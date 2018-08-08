@@ -16,11 +16,12 @@ import {
   Container, Row, Col
 } from 'reactstrap';
 
-// class TheNavbar extends Component {
+// class Navbar extends Component {
 
 //   render() {
 
 //     return (
+
 //       <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
 //         <div class="container">
 //           <a class="navbar-brand" href="index.html">MedTV</a>
@@ -59,71 +60,79 @@ import {
 //           </div>
 //         </div>
 //       </nav>
+//     )
+//   }
+// }
+// export default TheNavbar;
 
-//   export default TheNavbar;
 
-    export default class TheNavbar extends React.Component {
-      constructor(props) {
-        super(props);
+export default class TheNavbar extends React.Component {
 
-        this.toggle = this.toggle.bind(this);
-        this.state = {
-          isOpen: false
-        };
-      }
-      toggle() {
-        this.setState({
-          isOpen: !this.state.isOpen
-        });
-      }
-      render() {
-        return (
-          <Navbar fixed="top" className="bg-primary" dark expand="md">
-            <Container>
-              <NavbarBrand href="/">MedTV</NavbarBrand>
-              <NavbarToggler onClick={this.toggle} />
-              <Collapse isOpen={this.state.isOpen} navbar>
-                <Nav className="ml-auto" navbar>
-                  <NavItem>
-                    <NavLink active href="#">Videos</NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href="#">Contribute</NavLink>
-                  </NavItem>
-                  <UncontrolledDropdown nav inNavbar>
-                    <DropdownToggle nav caret>
-                      Browse
+  constructor(props) {
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      isOpen: false
+    };
+  }
+
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
+
+  render() {
+
+    return (
+
+      <Navbar fixed="top" className="bg-primary" dark expand="md">
+        <Container>
+          <NavbarBrand href="/">MedTV</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink active href="#">Videos</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="#">Contribute</NavLink>
+              </NavItem>
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Browse
                 </DropdownToggle>
-                    <DropdownMenu right>
-                      <DropdownItem>
-                        Head
+                <DropdownMenu right>
+                  <DropdownItem>
+                    Head
                   </DropdownItem>
-                      <DropdownItem>
-                        Appendages
+                  <DropdownItem>
+                    Appendages
                   </DropdownItem>
-                      <DropdownItem>
-                        Heart
+                  <DropdownItem>
+                    Heart
                   </DropdownItem>
-                      <DropdownItem>
-                        Lung
+                  <DropdownItem>
+                    Lung
                   </DropdownItem>
-                      <DropdownItem>
-                        Vascular
+                  <DropdownItem>
+                    Vascular
                   </DropdownItem>
-                    </DropdownMenu>
-                  </UncontrolledDropdown>
-                  <NavItem>
-                    <InputGroup>
-                      <Input type="text" className="form-control" placeholder="Search for..." />
-                      <InputGroupAddon className="input-group-btn">
-                        <Button className="btn btn-success" type="button">Go!</Button>
-                      </InputGroupAddon>
-                    </InputGroup>
-                  </NavItem>
-                </Nav>
-              </Collapse>
-            </Container>
-          </Navbar>
-        );
-      }
-    }
+                </DropdownMenu>
+              </UncontrolledDropdown>
+              <NavItem>
+                <InputGroup>
+                  <Input type="text" className="form-control" placeholder="Search for..." />
+                  <InputGroupAddon className="input-group-btn">
+                    <Button className="nav-go" type="button">Go!</Button>
+                  </InputGroupAddon>
+                </InputGroup>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Container>
+      </Navbar>
+    );
+  }
+}
