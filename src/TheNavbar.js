@@ -87,12 +87,20 @@ export default class TheNavbar extends React.Component {
 
     return (
 
-      <Navbar fixed="top" className="bg-primary" dark expand="md">
+      <Navbar fixed="top" className="bg-primary" dark expand="lg">
         <Container>
           <NavbarBrand href="/">MedTV</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
+            <NavItem id="nav-search">
+                <InputGroup>
+                  <Input type="text" className="form-control" placeholder="Search for..." />
+                  <InputGroupAddon className="input-group-btn">
+                    <Button className="btn-success" type="button">Go!</Button>
+                  </InputGroupAddon>
+                </InputGroup>
+              </NavItem>
               <NavItem>
                 <NavLink active href="#">Videos</NavLink>
               </NavItem>
@@ -121,14 +129,14 @@ export default class TheNavbar extends React.Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-              <NavItem>
+              {/* <NavItem>
                 <InputGroup>
                   <Input type="text" className="form-control" placeholder="Search for..." />
                   <InputGroupAddon className="input-group-btn">
                     <Button className="nav-go" type="button">Go!</Button>
                   </InputGroupAddon>
                 </InputGroup>
-              </NavItem>
+              </NavItem> */}
             </Nav>
           </Collapse>
         </Container>
