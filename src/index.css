@@ -10,3 +10,8 @@ body {
 .nav-go:hover {
   background-color: green;
 }
+
+.carousel-item > img {
+  width: 100%;
+  height: 100%;
+}
