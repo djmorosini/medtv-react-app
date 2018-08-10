@@ -6,42 +6,31 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
-import MyPic1 from './images/piron-guillaume-492639-unsplash.jpg'
-import MyPic2 from './images/jesse-orrico-60373-unsplash.jpg'
-import MyPic3 from './images/oneDoctor.jpg'
-import MyPic4 from './images/rawpixel-584296-unsplash.jpg'
-
-
 
 const items = [
   {
-    src: MyPic1,
-    altText: '',
-    header: 'DO YOU WANT TO EXCEL AS A SURGEON?',
-    caption: 'Find your educational resources here on MedTV.'
-    
+    id: 1,
+    altText: 'Slide 1',
+    caption: 'Slide 1'
   },
   {
-    src: MyPic2,
+    id: 2,
     altText: 'Slide 2',
-    header:'GET THE WORD OUT TO DOCTORS AROUND THE WORLD.',
-    caption: 'Market your medical device on MedTV.'
+    caption: 'Slide 2'
   },
   {
-    src: MyPic3,
+    id: 3,
     altText: 'Slide 3',
-    header: 'WHAT KIND OF SURGEON DO YOU WANT TO BE?',
-    caption: 'Learn from the best surgeons in the world, right in the classroom.'
+    caption: 'Slide 3'
   },
   {
-    src: MyPic4,
-    altText: 'Slide 3',
-    header: 'CUT, RECORD, UPLOAD. REPEAT.',
-    caption: 'Your LEGACY as a doctor, right here.'
+    id: 4,
+    altText: 'Slide 4',
+    caption: 'Slide 4'
   }
 ];
 
-class TheCarousel extends Component {
+export default class TheCarousel extends Component {
   constructor(props) {
     super(props);
     this.state = { activeIndex: 0 };
@@ -82,31 +71,31 @@ class TheCarousel extends Component {
 
     const slides = items.map((item) => {
       return (
-        <CarouselItem className='carousel-image-holder'
+        <CarouselItem
+          className="custom-tag"
+          tag="div"
+          key={item.id}
           onExiting={this.onExiting}
           onExited={this.onExited}
-          key={item.src}
         >
-          <img src={item.src} alt={item.altText} />
-          <CarouselCaption captionText={item.caption} captionHeader={item.header} />
+          <CarouselCaption className="text-danger" captionText={item.caption} captionHeader={item.caption} data-imageUrl />
         </CarouselItem>
       );
     });
 
     return (
-      <Carousel id='the-carousel'
-        activeIndex={activeIndex}
-        next={this.next}
-        previous={this.previous}
-      >
-        <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
-        {slides}
-        <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-        <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
-      </Carousel>
+      <div id='the-carousel'>
+        <Carousel
+          activeIndex={activeIndex}
+          next={this.next}
+          previous={this.previous}
+        >
+          <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+          {slides}
+          <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
+          <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+        </Carousel>
+      </div>
     );
   }
 }
-
-
-export default TheCarousel;
