@@ -28,11 +28,28 @@ body {
 .carousel-image-holder {
   height: 500px;
 }
-#one {
-  background-image: url(./images/oneDoctor.jpg) no-repeat center center;
-}
 .custom-tag {
   max-width: 100%;
   height: 500px;
-  
+  /* background: url(./images/oneDoctor.jpg) no-repeat center center; */
+}
+.carousel-item:first-child {
+  /* background-image: url(./images/oneDoctor.jpg) no-repeat center center; */
+  background: url(./images/piron-guillaume-492639-unsplash.jpg) no-repeat center center;
+  background-size: cover;
+}
+.carousel-item:nth-child(2) {
+  background: url(./images/jesse-orrico-60373-unsplash.jpg) no-repeat center center;
+  background-size: cover;
+}
+.carousel-item:nth-child(3) {
+  background: url(./images/oneDoctor.jpg) no-repeat center center;
+  background-size: cover;
+}
+.carousel-item:nth-child(4) {
+  background: url(./images/rawpixel-584296-unsplash.jpg) no-repeat center center;
+  background-size: cover;
+}
+#the-carousel {
+  margin-top: 30px;
 }
