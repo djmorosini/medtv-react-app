@@ -39,7 +39,7 @@ body {
   background-size: cover;
 }
 .carousel-item:nth-child(2) {
-  background: url(./images/jesse-orrico-60373-unsplash.jpg) no-repeat center center;
+  background: url(./images/jesse-orrico-60373-unsplash.png) no-repeat center center;
   background-size: cover;
 }
 .carousel-item:nth-child(3) {
@@ -52,4 +52,13 @@ body {
 }
 #the-carousel {
   margin-top: 30px;
+}
+
+.carousel-item:nth-child(2) .carousel-caption {
+  color: black;
+  border-radius: 5%;
+  text-shadow: 1px 1px 0px white,
+    1px 1px 10px rgba(0, 0, 0, 0.15),
+    1px 1px 2px rgba(0, 0, 0, 0.1),
+    1px 1px 20px rgba(0, 0, 0, 0.1);
 }

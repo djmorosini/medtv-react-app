@@ -11,22 +11,26 @@ const items = [
   {
     id: 1,
     altText: 'Slide 1',
-    caption: 'Slide 1'
+    header: 'DO YOU WANT TO EXCEL AS A SURGEON?',
+    caption: 'Find your educational resources here on MedTV.'
   },
   {
     id: 2,
     altText: 'Slide 2',
-    caption: 'Slide 2'
+    header: 'GET THE WORD OUT TO DOCTORS AROUND THE WORLD.',
+    caption: 'Market your medical device on MedTV.'
   },
   {
     id: 3,
     altText: 'Slide 3',
-    caption: 'Slide 3'
+    header: 'WHAT KIND OF SURGEON DO YOU WANT TO BE?',
+    caption: 'Learn from the best surgeons in the world, right in the classroom.'
   },
   {
     id: 4,
     altText: 'Slide 4',
-    caption: 'Slide 4'
+    header: 'CUT, RECORD, UPLOAD. REPEAT.',
+    caption: 'Your LEGACY as a doctor, right here.'
   }
 ];
 
@@ -78,14 +82,14 @@ export default class TheCarousel extends Component {
           onExiting={this.onExiting}
           onExited={this.onExited}
         >
-          <CarouselCaption className="text-danger" captionText={item.caption} captionHeader={item.caption} data-imageUrl />
+          <CarouselCaption className="d-flex h-50 align-items-center justify-content-center" captionText={item.caption} captionHeader={item.header} />
         </CarouselItem>
       );
     });
 
     return (
       <div id='the-carousel'>
-        <Carousel
+        <Carousel 
           activeIndex={activeIndex}
           next={this.next}
           previous={this.previous}

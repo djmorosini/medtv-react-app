@@ -1,7 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import logo from './logo.svg';
 import TheNavbar from './TheNavbar';
-import Sidebar from './Sidebar';
 import TheCarousel from './TheCarousel';
 import './App.css';
 
