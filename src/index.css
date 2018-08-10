@@ -5,8 +5,9 @@ body {
 }
 #filter-sidebar {
   margin-top: 100px;
-  margin-left: 50px;
+  margin-left: 20px;
   width: fit-content;
+  /* float: left; */
 }
 .category-title {
   color: blue;
@@ -21,6 +22,7 @@ body {
 }
 #filter-top {
   margin-left: 400px;
+  margin-right: 200px;
 }
 .carousel-item > img {
   width: 100%;
@@ -37,6 +39,7 @@ body {
   /* background-image: url(./images/oneDoctor.jpg) no-repeat center center; */
   background: url(./images/piron-guillaume-492639-unsplash.jpg) no-repeat center center;
   background-size: cover;
+  vertical-align: middle;
 }
 .carousel-item:nth-child(2) {
   background: url(./images/jesse-orrico-60373-unsplash.jpg) no-repeat center center;
@@ -52,4 +55,9 @@ body {
 }
 #the-carousel {
   margin-top: 30px;
+}
+#the-list {
+  position: absolute;
+  top: 150px;
+  left: 220px;
 }

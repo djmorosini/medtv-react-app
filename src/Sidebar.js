@@ -3,6 +3,7 @@ import {
     Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink,
     Collapse, Button, CardBody, Card, Input
 } from 'reactstrap';
+import VideoList from './VideoList';
 
 export default class Sidebar extends React.Component {
     constructor(props) {
@@ -59,7 +60,7 @@ export default class Sidebar extends React.Component {
                         <NavItem className='category-title' onClick={this.toggle1}>Cardiology</NavItem>
                         <Collapse isOpen={this.state.collapse1}>
                             <NavItem>
-                                <NavLink className='sub-title' href="#">- Coronary Artery Bypass Grafting</NavLink>
+                                <NavLink className='sub-title' href="#">- Coronary Artery</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink className='sub-title' href="#">- Heart</NavLink>
@@ -96,13 +97,13 @@ export default class Sidebar extends React.Component {
                         <NavItem className='category-title' onClick={this.toggle3}>General</NavItem>
                         <Collapse isOpen={this.state.collapse3}>
                             <NavItem>
-                                <NavLink className='sub-title' href="#">- Laparoscopic Cholecystectomy</NavLink>
+                                <NavLink className='sub-title' href="#">- Cholecystectomy</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink className='sub-title' href="#">- Hemorrhoid</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className='sub-title' href="#">- Laparoscopic Colon Resection</NavLink>
+                                <NavLink className='sub-title' href="#">- Colon Resection</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink className='sub-title' href="#">- Thyroid</NavLink>
@@ -110,6 +111,7 @@ export default class Sidebar extends React.Component {
                         </Collapse>
                     </NavItem>
                 </Nav>
+                <VideoList />
             </div>
         );
     }

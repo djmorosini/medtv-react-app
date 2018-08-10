@@ -12,7 +12,6 @@ class App extends Component {
     return (
       <Fragment>
         <TheNavbar />
-        <TheCarousel />
         <Sidebar />
       </Fragment>
     );
