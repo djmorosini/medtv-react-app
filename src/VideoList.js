@@ -5,21 +5,15 @@ import {
 } from 'reactstrap';
 
 
-const Cards = (props) => {
-    return (
-        <div>
-            <Card className='col-lg-3 col-md-3 col-sm-6'>
-                <CardBody>
-                    <CardTitle>Card title</CardTitle>
-                </CardBody>
-                <CardImg width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-                <CardBody>
-                    <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                </CardBody>
-            </Card>
-        </div>
-    );
-};
+// fetch("https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos/list-test")
+// .then((response) => {
+//     let videos = response.json();
+//     console.log(videos)
+//     return videos;
+// })
+// .then((data) => {
+
+// });
 
 
 const cards = [
@@ -80,23 +74,55 @@ const cards = [
 ];
 
 export default class VideoList extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { videos: [] }
+    }
+
+    componentDidMount() {
+        console.log("I mounted it guys!")
+        if (!this.videos) {
+            console.log("Im fetching!")
+            this.allVideos().then((allVideos) => {
+                this.setState({ videos: allVideos })
+            })
+        }
+    }
+
+    allVideos = () => {
+        console.log("Called all videos")
+        return fetch('https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos/list-test')
+            .then((response) => { return response.json() })
+            .then((data) => {
+                this.setState({ videos: data })
+                return data;
+            });
+    }
 
 
+    // componentDidMount() {
+    //     console.log("I mounted it guys!")
+    //     fetch('https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos/list-test')
+    //       .then(response => response.json())
+    //       .then(data => this.setState({ videos: data }));
+    // }
 
     render() {
+        let videos = this.state.videos;
+        console.log({ videos });
 
-        const theList = cards.map((card) => {
+        const theList = videos.map((video) => {
             return (
                 <Card className='h-100 col-lg-4 col-md-6 col-sm-8'
                     tag="div"
-                    key={card.id}
+                    key={video.id}
                 >
                     <CardBody>
-                        <CardTitle>{card.title}</CardTitle>
+                        <CardTitle>{video.title}</CardTitle>
                     </CardBody>
-                    <CardImg width="100%" src={card.thumbnail} alt="Video thumbnail" />
+                    <CardImg width="100%" src='https://www.placecage.com/c/300/200' alt="Video thumbnail" />
                     <CardBody>
-                        <CardText>{card.description}</CardText>
+                        <CardText>{video.description}</CardText>
                     </CardBody>
                 </Card>
             );
