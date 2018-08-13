@@ -75,7 +75,7 @@ export default class TheNavbar extends React.Component {
               <NavItem>
                 <InputGroup>
                   <Input type="text" className="form-control" placeholder="Search for..." />
-                  <InputGroupAddon className="input-group-btn">
+                  <InputGroupAddon addonType="append" className="input-group-btn">
                     <Button className="nav-go btn-success" type="button">Go!</Button>
                   </InputGroupAddon>
                 </InputGroup>
