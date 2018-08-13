@@ -47,8 +47,8 @@ export default class Sidebar extends Component {
         return (
             <Fragment>
                 <h2 id="video-header">Video List Page</h2>
+                <hr />
                 <div id='filter-sidebar'>
-                    <hr />
                     <Nav id='filter-top'>
                         <Dropdown isOpen={this.state.dropdownOpen1} toggle={this.drop1}>
                             <DropdownToggle className="bg-secondary" caret>

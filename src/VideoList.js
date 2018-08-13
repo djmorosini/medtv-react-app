@@ -29,12 +29,12 @@ export default class VideoList extends React.Component {
 
     allVideos = () => {
         console.log("Called all videos")
-        return fetch('https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos/list-test')
+        return fetch('https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos')
             .then((response) => { return response.json() })
             .then((data) => {
-                this.setState({ 
+                this.setState({
                     isLoaded: true,
-                    videos: data 
+                    videos: data
                 })
                 return data;
             },
@@ -48,7 +48,7 @@ export default class VideoList extends React.Component {
 
     render() {
         const { error, isLoaded, videos } = this.state;
-        console.log({videos})
+        console.log({ videos })
 
         if (error) {
             return <div>Error: {error.message}</div>;
@@ -58,14 +58,17 @@ export default class VideoList extends React.Component {
 
             const theList = videos.map((video) => {
                 return (
-                    <Card className='h-100 col-lg-4 col-md-6 col-sm-8'
+                    <Card className='h-100 col-lg-4 col-md-6 col-sm-12'
                         tag="div"
                         key={video.id}
                     >
-                    
-                            <CardTitle>{video.title}</CardTitle>
-                        <CardImg width="100%" src='https://www.placecage.com/c/300/200' alt="Video thumbnail" />
+                    <a href='#'>
+                        <CardImg width="100%" src={video.vid_thumbnail_uri} alt="Video thumbnail" />
+                        </a>
                         <CardBody>
+                            <a href='#'>
+                            <CardTitle>{video.title}</CardTitle>
+                            </a>
                             <CardText>{video.description}</CardText>
                         </CardBody>
                     </Card>
@@ -73,9 +76,9 @@ export default class VideoList extends React.Component {
             });
 
             return (
-                <div id='the-list' className='d-flex flex-wrap col-lg-9 col-sm-9'>
-                    <CardDeck>
-                    {theList}
+                <div id='the-list' className='d-flex flex-wrap col-lg-9 col-md-9 col-sm-9'>
+                    <CardDeck id="list-deck">
+                        {theList}
                     </CardDeck>
                 </div>
             )
