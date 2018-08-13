@@ -13,10 +13,11 @@ class App extends Component {
 
     return (
       <Fragment>
-        <TheNavbar />
+        <VideoPlayer />
+        {/* <TheNavbar />
         <TheCarousel />
         <TrendingVideos />
-        <TheFooter />
+        <TheFooter /> */}
       </Fragment>
     );
   }
