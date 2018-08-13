@@ -89,7 +89,8 @@ export default class TheCarousel extends Component {
 
     return (
       <div id='the-carousel'>
-        <Carousel 
+        <Carousel
+          ride='carousel' 
           activeIndex={activeIndex}
           next={this.next}
           previous={this.previous}
