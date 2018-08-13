@@ -65,10 +65,10 @@ export default class TrendingVideos extends React.Component {
                     <Card className='h-100 col-lg-4 col-md-6 col-sm-8'
                         tag="div"
                         key={video.id}
-                    >      
-                        <CardImg top width="100%" src="https://www.placecage.com/c/300/200" alt="Video thumbnail" />
+                    >    
+                        <a href='#'><CardImg top width="100%" src="https://www.placecage.com/c/300/200" alt="Video thumbnail" /></a>
                         <CardBody>
-                            <CardTitle>{video.title}</CardTitle>
+                            <a href='#'><CardTitle>{video.title}</CardTitle></a>
                             <CardText>{video.description}</CardText>
                         </CardBody>
                     </Card>  
