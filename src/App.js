@@ -2,9 +2,10 @@ import React, { Component, Fragment } from 'react';
 import logo from './logo.svg';
 import VideoDetails from './VideoDetails';
 import TheNavbar from './TheNavbar';
-import Sidebar from './Sidebar';
 import TheCarousel from './TheCarousel';
 import './App.css';
+import TrendingVideos from './TrendingVideos';
+import TheFooter from './TheFooter';
 
 class App extends Component {
 
@@ -12,7 +13,10 @@ class App extends Component {
 
     return (
       <Fragment>
-        <VideoDetails />
+        <TheNavbar />
+        <TheCarousel />
+        <TrendingVideos />
+        <TheFooter />
       </Fragment>
     );
   }
