@@ -48,7 +48,7 @@ export default class Sidebar extends React.Component {
             <div id='filter-sidebar'>
                 <Nav id='filter-top'>
                     <Dropdown isOpen={this.state.dropdownOpen1} toggle={this.drop1}>
-                        <DropdownToggle className="bg-primary" caret>
+                        <DropdownToggle className="bg-secondary" caret>
                             Age
                         </DropdownToggle>
                         <DropdownMenu right>
@@ -57,7 +57,7 @@ export default class Sidebar extends React.Component {
                         </DropdownMenu>
                     </Dropdown>
                     <Dropdown isOpen={this.state.dropdownOpen2} toggle={this.drop2}>
-                        <DropdownToggle className="bg-primary" caret>
+                        <DropdownToggle className="bg-secondary" caret>
                             Gender
                         </DropdownToggle>
                         <DropdownMenu right>
@@ -66,7 +66,7 @@ export default class Sidebar extends React.Component {
                         </DropdownMenu>
                     </Dropdown>
                     <Dropdown isOpen={this.state.dropdownOpen3} toggle={this.drop3}>
-                        <DropdownToggle className="bg-primary" caret>
+                        <DropdownToggle className="bg-secondary" caret>
                             Duration
                         </DropdownToggle>
                         <DropdownMenu right>
@@ -75,7 +75,7 @@ export default class Sidebar extends React.Component {
                         </DropdownMenu>
                     </Dropdown>
                     <Dropdown isOpen={this.state.dropdownOpen4} toggle={this.drop4}>
-                        <DropdownToggle className="bg-primary" caret>
+                        <DropdownToggle className="bg-secondary" caret>
                             Location
                         </DropdownToggle>
                         <DropdownMenu right>

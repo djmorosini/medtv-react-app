@@ -64,7 +64,11 @@ const cards = [
 export default class VideoList extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { videos: [] }
+        this.state = {
+            error: null,
+            isLoaded: false,
+            videos: []
+        };
     }
 
     componentDidMount() {
@@ -85,35 +89,51 @@ export default class VideoList extends React.Component {
         return fetch('https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos/list-test')
             .then((response) => { return response.json() })
             .then((data) => {
-                this.setState({ videos: data })
+                this.setState({ 
+                    isLoaded: true,
+                    videos: data 
+                })
                 return data;
-            });
+            },
+                error => {
+                    this.setState({
+                        isLoaded: true,
+                        error: error
+                    });
+                });
     }
 
     render() {
-        let videos = this.state.videos;
+        const { error, isLoaded, videos } = this.state;
 
-        const theList = videos.map((video) => {
+        if (error) {
+            return <div>Error: {error.message}</div>;
+        } else if (!isLoaded) {
+            return <div>Loading...</div>;
+        } else {
+
+            const theList = videos.map((video) => {
+                return (
+                    <Card className='h-100 col-lg-4 col-md-6 col-sm-8'
+                        tag="div"
+                        key={video.id}
+                    >
+                        <CardBody>
+                            <CardTitle>{video.title}</CardTitle>
+                        </CardBody>
+                        <CardImg width="100%" src='https://www.placecage.com/c/300/200' alt="Video thumbnail" />
+                        <CardBody>
+                            <CardText>{video.description}</CardText>
+                        </CardBody>
+                    </Card>
+                );
+            });
+
             return (
-                <Card className='h-100 col-lg-4 col-md-6 col-sm-8'
-                    tag="div"
-                    key={video.id}
-                >
-                    <CardBody>
-                        <CardTitle>{video.title}</CardTitle>
-                    </CardBody>
-                    <CardImg width="100%" src='https://www.placecage.com/c/300/200' alt="Video thumbnail" />
-                    <CardBody>
-                        <CardText>{video.description}</CardText>
-                    </CardBody>
-                </Card>
-            );
-        });
-
-        return (
-            <div id='the-list' className='d-flex flex-wrap col-lg-9 col-sm-9'>
-                {theList}
-            </div>
-        )
+                <div id='the-list' className='d-flex flex-wrap col-lg-9 col-sm-9'>
+                    {theList}
+                </div>
+            )
+        }
     }
 }
