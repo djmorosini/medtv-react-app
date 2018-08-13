@@ -23,7 +23,10 @@ body {
 #filter-top {
   margin-left: 400px;
   margin-right: 200px;
-  width: 400px;
+  width: 500px;
+}
+.dropdown button {
+  margin-right: 20px;
 }
 .carousel-item > img {
   width: 100%;
