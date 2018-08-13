@@ -61,7 +61,7 @@ body {
   margin-top: 30px;
 }
 #the-list {
-  position: absolute;
-  top: 150px;
+  position: relative;
+  top: -150px;
   left: 220px;
 }
