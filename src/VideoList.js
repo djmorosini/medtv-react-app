@@ -4,18 +4,6 @@ import {
     CardTitle, CardSubtitle
 } from 'reactstrap';
 
-
-// fetch("https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos/list-test")
-// .then((response) => {
-//     let videos = response.json();
-//     console.log(videos)
-//     return videos;
-// })
-// .then((data) => {
-
-// });
-
-
 const cards = [
     {
         id: 1,
@@ -81,7 +69,10 @@ export default class VideoList extends React.Component {
 
     componentDidMount() {
         console.log("I mounted it guys!")
-        if (!this.videos) {
+
+        let videos = this.state.videos;
+
+        if (videos.length === 0) {
             console.log("Im fetching!")
             this.allVideos().then((allVideos) => {
                 this.setState({ videos: allVideos })
@@ -99,17 +90,8 @@ export default class VideoList extends React.Component {
             });
     }
 
-
-    // componentDidMount() {
-    //     console.log("I mounted it guys!")
-    //     fetch('https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos/list-test')
-    //       .then(response => response.json())
-    //       .then(data => this.setState({ videos: data }));
-    // }
-
     render() {
         let videos = this.state.videos;
-        console.log({ videos });
 
         const theList = videos.map((video) => {
             return (

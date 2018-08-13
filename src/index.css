@@ -6,8 +6,7 @@ body {
 #filter-sidebar {
   margin-top: 100px;
   margin-left: 20px;
-  width: fit-content;
-  /* float: left; */
+  width: 800px;
 }
 .category-title {
   color: blue;
@@ -16,6 +15,7 @@ body {
 }
 #side-nav {
   margin-top: 30px;
+  width: fit-content;
 }
 .sub-title {
   margin-left: 20px;
@@ -23,6 +23,7 @@ body {
 #filter-top {
   margin-left: 400px;
   margin-right: 200px;
+  width: 400px;
 }
 .carousel-item > img {
   width: 100%;
