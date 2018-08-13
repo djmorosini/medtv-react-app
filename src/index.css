@@ -15,6 +15,8 @@ body {
 #side-nav {
   margin-top: 30px;
   width: fit-content;
+  position: absolute;
+
 }
 .sub-title {
   margin-left: 20px;
@@ -77,11 +79,13 @@ body {
   margin: 10px 0 10px 0;
 }
 #the-list {
-  position: relative;
-  top: -150px;
-  left: 220px;
+  margin-top: 50px;
+  margin-left: 200px;
 }
 #video-header {
-  margin-top: 100px;
+  margin-top: 70px;
   margin-left: 20px;
+}
+#the-list .card {
+  width: 800px;
 }

@@ -34,7 +34,7 @@ export default class TrendingVideos extends React.Component {
 
     allVideos = () => {
         console.log("Called all videos")
-        return fetch('https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos/list-test')
+        return fetch('https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos')
             .then((response) => { return response.json() })
             .then((data) => {
                 this.setState({ 
