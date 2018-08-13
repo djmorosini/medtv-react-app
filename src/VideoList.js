@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    Card, CardImg, CardText, CardBody, CardLink,
+    Card, CardImg, CardText, CardBody, CardLink, CardDeck,
     CardTitle, CardSubtitle
 } from 'reactstrap';
 
@@ -62,9 +62,8 @@ export default class VideoList extends React.Component {
                         tag="div"
                         key={video.id}
                     >
-                        <CardBody>
+                    
                             <CardTitle>{video.title}</CardTitle>
-                        </CardBody>
                         <CardImg width="100%" src='https://www.placecage.com/c/300/200' alt="Video thumbnail" />
                         <CardBody>
                             <CardText>{video.description}</CardText>
@@ -75,7 +74,9 @@ export default class VideoList extends React.Component {
 
             return (
                 <div id='the-list' className='d-flex flex-wrap col-lg-9 col-sm-9'>
+                    <CardDeck>
                     {theList}
+                    </CardDeck>
                 </div>
             )
         }
