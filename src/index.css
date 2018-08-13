@@ -5,8 +5,8 @@ body {
 }
 #filter-sidebar {
   margin-top: 100px;
-  margin-left: 50px;
-  width: fit-content;
+  margin-left: 20px;
+  width: 800px;
 }
 .category-title {
   color: blue;
@@ -15,12 +15,18 @@ body {
 }
 #side-nav {
   margin-top: 30px;
+  width: fit-content;
 }
 .sub-title {
   margin-left: 20px;
 }
 #filter-top {
   margin-left: 400px;
+  margin-right: 200px;
+  width: 500px;
+}
+.dropdown button {
+  margin-right: 20px;
 }
 .carousel-item > img {
   width: 100%;
@@ -37,6 +43,7 @@ body {
   /* background-image: url(./images/oneDoctor.jpg) no-repeat center center; */
   background: url(./images/piron-guillaume-492639-unsplash.jpg) no-repeat center center;
   background-size: cover;
+  vertical-align: middle;
 }
 .carousel-item:nth-child(2) {
   background: url(./images/jesse-orrico-60373-unsplash.png) no-repeat center center;
@@ -69,4 +76,9 @@ body {
 
 .card-title {
   margin: 10px 0 10px 0;
+}
+#the-list {
+  position: relative;
+  top: -150px;
+  left: 220px;
 }

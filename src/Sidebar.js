@@ -3,6 +3,7 @@ import {
     Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink,
     Collapse, Button, CardBody, Card, Input
 } from 'reactstrap';
+import VideoList from './VideoList';
 
 export default class Sidebar extends React.Component {
     constructor(props) {
@@ -10,8 +11,11 @@ export default class Sidebar extends React.Component {
         this.toggle1 = this.toggle1.bind(this);
         this.toggle2 = this.toggle2.bind(this);
         this.toggle3 = this.toggle3.bind(this);
-        this.toggle = this.toggle.bind(this);
-        this.state = { collapse1: false, collapse2: false, collapse3: false, dropdownOpen: false };
+        this.drop1 = this.drop1.bind(this);
+        this.drop2 = this.drop2.bind(this);
+        this.drop3 = this.drop3.bind(this);
+        this.drop4 = this.drop4.bind(this);
+        this.state = { collapse1: false, collapse2: false, collapse3: false, dropdownOpen1: false, dropdownOpen2: false, dropdownOpen3: false, dropdownOpen4: false };
     }
 
     toggle1() {
@@ -26,15 +30,24 @@ export default class Sidebar extends React.Component {
         this.setState({ collapse3: !this.state.collapse3 });
     }
 
-    toggle() {
-        this.setState({ dropdownOpen: !this.state.dropdownOpen });
+    drop1() {
+        this.setState({ dropdownOpen1: !this.state.dropdownOpen1 });
+    }
+    drop2() {
+        this.setState({ dropdownOpen2: !this.state.dropdownOpen2 });
+    }
+    drop3() {
+        this.setState({ dropdownOpen3: !this.state.dropdownOpen3 });
+    }
+    drop4() {
+        this.setState({ dropdownOpen4: !this.state.dropdownOpen4 });
     }
 
     render() {
         return (
             <div id='filter-sidebar'>
                 <Nav id='filter-top'>
-                    <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+                    <Dropdown isOpen={this.state.dropdownOpen1} toggle={this.drop1}>
                         <DropdownToggle className="bg-primary" caret>
                             Age
                         </DropdownToggle>
@@ -43,73 +56,86 @@ export default class Sidebar extends React.Component {
                             <DropdownItem>Age Above 60</DropdownItem>
                         </DropdownMenu>
                     </Dropdown>
-                    <NavItem>
-                        <NavLink href="#">Gender</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="#">Duration</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="#">Location</NavLink>
-                    </NavItem>
+                    <Dropdown isOpen={this.state.dropdownOpen2} toggle={this.drop2}>
+                        <DropdownToggle className="bg-primary" caret>
+                            Gender
+                        </DropdownToggle>
+                        <DropdownMenu right>
+                            <DropdownItem >Male</DropdownItem>
+                            <DropdownItem>Female</DropdownItem>
+                        </DropdownMenu>
+                    </Dropdown>
+                    <Dropdown isOpen={this.state.dropdownOpen3} toggle={this.drop3}>
+                        <DropdownToggle className="bg-primary" caret>
+                            Duration
+                        </DropdownToggle>
+                        <DropdownMenu right>
+                            <DropdownItem >Less than 3 hours</DropdownItem>
+                            <DropdownItem>Longer than 3 hours</DropdownItem>
+                        </DropdownMenu>
+                    </Dropdown>
+                    <Dropdown isOpen={this.state.dropdownOpen4} toggle={this.drop4}>
+                        <DropdownToggle className="bg-primary" caret>
+                            Location
+                        </DropdownToggle>
+                        <DropdownMenu right>
+                            <DropdownItem >In U.S.</DropdownItem>
+                            <DropdownItem>Outside U.S.</DropdownItem>
+                        </DropdownMenu>
+                    </Dropdown>
                 </Nav>
                 <Nav vertical id='side-nav'>
                     <h5>Categories</h5>
-                    <NavItem>
-                        <NavItem className='category-title' onClick={this.toggle1}>Cardiology</NavItem>
-                        <Collapse isOpen={this.state.collapse1}>
-                            <NavItem>
-                                <NavLink className='sub-title' href="#">- Coronary Artery Bypass Grafting</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className='sub-title' href="#">- Heart</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className='sub-title' href="#">- Aneurysm Repair</NavLink>
-                            </NavItem>
-                        </Collapse>
-                    </NavItem>
-                    <NavItem>
-                        <NavItem className='category-title' onClick={this.toggle2}>Orthopedic</NavItem>
-                        <Collapse isOpen={this.state.collapse2}>
-                            <NavItem>
-                                <NavLink className='sub-title' href="#">- Back</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className='sub-title' href="#">- Hip</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className='sub-title' href="#">- Hand/Wrist</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className='sub-title' href="#">- Knee</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className='sub-title' href="#">- Shoulder</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className='sub-title' href="#">- Foot/Ankle</NavLink>
-                            </NavItem>
-                        </Collapse>
-                    </NavItem>
-                    <NavItem>
-                        <NavItem className='category-title' onClick={this.toggle3}>General</NavItem>
-                        <Collapse isOpen={this.state.collapse3}>
-                            <NavItem>
-                                <NavLink className='sub-title' href="#">- Laparoscopic Cholecystectomy</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className='sub-title' href="#">- Hemorrhoid</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className='sub-title' href="#">- Laparoscopic Colon Resection</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className='sub-title' href="#">- Thyroid</NavLink>
-                            </NavItem>
-                        </Collapse>
-                    </NavItem>
+                    <NavItem className='category-title' onClick={this.toggle1}>Cardiology</NavItem>
+                    <Collapse isOpen={this.state.collapse1}>
+                        <NavItem>
+                            <NavLink className='sub-title' href="#">- Coronary Artery</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink className='sub-title' href="#">- Heart</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink className='sub-title' href="#">- Aneurysm Repair</NavLink>
+                        </NavItem>
+                    </Collapse>
+                    <NavItem className='category-title' onClick={this.toggle2}>Orthopedic</NavItem>
+                    <Collapse isOpen={this.state.collapse2}>
+                        <NavItem>
+                            <NavLink className='sub-title' href="#">- Back</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink className='sub-title' href="#">- Hip</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink className='sub-title' href="#">- Hand/Wrist</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink className='sub-title' href="#">- Knee</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink className='sub-title' href="#">- Shoulder</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink className='sub-title' href="#">- Foot/Ankle</NavLink>
+                        </NavItem>
+                    </Collapse>
+                    <NavItem className='category-title' onClick={this.toggle3}>General</NavItem>
+                    <Collapse isOpen={this.state.collapse3}>
+                        <NavItem>
+                            <NavLink className='sub-title' href="#">- Cholecystectomy</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink className='sub-title' href="#">- Hemorrhoid</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink className='sub-title' href="#">- Colon Resection</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink className='sub-title' href="#">- Thyroid</NavLink>
+                        </NavItem>
+                    </Collapse>
                 </Nav>
+                <VideoList />
             </div>
         );
     }

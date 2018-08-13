@@ -76,7 +76,7 @@ export default class TrendingVideos extends React.Component {
             });
 
             return (
-                <div id='the-list' className='d-flex flex-wrap col-lg-9 col-sm-9'>
+                <div className='d-flex flex-wrap col-lg-9 col-sm-9'>
                 <h1 id='trendTitle'>Trending Videos</h1>
                 <CardDeck>
                     {theList}
