@@ -4,63 +4,6 @@ import {
     CardTitle, CardSubtitle
 } from 'reactstrap';
 
-const cards = [
-    {
-        id: 1,
-        title: 'Surgi-Sim v3',
-        thumbnail: "https://img.youtube.com/vi/Zd39HhAUFl0/0.jpg",
-        description: "Example of using VR for knee surgery training."
-    },
-    {
-        id: 2,
-        title: 'VARISEscope',
-        thumbnail: "https://img.youtube.com/vi/K0D_gOCB79s/0.jpg",
-        description: "New surgical scope tool in use."
-    },
-    {
-        id: 3,
-        title: 'VARISESHIP2',
-        thumbnail: "https://img.youtube.com/vi/sd0l_asNfkg/0.jpg",
-        description: "Hip Surgery."
-    },
-    {
-        id: 4,
-        title: 'Card title 4',
-        thumbnail: "https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180",
-        description: "Some quick example text to build on the card title and make up the bulk of the card's content."
-    },
-    {
-        id: 5,
-        title: 'Card title 5',
-        thumbnail: "https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180",
-        description: "Some quick example text to build on the card title and make up the bulk of the card's content."
-    },
-    {
-        id: 6,
-        title: 'Card title 6',
-        thumbnail: "https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180",
-        description: "Some quick example text to build on the card title and make up the bulk of the card's content."
-    },
-    {
-        id: 7,
-        title: 'Card title 7',
-        thumbnail: "https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180",
-        description: "Some quick example text to build on the card title and make up the bulk of the card's content."
-    },
-    {
-        id: 8,
-        title: 'Card title 8',
-        thumbnail: "https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180",
-        description: "Some quick example text to build on the card title and make up the bulk of the card's content."
-    },
-    {
-        id: 9,
-        title: 'Card title 9',
-        thumbnail: "https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180",
-        description: "Some quick example text to build on the card title and make up the bulk of the card's content."
-    }
-];
-
 export default class VideoList extends React.Component {
     constructor(props) {
         super(props);
@@ -105,6 +48,7 @@ export default class VideoList extends React.Component {
 
     render() {
         const { error, isLoaded, videos } = this.state;
+        console.log({videos})
 
         if (error) {
             return <div>Error: {error.message}</div>;

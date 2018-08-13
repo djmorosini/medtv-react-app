@@ -4,7 +4,6 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 #filter-sidebar {
-  margin-top: 100px;
   margin-left: 20px;
   width: 800px;
 }
@@ -61,7 +60,11 @@ body {
   margin-top: 30px;
 }
 #the-list {
-  position: absolute;
-  top: 150px;
+  position: relative;
+  top: -150px;
   left: 220px;
+}
+#video-header {
+  margin-top: 100px;
+  margin-left: 20px;
 }
