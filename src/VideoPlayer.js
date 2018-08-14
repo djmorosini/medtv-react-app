@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import { Player, ControlBar } from 'video-react';
 import 'video-react/dist/video-react.css'; // import css
+import VideoDetails from './VideoDetails';
+import BigPlayButton from '../node_modules/video-react/lib/components/BigPlayButton';
 
-export default class VideoPlayer extends React.Component {
+export default class VideoPlayer extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -34,15 +36,20 @@ export default class VideoPlayer extends React.Component {
 
 	render() {
 		let video = this.state.video;
-		if (!this.state.video) {
+		if (!video) {
 			return <div>Loading...</div>;
 		} else {
 			return (
-				<div id="the-list" className="d-flex flex-wrap col-lg-9 col-sm-9">
-					<Player>
-						<source src="https://s3.us-east-2.amazonaws.com/medtvvideos/CE_Video_1534114276315.mp4" />
-						<ControlBar autoHide={false} />
-					</Player>
+				<div id= "detailWrapper" className= "d-flex flex-wrap">
+					<div className="col-lg-8 col-sm-8">
+						<Player fluid={false} width={900} height={400}>
+							<source src="https://s3.us-east-2.amazonaws.com/medtvvideos/MedTV_vid1.m4v" />
+							<BigPlayButton position='center' />
+							<ControlBar autoHide={false} />
+							
+						</Player>
+					</div>
+					<VideoDetails />
 				</div>
 			);
 		}

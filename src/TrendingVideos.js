@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react';
 import {
-    Card,  
-    CardImg, 
-    CardTitle, 
-    CardText, 
-    CardDeck, 
+    Card,
+    CardImg,
+    CardTitle,
+    CardText,
+    CardDeck,
     CardBody
 } from 'reactstrap';
-
+import { Link } from 'react-router-dom'
 
 export default class TrendingVideos extends React.Component {
     constructor(props) {
@@ -37,9 +37,9 @@ export default class TrendingVideos extends React.Component {
         return fetch('https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos')
             .then((response) => { return response.json() })
             .then((data) => {
-                this.setState({ 
+                this.setState({
                     isLoaded: true,
-                    videos: data 
+                    videos: data
                 })
                 return data;
             },
@@ -60,29 +60,31 @@ export default class TrendingVideos extends React.Component {
             return <div>Loading...</div>;
         } else {
 
-            const theList = videos.map((video) => {
+
+
+            const theList = videos.slice(0, 3).map((video) => {
                 return (
                     <Card className='h-100 col-lg-4 col-md-6 col-sm-8'
                         tag="div"
                         key={video.id}
-                    >    
-                        <a href='#'><CardImg top width="100%" src={video.vid_thumbnail_uri} alt="Video thumbnail" /></a>
+                    >
+                        <Link to='/video/2f7beb10-9fd9-11e8-920a-a77773504cc3'><CardImg top width="100%" height={200} src={video.vid_thumbnail_uri} alt="Video thumbnail" /></Link>
                         <CardBody>
-                            <a href='#'><CardTitle>{video.title}</CardTitle></a>
+                            <Link to='/video/2f7beb10-9fd9-11e8-920a-a77773504cc3'><CardTitle>{video.title}</CardTitle></Link>
                             <CardText>{video.description}</CardText>
                         </CardBody>
-                    </Card>  
+                    </Card>
                 );
             });
 
             return (
                 <Fragment>
-                <h1 id='trendTitle'>Trending Videos</h1>
-                <div className='trendVid d-flex flex-wrap col-lg-12 col-sm-12'>
-                <CardDeck>
-                    {theList}
-                </CardDeck>
-                </div>
+                    <h1 id='trendTitle'>Trending Videos</h1>
+                    <div className='trendVid d-flex flex-wrap col-lg-12 col-sm-12'>
+                        <CardDeck>
+                            {theList}
+                        </CardDeck>
+                    </div>
                 </Fragment>
             )
         }

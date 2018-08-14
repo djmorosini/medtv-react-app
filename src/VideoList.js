@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import {
-    Card, CardImg, CardText, CardBody, CardLink, CardDeck,
-    CardTitle, CardSubtitle
+    Card, CardImg, CardText, CardBody, Pagination, PaginationItem, PaginationLink,
+    CardTitle
 } from 'reactstrap';
+import { Link } from 'react-router-dom'
 
 export default class VideoList extends React.Component {
     constructor(props) {
@@ -58,17 +59,20 @@ export default class VideoList extends React.Component {
 
             const theList = videos.map((video) => {
                 return (
-                    <Card className='h-100 col-lg-4 col-md-6 col-sm-12'
+
+                    <Card className='col-lg-3 col-md-5 col-sm-12'
                         tag="div"
                         key={video.id}
                     >
-                    <a href='#'>
-                        <CardImg width="100%" src={video.vid_thumbnail_uri} alt="Video thumbnail" />
-                        </a>
+                        <Link to='/video/2f7beb10-9fd9-11e8-920a-a77773504cc3'>
+                            <CardImg width="100%" src={video.vid_thumbnail_uri} alt="Video thumbnail"
+                                height={200}
+                            />
+                        </Link>
                         <CardBody>
-                            <a href='#'>
-                            <CardTitle>{video.title}</CardTitle>
-                            </a>
+                            <Link to='/video/2f7beb10-9fd9-11e8-920a-a77773504cc3'>
+                                <CardTitle>{video.title}</CardTitle>
+                            </Link>
                             <CardText>{video.description}</CardText>
                         </CardBody>
                     </Card>
@@ -76,12 +80,55 @@ export default class VideoList extends React.Component {
             });
 
             return (
-                <div id='the-list' className='d-flex flex-wrap col-lg-9 col-md-9 col-sm-9'>
-                    <CardDeck id="list-deck">
+                <Fragment>
+                    <div id='the-list' className='d-flex flex-wrap col-lg-12 col-md-12 col-sm-12 container-fluid'>
                         {theList}
-                    </CardDeck>
-                </div>
+                    </div>
+                    <div className='d-flex justify-content-center'>
+                        <ChangePage />
+                    </div>
+                </Fragment>
             )
         }
+    }
+}
+
+class ChangePage extends React.Component {
+    render() {
+        return (
+            <Pagination aria-label="Page navigation example">
+                <PaginationItem disabled>
+                    <PaginationLink previous href="#" />
+                </PaginationItem>
+                <PaginationItem active>
+                    <PaginationLink href="#">
+                        1
+          </PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                    <PaginationLink href="#">
+                        2
+          </PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                    <PaginationLink href="#">
+                        3
+          </PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                    <PaginationLink href="#">
+                        4
+          </PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                    <PaginationLink href="#">
+                        5
+          </PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                    <PaginationLink next href="#" />
+                </PaginationItem>
+            </Pagination>
+        );
     }
 }

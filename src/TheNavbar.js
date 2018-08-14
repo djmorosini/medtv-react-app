@@ -12,9 +12,10 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  InputGroupAddon, InputGroupText, InputGroup, Input,
-  Container, Row, Col
+  InputGroupAddon, InputGroup, Input,
+  Container
 } from 'reactstrap';
+import { Link } from 'react-router-dom'
 
 
 export default class TheNavbar extends React.Component {
@@ -40,15 +41,15 @@ export default class TheNavbar extends React.Component {
 
       <Navbar fixed="top" className="bg-primary" dark expand="lg">
         <Container>
-          <NavbarBrand href="/">MedTV</NavbarBrand>
+        <NavbarBrand><Link className='the-logo' to="/">MedTV</Link></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink active href="#">Videos</NavLink>
+                <Link className='nav-links' to="/videos">Videos</Link>
               </NavItem>
               <NavItem>
-                <NavLink href="#">Contribute</NavLink>
+                <NavLink href="404.html">Contribute</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>

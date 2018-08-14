@@ -1,9 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import {
     Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink,
-    Collapse, Button, CardBody, Card, Input
+    Collapse
 } from 'reactstrap';
 import VideoList from './VideoList';
+import { Link } from 'react-router-dom'
+import VideoListBreadCrumb from './ListBreadcrumb'
 
 export default class Sidebar extends Component {
     constructor(props) {
@@ -47,7 +49,7 @@ export default class Sidebar extends Component {
         return (
             <Fragment>
                 <h2 id="video-header">Video List Page</h2>
-                <hr />
+                <VideoListBreadCrumb />
                 <div id='filter-sidebar'>
                     <Nav id='filter-top'>
                         <Dropdown isOpen={this.state.dropdownOpen1} toggle={this.drop1}>

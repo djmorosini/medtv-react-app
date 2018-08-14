@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardImg, CardText, CardBody, CardLink, CardTitle, CardSubtitle } from 'reactstrap';
+import { Card, CardText, CardBody, CardTitle } from 'reactstrap';
 
 export default class VideoDetails extends React.Component {
 	constructor(props) {
@@ -12,7 +12,7 @@ export default class VideoDetails extends React.Component {
 	}
 
 	componentDidMount() {
-		fetch('https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos/27620c20-9cb9-11e8-b2ad-d524ebffd498')
+		fetch('https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos/2f7beb10-9fd9-11e8-920a-a77773504cc3')
 			.then((res) => res.json())
 			.then(
 				(result) => {
@@ -37,21 +37,19 @@ export default class VideoDetails extends React.Component {
 			return <div>Loading...</div>;
 		} else {
 			return (
-				<div id="the-list" className="d-flex flex-wrap col-lg-9 col-sm-9">
-					<Card className="h-100 col-lg-4 col-md-6 col-sm-8" tag="div" key={video.id}>
+				<div className="d-flex flex-wrap col-lg-4 col-sm-4">
+					<Card className="h-100 col-lg-12 col-md-12 col-sm-12" tag="div" key={video.id}>
 						<CardBody>
-							<CardTitle>{video.title}</CardTitle>
-						</CardBody>
-						<CardBody>
+							<CardTitle><span id='vidDetailTitle'>{video.title}</span></CardTitle>
 							<CardText>{video.description}</CardText>
-							<CardText>{video.author}</CardText>
-							<CardText>{video.patient.gender}</CardText>
-                            <CardText>{video.patient.age}</CardText>
-                            <CardText>{video.vid_location.title}</CardText>
-                            <CardText>{video.vid_location.country}</CardText>
-							<CardText>{video.device}</CardText>
-							<CardText>{video.duration}</CardText>
-							<CardText>{video.tags}</CardText>
+							<CardText><span className='strong'>Author:</span>  {video.author}</CardText>
+							<CardText><span className='strong'>Gender</span>: {video.patient.gender}</CardText>
+                            <CardText><span className='strong'>Age</span>: {video.patient.age}</CardText>
+                            <CardText><span className='strong'>Location:</span> {video.vid_location.title}</CardText>
+                            <CardText><span className='strong'>Country:</span> {video.vid_location.country}</CardText>
+							<CardText><span className='strong'>Device:</span> {video.device}</CardText>
+							<CardText><span className='strong'>Duration:</span> {video.vid_duration} seconds</CardText>
+							{/* <CardText>{video.tags}</CardText> */}
 						</CardBody>
 					</Card>
 				</div>

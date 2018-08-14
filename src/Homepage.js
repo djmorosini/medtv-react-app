@@ -1,25 +1,21 @@
 import React, { Component, Fragment } from 'react';
-import VideoPlayer from './VideoPlayer';
-import logo from './logo.svg';
 import TheNavbar from './TheNavbar';
 import TheCarousel from './TheCarousel';
 import './App.css';
-import TrendingVideos from './TrendingVideos';
-import Sidebar from './Sidebar'
 import TheFooter from './TheFooter';
 
-class App extends Component {
+class Homepage extends Component {
 
   render() {
 
     return (
       <Fragment>
         <TheNavbar />
-        <VideoPlayer />
+        <TheCarousel />
         <TheFooter />
       </Fragment>
     );
   }
 }
 
-export default App;
+export default Homepage;
