@@ -96,6 +96,17 @@ body {
   overflow: hidden;
   height: 450px;
 }
+
+#detailWrapper {
+  margin-top: 80px;
+}
+
+#vidDetailTitle{
+  font-size: 2em;
+}
+.strong {
+  font-weight: 1000;
+}
 .footer {
   display: block;
   width: 100%;
