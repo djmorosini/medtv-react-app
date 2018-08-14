@@ -45,7 +45,7 @@ export default class TheNavbar extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/videos">Videos</NavLink>
+                <NavLink href="./videos">Videos</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="404.html">Contribute</NavLink>
