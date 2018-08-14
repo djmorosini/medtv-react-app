@@ -39,7 +39,7 @@ export default class TrendingVideos extends React.Component {
             .then((data) => {
                 this.setState({ 
                     isLoaded: true,
-                    videos: data 
+                    videos: data
                 })
                 return data;
             },
@@ -60,7 +60,9 @@ export default class TrendingVideos extends React.Component {
             return <div>Loading...</div>;
         } else {
 
-            const theList = videos.map((video) => {
+      
+
+            const theList = videos.slice(0,3).map((video) => {
                 return (
                     <Card className='h-100 col-lg-4 col-md-6 col-sm-8'
                         tag="div"

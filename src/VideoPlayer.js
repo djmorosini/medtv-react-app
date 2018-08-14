@@ -40,7 +40,7 @@ export default class VideoPlayer extends React.Component {
 			return (
 				<div className="d-flex flex-wrap col-lg-9 col-sm-9">
 					<Player>
-						<source src="https://s3.us-east-2.amazonaws.com/medtvvideos/CE_Video_1534114276315.mp4" />
+						<source src="https://s3.us-east-2.amazonaws.com/medtvvideos/MedTV_vid1.m4v" />
 						<ControlBar autoHide={false} />
 					</Player>
 				</div>
