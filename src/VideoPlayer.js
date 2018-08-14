@@ -1,5 +1,5 @@
 import React from 'react';
-import { Player } from 'video-react';
+import { Player, ControlBar } from 'video-react';
 import 'video-react/dist/video-react.css'; // import css
 
 export default class VideoPlayer extends React.Component {
@@ -8,6 +8,7 @@ export default class VideoPlayer extends React.Component {
 		this.state = {
 			error: null,
 			isLoaded: false,
+			video: []
 		};
 	}
 
