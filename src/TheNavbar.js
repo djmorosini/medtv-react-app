@@ -15,6 +15,7 @@ import {
   InputGroupAddon, InputGroup, Input,
   Container
 } from 'reactstrap';
+import { Link } from 'react-router-dom'
 
 
 export default class TheNavbar extends React.Component {
@@ -40,7 +41,7 @@ export default class TheNavbar extends React.Component {
 
       <Navbar fixed="top" className="bg-primary" dark expand="lg">
         <Container>
-          <NavbarBrand href="/">MedTV</NavbarBrand>
+          <NavbarBrand><Link to="/">MedTV</Link></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
