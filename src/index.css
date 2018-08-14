@@ -100,3 +100,23 @@ body {
   display: block;
   width: 100%;
 }
+
+.nav-links {
+  color: rgb(218, 218, 218);
+  position: relative;
+  top: 8px;
+  right: 8px;
+}
+.nav-links:hover {
+  color: white;
+  text-decoration: none;
+}
+.the-logo {
+  color: rgb(218, 218, 218);
+  position: relative;
+  top: 0px;
+}
+.the-logo:hover {
+  color: white;
+  text-decoration: none;
+}
