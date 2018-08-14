@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import VideoPlayer from './VideoPlayer';
 import logo from './logo.svg';
 import VideoDetails from './VideoDetails';
 import TheNavbar from './TheNavbar';
