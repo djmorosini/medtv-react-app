@@ -7,9 +7,9 @@ import VideoWatchPage from './VideoWatchPage'
 const Main = () => (
   <BrowserRouter>
     <Switch>
-      <Route exact path='/' component={Homepage}/>
-      <Route exact path='/video/:id' component={VideoWatchPage}/>
-      <Route path='/videos' component={FullListPage}/>
+      <Route name='home' exact path='/' component={Homepage}/>
+      <Route name='watch-page' exact path='/video/:id' component={VideoWatchPage}/>
+      <Route name='list-page' path='/videos' component={FullListPage}/>
     </Switch>
   </BrowserRouter>
 )
