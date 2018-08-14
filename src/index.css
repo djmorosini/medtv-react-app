@@ -93,8 +93,8 @@ body {
 #the-list .card {
   margin-left: 20px;
   margin-bottom: 20px;
-  overflow: auto;
-  height: 400px;
+  overflow: hidden;
+  height: 450px;
 }
 .footer {
   display: block;

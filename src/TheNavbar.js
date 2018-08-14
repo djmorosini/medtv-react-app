@@ -12,8 +12,8 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  InputGroupAddon, InputGroupText, InputGroup, Input,
-  Container, Row, Col
+  InputGroupAddon, InputGroup, Input,
+  Container
 } from 'reactstrap';
 
 
@@ -45,10 +45,10 @@ export default class TheNavbar extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink active href="#">Videos</NavLink>
+                <NavLink href="/videos">Videos</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#">Contribute</NavLink>
+                <NavLink href="404.html">Contribute</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>

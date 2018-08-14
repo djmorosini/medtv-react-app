@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import {
     Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink,
-    Collapse, Button, CardBody, Card, Input
+    Collapse
 } from 'reactstrap';
 import VideoList from './VideoList';
 
