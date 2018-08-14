@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import VideoPlayer from './VideoPlayer';
 import logo from './logo.svg';
-import VideoDetails from './VideoDetails';
 import TheNavbar from './TheNavbar';
 import TheCarousel from './TheCarousel';
 import './App.css';
@@ -17,8 +16,6 @@ class App extends Component {
       <Fragment>
         <TheNavbar />
         <VideoPlayer />
-        <VideoDetails />
-        <TrendingVideos />
         <TheFooter />
       </Fragment>
     );

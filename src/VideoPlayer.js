@@ -1,6 +1,7 @@
 import React from 'react';
 import { Player, ControlBar } from 'video-react';
 import 'video-react/dist/video-react.css'; // import css
+import VideoDetails from './VideoDetails';
 
 export default class VideoPlayer extends React.Component {
 	constructor(props) {
@@ -43,6 +44,7 @@ export default class VideoPlayer extends React.Component {
 						<source src="https://s3.us-east-2.amazonaws.com/medtvvideos/MedTV_vid1.m4v" />
 						<ControlBar autoHide={false} />
 					</Player>
+					<VideoDetails />
 				</div>
 			);
 		}
