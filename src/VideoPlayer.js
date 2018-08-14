@@ -38,7 +38,7 @@ export default class VideoPlayer extends React.Component {
 			return <div>Loading...</div>;
 		} else {
 			return (
-				<div id="the-list" className="d-flex flex-wrap col-lg-9 col-sm-9">
+				<div className="d-flex flex-wrap col-lg-9 col-sm-9">
 					<Player>
 						<source src="https://s3.us-east-2.amazonaws.com/medtvvideos/CE_Video_1534114276315.mp4" />
 						<ControlBar autoHide={false} />

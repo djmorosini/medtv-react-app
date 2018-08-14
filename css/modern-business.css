@@ -48,3 +48,7 @@ body {
 .portfolio-item {
   margin-bottom: 30px;
 }
+
+#wrapper {
+  margin-top: 50px;
+}
