@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import {
   Carousel,
   CarouselItem,
@@ -6,6 +6,7 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
+import TrendingVideos from './TrendingVideos';
 
 const items = [
   {
@@ -88,19 +89,22 @@ export default class TheCarousel extends Component {
     });
 
     return (
-      <div id='the-carousel'>
-        <Carousel
-          ride='carousel' 
-          activeIndex={activeIndex}
-          next={this.next}
-          previous={this.previous}
-        >
-          <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
-          {slides}
-          <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-          <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
-        </Carousel>
-      </div>
+      <Fragment>
+        <div id='the-carousel'>
+          <Carousel
+            ride='carousel'
+            activeIndex={activeIndex}
+            next={this.next}
+            previous={this.previous}
+          >
+            <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+            {slides}
+            <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
+            <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+          </Carousel>
+        </div>
+        <TrendingVideos />
+      </Fragment>
     );
   }
 }
