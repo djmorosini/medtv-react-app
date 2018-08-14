@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { Player, ControlBar } from 'video-react';
 import 'video-react/dist/video-react.css'; // import css
 import VideoDetails from './VideoDetails';
