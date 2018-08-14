@@ -3,6 +3,7 @@ import {
     Card, CardImg, CardText, CardBody, Pagination, PaginationItem, PaginationLink,
     CardTitle
 } from 'reactstrap';
+import { Link } from 'react-router-dom'
 
 export default class VideoList extends React.Component {
     constructor(props) {
@@ -63,15 +64,15 @@ export default class VideoList extends React.Component {
                         tag="div"
                         key={video.id}
                     >
-                        <a href='/video/2f7beb10-9fd9-11e8-920a-a77773504cc3'>
+                        <Link to='/video/2f7beb10-9fd9-11e8-920a-a77773504cc3'>
                             <CardImg width="100%" src={video.vid_thumbnail_uri} alt="Video thumbnail"
                                 height={200}
                             />
-                        </a>
+                        </Link>
                         <CardBody>
-                            <a href='#'>
+                            <Link to='/video/2f7beb10-9fd9-11e8-920a-a77773504cc3'>
                                 <CardTitle>{video.title}</CardTitle>
-                            </a>
+                            </Link>
                             <CardText>{video.description}</CardText>
                         </CardBody>
                     </Card>
@@ -83,7 +84,9 @@ export default class VideoList extends React.Component {
                     <div id='the-list' className='d-flex flex-wrap col-lg-12 col-md-12 col-sm-12 container-fluid'>
                         {theList}
                     </div>
-                    <ChangePage />
+                    <div className='d-flex justify-content-center'>
+                        <ChangePage />
+                    </div>
                 </Fragment>
             )
         }
