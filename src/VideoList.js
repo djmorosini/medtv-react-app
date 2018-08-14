@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import {
-    Card, CardImg, CardText, CardBody, CardLink, CardDeck,
+    Card, CardImg, CardText, CardBody, CardLink, CardDeck, Pagination, PaginationItem, PaginationLink,
     CardTitle, CardSubtitle
 } from 'reactstrap';
 
@@ -59,7 +59,7 @@ export default class VideoList extends React.Component {
             const theList = videos.map((video) => {
                 return (
 
-                    <Card className='h-100 col-lg-3 col-md-5 col-sm-12'
+                    <Card className='col-lg-3 col-md-5 col-sm-12'
                         tag="div"
                         key={video.id}
                     >
@@ -79,10 +79,53 @@ export default class VideoList extends React.Component {
             });
 
             return (
-                <div id='the-list' className='d-flex flex-wrap col-lg-12 col-md-12 col-sm-12 container-fluid'>
+                <Fragment>
+                    <div id='the-list' className='d-flex flex-wrap col-lg-12 col-md-12 col-sm-12 container-fluid'>
                         {theList}
-                </div>
+                    </div>
+                    <ChangePage />
+                </Fragment>
             )
         }
+    }
+}
+
+class ChangePage extends React.Component {
+    render() {
+        return (
+            <Pagination aria-label="Page navigation example">
+                <PaginationItem disabled>
+                    <PaginationLink previous href="#" />
+                </PaginationItem>
+                <PaginationItem active>
+                    <PaginationLink href="#">
+                        1
+          </PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                    <PaginationLink href="#">
+                        2
+          </PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                    <PaginationLink href="#">
+                        3
+          </PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                    <PaginationLink href="#">
+                        4
+          </PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                    <PaginationLink href="#">
+                        5
+          </PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                    <PaginationLink next href="#" />
+                </PaginationItem>
+            </Pagination>
+        );
     }
 }

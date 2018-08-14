@@ -12,7 +12,7 @@ export default class VideoDetails extends React.Component {
 	}
 
 	componentDidMount() {
-		fetch('https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos/27620c20-9cb9-11e8-b2ad-d524ebffd498')
+		fetch('https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos/2f7beb10-9fd9-11e8-920a-a77773504cc3')
 			.then((res) => res.json())
 			.then(
 				(result) => {

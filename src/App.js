@@ -16,7 +16,9 @@ class App extends Component {
     return (
       <Fragment>
         <TheNavbar />
-        <Sidebar />
+        <VideoPlayer />
+        <VideoDetails />
+        <TrendingVideos />
         <TheFooter />
       </Fragment>
     );
