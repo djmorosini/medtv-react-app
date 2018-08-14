@@ -5,7 +5,7 @@ body {
 }
 #filter-sidebar {
   margin-left: 20px;
-  width: 800px;
+  width: 90%;
 }
 .category-title {
   color: blue;
@@ -13,10 +13,9 @@ body {
   cursor: pointer;
 }
 #side-nav {
-  margin-top: 30px;
+  margin-top: 100px;
   width: fit-content;
   position: absolute;
-
 }
 .sub-title {
   margin-left: 20px;
@@ -85,11 +84,17 @@ body {
 #the-list {
   margin-top: 50px;
   margin-left: 200px;
+  width: 100%;
 }
 #video-header {
   margin-top: 70px;
   margin-left: 20px;
 }
 #the-list .card {
-  width: 800px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.footer {
+  display: block;
+  width: 100%;
 }

@@ -66,7 +66,7 @@ export default class TrendingVideos extends React.Component {
                         tag="div"
                         key={video.id}
                     >    
-                        <a href='#'><CardImg top width="100%" src={video.vid_thumbnail_uri} alt="Video thumbnail" /></a>
+                        <a href='#'><CardImg top width="100%" height={200} src={video.vid_thumbnail_uri} alt="Video thumbnail" /></a>
                         <CardBody>
                             <a href='#'><CardTitle>{video.title}</CardTitle></a>
                             <CardText>{video.description}</CardText>
