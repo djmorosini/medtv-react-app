@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import {
-    Card, CardImg, CardText, CardBody, CardLink, CardDeck, Pagination, PaginationItem, PaginationLink,
-    CardTitle, CardSubtitle
+    Card, CardImg, CardText, CardBody, Pagination, PaginationItem, PaginationLink,
+    CardTitle
 } from 'reactstrap';
 
 export default class VideoList extends React.Component {
@@ -63,7 +63,7 @@ export default class VideoList extends React.Component {
                         tag="div"
                         key={video.id}
                     >
-                        <a href='#'>
+                        <a href='/video/2f7beb10-9fd9-11e8-920a-a77773504cc3'>
                             <CardImg width="100%" src={video.vid_thumbnail_uri} alt="Video thumbnail"
                                 height={200}
                             />
