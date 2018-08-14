@@ -4,7 +4,7 @@ import {
     Collapse
 } from 'reactstrap';
 import VideoList from './VideoList';
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import VideoListBreadCrumb from './ListBreadcrumb'
 
 export default class Sidebar extends Component {
