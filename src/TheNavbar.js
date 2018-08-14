@@ -41,12 +41,12 @@ export default class TheNavbar extends React.Component {
 
       <Navbar fixed="top" className="bg-primary" dark expand="lg">
         <Container>
-        <Link to="/"><NavbarBrand>MedTV</NavbarBrand></Link>
+        <NavbarBrand><Link className='the-logo' to="/">MedTV</Link></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <Link to="/videos">Videos</Link>
+                <Link className='nav-links' to="/videos">Videos</Link>
               </NavItem>
               <NavItem>
                 <NavLink href="404.html">Contribute</NavLink>
