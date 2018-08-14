@@ -6,6 +6,7 @@ import TheNavbar from './TheNavbar';
 import TheCarousel from './TheCarousel';
 import './App.css';
 import TrendingVideos from './TrendingVideos';
+import Sidebar from './Sidebar'
 import TheFooter from './TheFooter';
 
 class App extends Component {
@@ -14,11 +15,9 @@ class App extends Component {
 
     return (
       <Fragment>
-        <VideoPlayer />
-        {/* <TheNavbar />
-        <TheCarousel />
-        <TrendingVideos />
-        <TheFooter /> */}
+        <TheNavbar />
+        <Sidebar />
+        <TheFooter />
       </Fragment>
     );
   }
