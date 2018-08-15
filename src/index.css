@@ -22,7 +22,6 @@ body {
 }
 #filter-top {
   margin-left: 400px;
-  margin-right: 200px;
   width: 500px;
 }
 .dropdown button {
@@ -83,7 +82,7 @@ body {
 }
 #the-list {
   margin-top: 50px;
-  margin-left: 200px;
+  margin-left: 220px;
   width: 100%;
 }
 #video-header {
@@ -117,6 +116,7 @@ body {
   position: relative;
   top: 8px;
   right: 8px;
+  
 }
 .nav-links:hover {
   color: white;
@@ -131,4 +131,28 @@ body {
 .the-logo:hover {
   color: white;
   text-decoration: none;
+}
+@media (max-width: 991px){
+  .nav-links {
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+  .the-logo {
+    margin-bottom: 10px;
+  }
+  #filter-top {
+    margin-left: 400px;
+    width: 500px;
+  }
+  .footer {
+    display: block;
+    width: 100%;
+  }
+}
+@media only screen and (max-device-width: 480px){
+  #filter-top {
+    margin-left: 100px;
+    width: 500px;
+  }
 }

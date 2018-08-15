@@ -42,7 +42,7 @@ export default class VideoPlayer extends Component {
 			return (
 				<div id= "detailWrapper" className= "d-flex flex-wrap">
 					<div className="col-lg-8 col-sm-8">
-						<Player fluid={false} width={900} height={400}>
+						<Player fluid={false} width='100%' height={400}>
 							<source src="https://s3.us-east-2.amazonaws.com/medtvvideos/MedTV_vid1.m4v" />
 							<BigPlayButton position='center' />
 							<ControlBar autoHide={false} />
