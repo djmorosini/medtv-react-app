@@ -8,7 +8,7 @@ body {
   width: 90%;
 }
 .category-title {
-  color: blue;
+  color: #004E64;
   margin: 10px 0 10px 20px;
   cursor: pointer;
   
@@ -20,6 +20,11 @@ body {
 }
 .sub-title {
   margin-left: 20px;
+  color: #259E74;
+}
+.sub-title:hover {
+  margin-left: 20px;
+  color: #022F40;
 }
 #filter-top {
   margin-left: 400px;
@@ -33,6 +38,14 @@ body {
 }
 .carousel-image-holder {
   height: 500px;
+}
+.card-img-top {
+  margin-top: 14px;
+  border-radius: 0;
+}
+.card-img {
+  margin-top: 14px;
+  border-radius: 0;
 }
 .custom-tag {
   max-width: 100%;
@@ -63,7 +76,7 @@ body {
 }
 
 .carousel-item:nth-child(2) .carousel-caption {
-  color: black;
+  color: #022F40;
   border-radius: 5%;
   text-shadow: 1px 1px 0px white,
     1px 1px 10px rgba(0, 0, 0, 0.15),
@@ -71,8 +84,9 @@ body {
     1px 1px 20px rgba(0, 0, 0, 0.1);
 }
 
-#trendTitle {
+.trendTitle {
   margin: 10px 0 10px 20px; 
+  color: #A8201A;
 }
 
 .trendVid {
@@ -80,7 +94,12 @@ body {
 }
 
 .card-title {
+  color: #A8201A;
   margin: 10px 0 10px 0;
+}
+.card-title:hover {
+  color: #004E64;
+  text-decoration: none;
 }
 #the-list {
   margin-top: 50px;
@@ -88,8 +107,20 @@ body {
   width: 100%;
 }
 #video-header {
-  margin-top: 70px;
-  margin-left: 20px;
+  margin-top: 80px;
+  margin-left: 40px;
+}
+#home-breadcrumb a {
+  color: #004E64;
+}
+#home-breadcrumb a:hover {
+  color: #004E64;
+}
+.breadcrumb {
+  background-color: lightgray;
+}
+h5 {
+  color: #A8201A;
 }
 #the-list .card {
   margin-left: 20px;
@@ -111,6 +142,8 @@ body {
 .footer {
   display: block;
   width: 100%;
+  background-color: #004E64;
+  /* #022F40 */
 }
 
 .nav-links {
@@ -133,6 +166,27 @@ body {
 .the-logo:hover {
   color: white;
   text-decoration: none;
+}
+#toplevel-nav {
+  background-color: #004E64;
+}
+.nav-go {
+  background-color: #259E74;
+}
+.nav-go:hover {
+  background-color: #022F40;
+}
+.filter-icons {
+  background-color: #004E64;
+}
+.filter-icons:hover {
+  background-color: #022F40;
+}
+.filter-icons:active {
+  background-color: #022F40;
+}
+.page-link {
+  color: #022F40;
 }
 @media (max-width: 991px){
   .nav-links {

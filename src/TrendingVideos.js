@@ -79,7 +79,7 @@ export default class TrendingVideos extends React.Component {
 
             return (
                 <Fragment>
-                    <h1 id='trendTitle'>Trending Videos</h1>
+                    <h1 className='trendTitle'>Trending Videos</h1>
                     <div className='trendVid d-flex flex-wrap col-lg-12 col-sm-12'>
                         <CardDeck>
                             {theList}
