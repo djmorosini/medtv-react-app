@@ -38,7 +38,7 @@ export default class TheNavbar extends React.Component {
 
     return (
 
-      <Navbar fixed="top" className="bg-primary" dark expand="lg">
+      <Navbar fixed="top" id='toplevel-nav' dark expand="lg">
         <Container>
         <Link className='the-logo' to="/">MedTV</Link>
           <NavbarToggler onClick={this.toggle} />
@@ -56,7 +56,7 @@ export default class TheNavbar extends React.Component {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    Head
+                    Cranial
                   </DropdownItem>
                   <DropdownItem>
                     Appendages
@@ -76,7 +76,7 @@ export default class TheNavbar extends React.Component {
                 <InputGroup>
                   <Input type="text" className="form-control" placeholder="Search for..." />
                   <InputGroupAddon addonType="append" className="input-group-btn">
-                    <Button className="nav-go btn-success" type="button">Go!</Button>
+                    <Button className="nav-go" type="button">Go!</Button>
                   </InputGroupAddon>
                 </InputGroup>
               </NavItem>
