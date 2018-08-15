@@ -1,9 +1,11 @@
 import React from 'react';
 import { Card, CardText, CardBody, CardTitle } from 'reactstrap';
+import {withRouter} from 'react-router-dom';
 
-export default class VideoDetails extends React.Component {
+class VideoDetails extends React.Component {
 	constructor(props) {
 		super(props);
+		this.routeParam = props.match.params.id;
 		this.state = {
 			error: null,
 			isLoaded: false,
@@ -12,7 +14,7 @@ export default class VideoDetails extends React.Component {
 	}
 
 	componentDidMount() {
-		fetch('https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos/2f7beb10-9fd9-11e8-920a-a77773504cc3')
+		fetch(`https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos/${this.routeParam}`)
 			.then((res) => res.json())
 			.then(
 				(result) => {
@@ -33,7 +35,7 @@ export default class VideoDetails extends React.Component {
 
 	render() {
 		let video = this.state.video;
-		if (!this.state.video) {
+		if (!video) {
 			return <div>Loading...</div>;
 		} else {
 			return (
@@ -57,3 +59,5 @@ export default class VideoDetails extends React.Component {
 		}
 	}
 }
+
+export default withRouter(VideoDetails);

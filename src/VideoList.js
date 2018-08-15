@@ -81,7 +81,7 @@ export default class VideoList extends React.Component {
 
             return (
                 <Fragment>
-                    <div id='the-list' className='d-flex flex-wrap col-lg-11 col-md-11 col-sm-11 container-fluid'>
+                    <div id='the-list' className='d-flex flex-wrap col-lg-12 col-md-12 col-sm-12 container-fluid'>
                         {theList}
                     </div>
                     <div className='d-flex justify-content-center'>
