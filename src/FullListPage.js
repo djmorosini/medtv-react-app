@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import TheNavbar from './TheNavbar';
-import './App.css';
 import Sidebar from './Sidebar'
 import TheFooter from './TheFooter';
 
