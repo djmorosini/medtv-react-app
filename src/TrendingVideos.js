@@ -62,15 +62,15 @@ export default class TrendingVideos extends React.Component {
 
 
 
-            const theList = videos.slice(0, 3).map((video) => {
+            const theList = videos.slice(3, 6).map((video) => {
                 return (
                     <Card className='h-100 col-lg-4 col-md-6 col-sm-8'
                         tag="div"
                         key={video.id}
                     >
-                        <Link to={{pathname:`/video/${video.id}`}} params={{id:video.id}}><CardImg top width="100%" height={200} src={video.vid_thumbnail_uri} alt="Video thumbnail" /></Link>
+                        <Link onClick='location.reload();' to={{pathname:`/video/${video.id}`}} params={{id:video.id}}><CardImg top width="100%" height={200} src={video.vid_thumbnail_uri} alt="Video thumbnail" /></Link>
                         <CardBody>
-                            <Link to={{pathname:`/video/${video.id}`}} params={{id:video.id}}><CardTitle>{video.title}</CardTitle></Link>
+                            <Link onClick='location.reload();' to={{pathname:`/video/${video.id}`}} params={{id:video.id}}><CardTitle>{video.title}</CardTitle></Link>
                             <CardText>{video.description}</CardText>
                         </CardBody>
                     </Card>

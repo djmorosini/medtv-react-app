@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 #filter-sidebar {
   margin-left: 20px;
@@ -11,6 +11,7 @@ body {
   color: blue;
   margin: 10px 0 10px 20px;
   cursor: pointer;
+  
 }
 #side-nav {
   margin-top: 100px;
@@ -58,6 +59,7 @@ body {
 }
 #the-carousel {
   margin-top: 30px;
+  
 }
 
 .carousel-item:nth-child(2) .carousel-caption {
