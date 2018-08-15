@@ -48,7 +48,7 @@ export default class TheNavbar extends React.Component {
                 <Link className='nav-links' to="/videos">Videos</Link>
               </NavItem>
               <NavItem>
-                <NavLink href="404.html">Contribute</NavLink>
+                <NavLink href="/404.html">Contribute</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
