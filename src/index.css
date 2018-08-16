@@ -41,6 +41,9 @@ body {
 .carousel-image-holder {
   height: 500px;
 }
+#the-list .col-sm-12 {
+  max-width: 60%;
+}
 .card-img-top {
   margin-top: 14px;
   border-radius: 0;
@@ -52,16 +55,14 @@ body {
 .custom-tag {
   max-width: 100%;
   height: 500px;
-  /* background: url(./images/oneDoctor.jpg) no-repeat center center; */
 }
 .carousel-item:first-child {
-  /* background-image: url(./images/oneDoctor.jpg) no-repeat center center; */
   background: url(./images/piron-guillaume-492639-unsplash.jpg) no-repeat center center;
   background-size: cover;
   vertical-align: middle;
 }
 .carousel-item:nth-child(2) {
-  background: url(./images/jesse-orrico-60373-unsplash.png) no-repeat center center;
+  background: url(./images/jesse-orrico-60373-unsplash-min.png) no-repeat center center;
   background-size: cover;
 }
 .carousel-item:nth-child(3) {
@@ -74,7 +75,6 @@ body {
 }
 #the-carousel {
   margin-top: 30px;
-  
 }
 .carousel-item:first-child .carousel-caption {
   text-shadow: 1px 1px 0px black,
@@ -170,7 +170,6 @@ body {
 .footer {
   width: 100%;
   background-color: #004E64;
-  /* #022F40 */
 }
 
 .nav-links {
@@ -226,6 +225,9 @@ body {
 .bread-bg {
   width: 98%;
   margin: auto;
+}
+.card {
+  max-width: 70%;
 }
 @media (max-width: 991px){
   .nav-links {
