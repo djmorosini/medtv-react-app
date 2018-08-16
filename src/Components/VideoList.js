@@ -71,7 +71,7 @@ export default class VideoList extends React.Component {
                         </Link>
                         <CardBody>
                             <Link to={{pathname:`/video/${video.id}`}} params={{id:video.id}}>
-                                <CardTitle id='vidDetailTitle'>{video.title}</CardTitle>
+                                <CardTitle>{video.title}</CardTitle>
                             </Link>
                             <CardText>{video.description}</CardText>
                         </CardBody>
