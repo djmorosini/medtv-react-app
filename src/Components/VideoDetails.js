@@ -42,7 +42,7 @@ class VideoDetails extends React.Component {
 				<div className="d-flex flex-wrap col-lg-4 col-sm-4">
 					<Card className="h-100 col-lg-12 col-md-12 col-sm-12" tag="div" key={video.id}>
 						<CardBody>
-							<CardTitle><span id='vidDetailTitle'>{video.title}</span></CardTitle>
+							<CardTitle id='vidDetailTitle'><span>{video.title}</span></CardTitle>
 							<CardText>{video.description}</CardText>
 							<CardText><span className='strong'>Author:</span>  {video.author}</CardText>
 							<CardText><span className='strong'>Gender</span>: {video.patient.gender}</CardText>

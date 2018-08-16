@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Player, ControlBar } from 'video-react';
 import 'video-react/dist/video-react.css'; // import css
 import VideoDetails from './VideoDetails';
-import BigPlayButton from '../node_modules/video-react/lib/components/BigPlayButton';
+import BigPlayButton from 'video-react/lib/components/BigPlayButton';
 import {withRouter} from 'react-router-dom';
 
 class VideoPlayer extends Component {
@@ -41,7 +41,7 @@ class VideoPlayer extends Component {
 		let video = this.state.video;
 		let videoLink = video.vid_uri
 		if (!video || !videoLink) {
-			return <div>Loading...</div>;
+			return <div className='loading-div'>Loading...</div>;
 		} else {
 			return (
 				<div id= "detailWrapper" className= "d-flex flex-wrap">

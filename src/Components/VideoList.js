@@ -54,7 +54,7 @@ export default class VideoList extends React.Component {
         if (error) {
             return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
-            return <div>Loading...</div>;
+            return <div className='loading-div'>Loading...</div>;
         } else {
 
             const theList = videos.slice(0,9).map((video) => {
@@ -81,7 +81,7 @@ export default class VideoList extends React.Component {
 
             return (
                 <Fragment>
-                    <div id='the-list' className='d-flex flex-wrap col-lg-12 col-md-12 col-sm-12 container-fluid'>
+                    <div id='the-list' className='d-flex flex-wrap col-lg-11 col-md-11 col-sm-11'>
                         {theList}
                     </div>
                     <div className='d-flex justify-content-center'>

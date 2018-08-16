@@ -6,7 +6,6 @@ import {
   NavbarToggler,
   Nav,
   NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -14,8 +13,9 @@ import {
   InputGroupAddon, InputGroup, Input,
   Container
 } from 'reactstrap';
-import { Link } from 'react-router-dom'
-import Picture from './images/logo_transparent_fullsize.png'
+import { Link, NavLink } from 'react-router-dom'
+
+import Picture from '../images/logo_transparent_small(1).png'
 
 
 export default class TheNavbar extends React.Component {
@@ -39,17 +39,17 @@ export default class TheNavbar extends React.Component {
 
     return (
 
-      <Navbar fixed="top" className="bg-primary" dark expand="lg">
+      <Navbar fixed="top" id='toplevel-nav' dark expand="lg">
         <Container>
-        <Link className='the-logo' to="/"><img src={Picture} width="100px" height="40px"/></Link>
+        <Link className='the-logo' to="/"><img alt='MedTV logo' height={40} src={Picture}/></Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <Link className='nav-links' to="/videos">Videos</Link>
+                <NavLink className='nav-links' to="/videos"><div className='nav-item-container'>Videos</div></NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/404.html">Contribute</NavLink>
+                <NavLink className='nav-links nav2' to="/404"><div className='nav-item-container contribute'>Contribute</div></NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
@@ -57,7 +57,7 @@ export default class TheNavbar extends React.Component {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    Head
+                    Cranial
                   </DropdownItem>
                   <DropdownItem>
                     Appendages
@@ -77,7 +77,7 @@ export default class TheNavbar extends React.Component {
                 <InputGroup>
                   <Input type="text" className="form-control" placeholder="Search for..." />
                   <InputGroupAddon addonType="append" className="input-group-btn">
-                    <Button className="nav-go btn-success" type="button">Go!</Button>
+                    <Button className="nav-go" type="button">Go!</Button>
                   </InputGroupAddon>
                 </InputGroup>
               </NavItem>

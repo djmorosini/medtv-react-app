@@ -48,12 +48,12 @@ export default class Sidebar extends Component {
     render() {
         return (
             <Fragment>
-                <h2 id="video-header">Video List Page</h2>
+                <h1 className='trendTitle' id="video-header">Video List Page</h1>
                 <VideoListBreadCrumb />
                 <div id='filter-sidebar'>
                     <Nav id='filter-top'>
                         <Dropdown isOpen={this.state.dropdownOpen1} toggle={this.drop1}>
-                            <DropdownToggle className="bg-secondary" caret>
+                            <DropdownToggle className="filter-icons" caret>
                                 Age
                         </DropdownToggle>
                             <DropdownMenu right>
@@ -62,7 +62,7 @@ export default class Sidebar extends Component {
                             </DropdownMenu>
                         </Dropdown>
                         <Dropdown isOpen={this.state.dropdownOpen2} toggle={this.drop2}>
-                            <DropdownToggle className="bg-secondary" caret>
+                            <DropdownToggle className="filter-icons" caret>
                                 Gender
                         </DropdownToggle>
                             <DropdownMenu right>
@@ -71,7 +71,7 @@ export default class Sidebar extends Component {
                             </DropdownMenu>
                         </Dropdown>
                         <Dropdown isOpen={this.state.dropdownOpen3} toggle={this.drop3}>
-                            <DropdownToggle className="bg-secondary" caret>
+                            <DropdownToggle className="filter-icons" caret>
                                 Duration
                         </DropdownToggle>
                             <DropdownMenu right>
@@ -80,7 +80,7 @@ export default class Sidebar extends Component {
                             </DropdownMenu>
                         </Dropdown>
                         <Dropdown isOpen={this.state.dropdownOpen4} toggle={this.drop4}>
-                            <DropdownToggle className="bg-secondary" caret>
+                            <DropdownToggle className="filter-icons" caret>
                                 Location
                         </DropdownToggle>
                             <DropdownMenu right>
@@ -90,7 +90,7 @@ export default class Sidebar extends Component {
                         </Dropdown>
                     </Nav>
                     <Nav vertical id='side-nav'>
-                        <h5>Categories</h5>
+                        <h4 id='side-nav-title'>Categories</h4>
                         <NavItem className='category-title' onClick={this.toggle1}>Cardiology</NavItem>
                         <Collapse isOpen={this.state.collapse1}>
                             <NavItem>
