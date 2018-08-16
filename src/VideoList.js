@@ -57,20 +57,20 @@ export default class VideoList extends React.Component {
             return <div>Loading...</div>;
         } else {
 
-            const theList = videos.map((video) => {
+            const theList = videos.slice(0,9).map((video) => {
                 return (
-
+                    
                     <Card className='col-lg-3 col-md-5 col-sm-12'
                         tag="div"
                         key={video.id}
                     >
-                        <Link to='/video/2f7beb10-9fd9-11e8-920a-a77773504cc3'>
+                        <Link to={{pathname:`/video/${video.id}`}} params={{id:video.id}}>
                             <CardImg width="100%" src={video.vid_thumbnail_uri} alt="Video thumbnail"
                                 height={200}
                             />
                         </Link>
                         <CardBody>
-                            <Link to='/video/2f7beb10-9fd9-11e8-920a-a77773504cc3'>
+                            <Link to={{pathname:`/video/${video.id}`}} params={{id:video.id}}>
                                 <CardTitle>{video.title}</CardTitle>
                             </Link>
                             <CardText>{video.description}</CardText>

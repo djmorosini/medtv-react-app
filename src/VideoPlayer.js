@@ -1,12 +1,14 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { Player, ControlBar } from 'video-react';
 import 'video-react/dist/video-react.css'; // import css
 import VideoDetails from './VideoDetails';
 import BigPlayButton from '../node_modules/video-react/lib/components/BigPlayButton';
+import {withRouter} from 'react-router-dom';
 
-export default class VideoPlayer extends Component {
+class VideoPlayer extends Component {
 	constructor(props) {
 		super(props);
+		this.routeParam = props.match.params.id;
 		this.state = {
 			error: null,
 			isLoaded: false,
@@ -15,7 +17,8 @@ export default class VideoPlayer extends Component {
 	}
 
 	componentDidMount() {
-		fetch('https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos/27620c20-9cb9-11e8-b2ad-d524ebffd498')
+		console.log(this.routeParam)
+		fetch(`https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos/${this.routeParam}`)
 			.then((res) => res.json())
 			.then(
 				(result) => {
@@ -36,14 +39,15 @@ export default class VideoPlayer extends Component {
 
 	render() {
 		let video = this.state.video;
-		if (!video) {
+		let videoLink = video.vid_uri
+		if (!video || !videoLink) {
 			return <div>Loading...</div>;
 		} else {
 			return (
 				<div id= "detailWrapper" className= "d-flex flex-wrap">
 					<div className="col-lg-8 col-sm-8">
-						<Player fluid={false} width={900} height={400}>
-							<source src="https://s3.us-east-2.amazonaws.com/medtvvideos/MedTV_vid1.m4v" />
+						<Player fluid={false} width='100%' height={400}>
+							<source src={videoLink} />
 							<BigPlayButton position='center' />
 							<ControlBar autoHide={false} />
 							
@@ -55,3 +59,5 @@ export default class VideoPlayer extends Component {
 		}
 	}
 }
+
+export default withRouter(VideoPlayer);

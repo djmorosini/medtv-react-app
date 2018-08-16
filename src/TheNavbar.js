@@ -4,7 +4,6 @@ import {
   Button,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
   NavLink,
@@ -16,6 +15,7 @@ import {
   Container
 } from 'reactstrap';
 import { Link } from 'react-router-dom'
+import Picture from './images/logo_transparent_fullsize.png'
 
 
 export default class TheNavbar extends React.Component {
@@ -41,7 +41,7 @@ export default class TheNavbar extends React.Component {
 
       <Navbar fixed="top" className="bg-primary" dark expand="lg">
         <Container>
-        <NavbarBrand><Link className='the-logo' to="/">MedTV</Link></NavbarBrand>
+        <Link className='the-logo' to="/"><img src={Picture} width="100px" height="40px"/></Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -49,7 +49,7 @@ export default class TheNavbar extends React.Component {
                 <Link className='nav-links' to="/videos">Videos</Link>
               </NavItem>
               <NavItem>
-                <NavLink href="404.html">Contribute</NavLink>
+                <NavLink href="/404.html">Contribute</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>

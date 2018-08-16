@@ -68,9 +68,9 @@ export default class TrendingVideos extends React.Component {
                         tag="div"
                         key={video.id}
                     >
-                        <Link to='/video/2f7beb10-9fd9-11e8-920a-a77773504cc3'><CardImg top width="100%" height={200} src={video.vid_thumbnail_uri} alt="Video thumbnail" /></Link>
+                        <Link to={{pathname:`/video/${video.id}`}} params={{id:video.id}}><CardImg top width="100%" height={200} src={video.vid_thumbnail_uri} alt="Video thumbnail" /></Link>
                         <CardBody>
-                            <Link to='/video/2f7beb10-9fd9-11e8-920a-a77773504cc3'><CardTitle>{video.title}</CardTitle></Link>
+                            <Link to={{pathname:`/video/${video.id}`}} params={{id:video.id}}><CardTitle>{video.title}</CardTitle></Link>
                             <CardText>{video.description}</CardText>
                         </CardBody>
                     </Card>

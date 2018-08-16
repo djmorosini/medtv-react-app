@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import VideoPlayer from './VideoPlayer';
 import TheNavbar from './TheNavbar';
-import './App.css';
 import TrendingVideos from './TrendingVideos';
 import TheFooter from './TheFooter';
 
