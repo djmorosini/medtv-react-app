@@ -226,6 +226,9 @@ body {
   width: 98%;
   margin: auto;
 }
+.card {
+  max-width: 70%;
+}
 @media (max-width: 991px){
   .nav-links {
     position: relative;
