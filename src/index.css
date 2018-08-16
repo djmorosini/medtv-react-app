@@ -15,16 +15,17 @@ body {
 }
 #side-nav {
   margin-top: 100px;
+  margin-left: 10px;
   width: fit-content;
   position: absolute;
 }
 .sub-title {
   margin-left: 20px;
-  color: #259E74;
+  color: #A8201A;
 }
 .sub-title:hover {
   margin-left: 20px;
-  color: #022F40;
+  color: #1689AF;
 }
 #filter-top {
   margin-left: 400px;
@@ -74,7 +75,12 @@ body {
   margin-top: 30px;
   
 }
-
+.carousel-item:first-child .carousel-caption {
+  text-shadow: 1px 1px 0px black,
+    1px 1px 10px rgba(0, 0, 0, 0.15),
+    1px 1px 2px rgba(0, 0, 0, 0.1),
+    1px 1px 20px rgba(0, 0, 0, 0.1);
+}
 .carousel-item:nth-child(2) .carousel-caption {
   color: #022F40;
   border-radius: 5%;
@@ -83,7 +89,18 @@ body {
     1px 1px 2px rgba(0, 0, 0, 0.1),
     1px 1px 20px rgba(0, 0, 0, 0.1);
 }
-
+.carousel-item:nth-child(3) .carousel-caption {
+  text-shadow: 1px 1px 0px black,
+    1px 1px 10px rgba(0, 0, 0, 0.15),
+    1px 1px 2px rgba(0, 0, 0, 0.1),
+    1px 1px 20px rgba(0, 0, 0, 0.1);
+}
+.carousel-item:nth-child(4) .carousel-caption {
+  text-shadow: 1px 1px 0px black,
+    1px 1px 10px rgba(0, 0, 0, 0.15),
+    1px 1px 2px rgba(0, 0, 0, 0.1),
+    1px 1px 20px rgba(0, 0, 0, 0.1);
+}
 .trendTitle {
   margin: 10px 0 10px 20px; 
   color: #A8201A;
@@ -114,13 +131,15 @@ body {
   color: #004E64;
 }
 #home-breadcrumb a:hover {
-  color: #004E64;
+  color: rgb(37, 158, 73);
 }
 .breadcrumb {
   background-color: lightgray;
 }
-h5 {
-  color: #A8201A;
+#side-nav-title {
+  color: rgb(94, 93, 93);
+  text-decoration: underline;
+  margin-bottom: 20px;
 }
 #the-list .card {
   margin-left: 20px;
@@ -140,7 +159,6 @@ h5 {
   font-weight: 1000;
 }
 .footer {
-  display: block;
   width: 100%;
   background-color: #004E64;
   /* #022F40 */
@@ -152,6 +170,11 @@ h5 {
   top: 8px;
   right: 8px;
   
+}
+.nav-item-container {
+  width: 100%;
+  height: 100%;
+
 }
 .nav-links:hover {
   color: white;
@@ -171,10 +194,10 @@ h5 {
   background-color: #004E64;
 }
 .nav-go {
-  background-color: #259E74;
+  background-color: rgb(37, 158, 73);
 }
 .nav-go:hover {
-  background-color: #022F40;
+  background-color: rgb(41, 233, 99);
 }
 .filter-icons {
   background-color: #004E64;
@@ -188,6 +211,13 @@ h5 {
 .page-link {
   color: #022F40;
 }
+.loading-div {
+  height: 800px;
+}
+#bread-bg {
+  width: 95%;
+  margin: auto;
+}
 @media (max-width: 991px){
   .nav-links {
     position: relative;
@@ -198,12 +228,8 @@ h5 {
     margin-bottom: 10px;
   }
   #filter-top {
-    margin-left: 400px;
+    margin-left: 300px;
     width: 500px;
-  }
-  .footer {
-    display: block;
-    width: 100%;
   }
 }
 @media only screen and (max-device-width: 480px){

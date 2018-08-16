@@ -90,7 +90,7 @@ export default class Sidebar extends Component {
                         </Dropdown>
                     </Nav>
                     <Nav vertical id='side-nav'>
-                        <h5>Categories</h5>
+                        <h4 id='side-nav-title'>Categories</h4>
                         <NavItem className='category-title' onClick={this.toggle1}>Cardiology</NavItem>
                         <Collapse isOpen={this.state.collapse1}>
                             <NavItem>

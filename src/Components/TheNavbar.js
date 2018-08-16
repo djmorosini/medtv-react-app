@@ -15,6 +15,7 @@ import {
   Container
 } from 'reactstrap';
 import { Link } from 'react-router-dom'
+import Picture from '../images/logo_transparent_small (1).png'
 
 
 export default class TheNavbar extends React.Component {
@@ -40,15 +41,15 @@ export default class TheNavbar extends React.Component {
 
       <Navbar fixed="top" id='toplevel-nav' dark expand="lg">
         <Container>
-        <Link className='the-logo' to="/">MedTV</Link>
+        <Link className='the-logo' to="/"><img alt='MedTV logo' src={Picture}/></Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <Link className='nav-links' to="/videos">Videos</Link>
+                <Link className='nav-links' to="/videos"><div className='nav-item-container'>Videos</div></Link>
               </NavItem>
               <NavItem>
-                <NavLink href="/404.html">Contribute</NavLink>
+                <NavLink href="/404">Contribute</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>

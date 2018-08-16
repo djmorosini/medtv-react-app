@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react';
-import VideoPlayer from './VideoPlayer';
-import TheNavbar from './TheNavbar';
-import TrendingVideos from './TrendingVideos';
-import TheFooter from './TheFooter';
+import VideoPlayer from '../Components/VideoPlayer';
+import TheNavbar from '../Components/TheNavbar';
+import TrendingVideos from '../Components/TrendingVideos';
+import TheFooter from '../Components/TheFooter';
 
 class VideoWatchPage extends Component {
 

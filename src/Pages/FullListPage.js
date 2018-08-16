@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import TheNavbar from './TheNavbar';
-import Sidebar from './Sidebar'
-import TheFooter from './TheFooter';
+import TheNavbar from '../Components/TheNavbar';
+import Sidebar from '../Components/Sidebar'
+import TheFooter from '../Components/TheFooter';
 
 class FullListPage extends Component {
 
