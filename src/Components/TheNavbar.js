@@ -6,7 +6,6 @@ import {
   NavbarToggler,
   Nav,
   NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -14,7 +13,8 @@ import {
   InputGroupAddon, InputGroup, Input,
   Container
 } from 'reactstrap';
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+
 import Picture from '../images/logo_transparent_small(1).png'
 
 
@@ -46,10 +46,10 @@ export default class TheNavbar extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <Link className='nav-links' to="/videos"><div className='nav-item-container'>Videos</div></Link>
+                <NavLink className='nav-links' to="/videos"><div className='nav-item-container'>Videos</div></NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/404">Contribute</NavLink>
+                <NavLink className='nav-links nav2' to="/404"><div className='nav-item-container contribute'>Contribute</div></NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>

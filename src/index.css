@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 #filter-sidebar {
   margin-left: 20px;
@@ -21,11 +22,11 @@ body {
 }
 .sub-title {
   margin-left: 20px;
-  color: #A8201A;
+  color: #1689AF;
 }
 .sub-title:hover {
   margin-left: 20px;
-  color: #1689AF;
+  color: rgb(37, 158, 73);
 }
 #filter-top {
   margin-left: 400px;
@@ -103,7 +104,7 @@ body {
 }
 .trendTitle {
   margin: 10px 0 10px 20px; 
-  color: #A8201A;
+  color: #022F40;
 }
 
 .trendVid {
@@ -111,11 +112,15 @@ body {
 }
 
 .card-title {
-  color: #A8201A;
+  color: #1689AF;
   margin: 10px 0 10px 0;
+  font-weight: 700;
 }
 .card-title:hover {
-  color: #004E64;
+  color: rgb(37, 158, 73);
+  text-decoration: none;
+}
+.card-body a {
   text-decoration: none;
 }
 #the-list {
@@ -127,17 +132,21 @@ body {
   margin-top: 80px;
   margin-left: 40px;
 }
-#home-breadcrumb a {
+.home-breadcrumb a {
   color: #004E64;
 }
-#home-breadcrumb a:hover {
+.home-breadcrumb a:hover {
   color: rgb(37, 158, 73);
 }
 .breadcrumb {
   background-color: lightgray;
 }
+#vidDetailTitle:hover {
+  text-decoration: none;
+  color: #1689AF;
+}
 #side-nav-title {
-  color: rgb(94, 93, 93);
+  color: #022F40;
   text-decoration: underline;
   margin-bottom: 20px;
 }
@@ -148,8 +157,8 @@ body {
   height: 450px;
 }
 
-#detailWrapper {
-  margin-top: 80px;
+.watch-breadcrumb {
+  margin-top: 70px;
 }
 
 #vidDetailTitle{
@@ -180,6 +189,13 @@ body {
   color: white;
   text-decoration: none;
 }
+.active {
+  color: white;
+  text-decoration: none;
+}
+.contribute {
+  margin-left: 15px;
+}
 .the-logo {
   margin:0;
 }
@@ -207,8 +223,8 @@ body {
 .loading-div {
   height: 800px;
 }
-#bread-bg {
-  width: 95%;
+.bread-bg {
+  width: 98%;
   margin: auto;
 }
 @media (max-width: 991px){
@@ -217,12 +233,22 @@ body {
     top: 0px;
     left: 0px;
   }
+  .nav2 {
+    position: relative;
+    left: -15px;
+  }
+  .contribute {
+    padding-top: 10px
+  }
   .the-logo {
     margin-bottom: 10px;
   }
   #filter-top {
     margin-left: 300px;
     width: 500px;
+  }
+  .watch-breadcrumb {
+    margin-top: 80px;
   }
 }
 @media only screen and (max-device-width: 480px){

@@ -71,7 +71,7 @@ export default class VideoList extends React.Component {
                         </Link>
                         <CardBody>
                             <Link to={{pathname:`/video/${video.id}`}} params={{id:video.id}}>
-                                <CardTitle>{video.title}</CardTitle>
+                                <CardTitle id='vidDetailTitle'>{video.title}</CardTitle>
                             </Link>
                             <CardText>{video.description}</CardText>
                         </CardBody>
@@ -81,7 +81,7 @@ export default class VideoList extends React.Component {
 
             return (
                 <Fragment>
-                    <div id='the-list' className='d-flex flex-wrap col-lg-11 col-md-11 col-sm-11 container-fluid'>
+                    <div id='the-list' className='d-flex flex-wrap col-lg-11 col-md-11 col-sm-11'>
                         {theList}
                     </div>
                     <div className='d-flex justify-content-center'>
