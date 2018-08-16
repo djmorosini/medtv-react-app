@@ -2,19 +2,19 @@
 
 ### www.medtv.me
 
-The idea is to make it easier for surgeons to learn and improve their skills. Surgeons can learn and practise their craft within a Virtual Reality VR environment.
-The goal of this capstone is to create a web-based experience  for users to see a list of videos. A user can select and play a video.
+The idea is to make it easier for surgeons to learn and improve their skills. Surgeons can learn and practice their craft within a Virtual Reality (VR) environment.
+The goal of this capstone is to create a web-based experience  for users to see a list of videos. A user can select then play a video.
 
 ## Getting Started
 
-* Clone this repo.
+* Clone this repo
 ```
 git clone git@github.com:djmorosini/medtv-react-app.git
 ```
 
 ### Prerequisites
 
-Node js, npm, and built using VSCode
+Node js, npm, and we built it using VSCode
 
 ```
 brew install node
@@ -32,7 +32,7 @@ npm start
 ```
 ## Deployment
 
-Can be deployed to heroku or netlify via linking your Github repo to those accounts. We have deployed it to netlify
+Can be deployed to Heroku or Netlify via linking your Github repo to those accounts. We have deployed it to Netlify.
 
 ## Authors
 
