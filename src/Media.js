@@ -3,9 +3,9 @@ import { Media } from 'reactstrap';
 import AgentSmith from './images/AgentSmith.jpg';
 import Dozer from './images/Dozer.jpg';
 import TheOracle from './images/TheOracle.jpg';
-import Trinity from './images/Trinity.jpg';
-import Morpheus from './images/Morpheus.jpg';
-import Neo from './images/Neo.jpg'
+import Trinity from './images/Trinity1.jpg';
+import Morpheus from './images/Morpheus1.jpg';
+import Neo from './images/Neo1.jpg'
 
 
 
@@ -13,20 +13,20 @@ import Neo from './images/Neo.jpg'
 const Team = () => {
   return (
     <div>
-      <Media>
+      <Media className="d-flex">
         <Media left top href="#">
-          <Media object src={ AgentSmith } alt="Picture of" />
+          <Media object src={ AgentSmith } alt="Picture of Mat" />
         </Media>
         <Media body>
           <Media heading>
             Mat Gilbert
           </Media>
-            Mat is our TA.
+            Mat is committed to taking down the system he was once part of.
             </Media>
       </Media>
-      <Media className="mt-1">
+      <Media className="mt-1 d-flex">
         <Media left middle href="#">
-        <Media object src={ AgentSmith } height="200px" alt="Picture of"/>
+        <Media object src={ TheOracle } alt="Picture of Flo"/>
         </Media>
         <Media body>
           <Media heading>
@@ -35,7 +35,7 @@ const Team = () => {
             Flo is ...
             </Media>
       </Media>
-      <Media className="mt-1">
+      <Media className="mt-1 d-flex">
         <Media left bottom href="#">
           <Media object src={ Neo } alt="Picture of" />
         </Media>
@@ -46,7 +46,7 @@ const Team = () => {
                 Dylan can't stop won't stop.
                 </Media>
       </Media>
-      <Media>
+      <Media className="d-flex">
         <Media left top href="#">
           <Media object src={ Dozer } alt="Picture of" />
         </Media>
@@ -58,7 +58,7 @@ const Team = () => {
             </Media>
       </Media>
       
-      <Media className="mt-1">
+      <Media className="mt-1 d-flex">
         <Media left middle href="#">
         <Media object src={ Trinity } alt="Picture of"/>
         </Media>
@@ -70,7 +70,7 @@ const Team = () => {
             </Media>
       </Media>
      
-      <Media className="mt-1">
+      <Media className="mt-1 d-flex">
         <Media left middle href="#">
         <Media object src={ Morpheus } alt="Picture of"/>
         </Media>

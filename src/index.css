@@ -130,6 +130,17 @@ body {
   margin-top:100px;
 }
 
+.media-object{
+  border-radius:50%;
+  height:100px;
+  width:100px;
+}
+
+.d-flex{
+  flex-direction:row;
+  width:10%;
+}
+
 @media (max-width: 991px){
   .nav-links {
     position: relative;
