@@ -123,15 +123,16 @@ body {
   text-decoration: none;
 }
 .the-logo {
-  color: rgba(255, 255, 255, 0.9);
+  margin:0;
+  /* color: rgba(255, 255, 255, 0.9);
   font-size: 1.4em;
   position: relative;
-  top: 0px;
+  top: 0px; */
 }
-.the-logo:hover {
+/* .the-logo:hover {
   color: white;
-  text-decoration: none;
-}
+  text-decoration: none; 
+} */
 @media (max-width: 991px){
   .nav-links {
     position: relative;
