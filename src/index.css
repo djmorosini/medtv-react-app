@@ -124,15 +124,12 @@ body {
 }
 .the-logo {
   margin:0;
-  /* color: rgba(255, 255, 255, 0.9);
-  font-size: 1.4em;
-  position: relative;
-  top: 0px; */
 }
-/* .the-logo:hover {
-  color: white;
-  text-decoration: none; 
-} */
+
+.media{
+  margin-top:100px;
+}
+
 @media (max-width: 991px){
   .nav-links {
     position: relative;
