@@ -181,14 +181,7 @@ body {
   text-decoration: none;
 }
 .the-logo {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1.4em;
-  position: relative;
-  top: 0px;
-}
-.the-logo:hover {
-  color: white;
-  text-decoration: none;
+  margin:0;
 }
 #toplevel-nav {
   background-color: #004E64;
