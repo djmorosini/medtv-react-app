@@ -60,7 +60,7 @@ export default class VideoList extends React.Component {
             const theList = videos.slice(0,9).map((video) => {
                 return (
                     
-                    <Card className='col-lg-3 col-md-5 col-sm-12'
+                    <Card width={400} className='col-lg-3 col-md-5 col-sm-12'
                         tag="div"
                         key={video.id}
                     >
