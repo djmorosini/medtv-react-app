@@ -1,11 +1,11 @@
 import React from 'react';
 import { Media } from 'reactstrap';
-import AgentSmith from './images/AgentSmith.jpg';
-import Dozer from './images/Dozer.jpg';
-import TheOracle from './images/TheOracle.jpg';
-import Trinity from './images/Trinity1.jpg';
-import Morpheus from './images/Morpheus1.jpg';
-import Neo from './images/Neo1.jpg'
+import AgentSmith from '../images/AgentSmith.jpg';
+import Dozer from '../images/Dozer.jpg';
+import TheOracle from '../images/TheOracle.jpg';
+import Trinity from '../images/Trinity1.jpg';
+import Morpheus from '../images/Morpheus1.jpg';
+import Neo from '../images/Neo1.jpg'
 
 
 
