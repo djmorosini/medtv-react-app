@@ -6,55 +6,42 @@ import {
 import { Link } from 'react-router-dom'
 
 export default class VideoList extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            error: null,
-            isLoaded: false,
-            videos: []
-        };
-    }
 
     componentDidMount() {
         console.log("I mounted it guys!")
-
-        let videos = this.state.videos;
-
+        let videos = this.props.video || []
         if (videos.length === 0) {
-            console.log("Im fetching!")
-            this.allVideos().then((allVideos) => {
-                this.setState({ videos: allVideos })
-            })
+            console.log(this.props.video)
+            this.setState({ videos: this.props.video, isLoaded: true })
+            
         }
     }
 
-    allVideos = () => {
-        console.log("Called all videos")
-        return fetch('https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos')
-            .then((response) => { return response.json() })
-            .then((data) => {
-                this.setState({
-                    isLoaded: true,
-                    videos: data
-                })
-                return data;
-            },
-                error => {
-                    this.setState({
-                        isLoaded: true,
-                        error: error
-                    });
-                });
-    }
+    // allVideos = () => {
+    //     console.log("Called all videos")
+    //     return fetch('https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos')
+    //         .then((response) => { return response.json() })
+    //         .then((data) => {
+    //             this.setState({
+    //                 isLoaded: true,
+    //                 videos: data
+    //             })
+    //             return data;
+    //         },
+    //             error => {
+    //                 this.setState({
+    //                     isLoaded: true,
+    //                     error: error
+    //                 });
+    //             });
+    // }
 
     render() {
-        const { error, isLoaded, videos } = this.state;
-        console.log({ videos })
+        const videos = this.props.video || []
+        console.log(videos)
 
-        if (error) {
-            return <div>Error: {error.message}</div>;
-        } else if (!isLoaded) {
-            return <div className='loading-div'>Loading...</div>;
+        if (videos.length === 0) {
+            return <div>Loading...</div>;
         } else {
 
             const theList = videos.slice(0,9).map((video) => {

@@ -10,53 +10,41 @@ import {
 import { Link } from 'react-router-dom'
 
 export default class TrendingVideos extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            error: null,
-            isLoaded: false,
-            videos: []
-        };
-    }
 
     componentDidMount() {
         console.log("I mounted it guys!")
-
-        let videos = this.state.videos;
-
+        let videos = this.props.video || []
         if (videos.length === 0) {
-            console.log("Im fetching!")
-            this.allVideos().then((allVideos) => {
-                this.setState({ videos: allVideos })
-            })
+            console.log(this.props.video)
+            this.setState({ videos: this.props.video, isLoaded: true })
+            
         }
     }
 
-    allVideos = () => {
-        console.log("Called all videos")
-        return fetch('https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos')
-            .then((response) => { return response.json() })
-            .then((data) => {
-                this.setState({
-                    isLoaded: true,
-                    videos: data
-                })
-                return data;
-            },
-                error => {
-                    this.setState({
-                        isLoaded: true,
-                        error: error
-                    });
-                });
-    }
+    // allVideos = () => {
+    //     console.log("Called all videos")
+    //     return fetch('https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos')
+    //         .then((response) => { return response.json() })
+    //         .then((data) => {
+    //             this.setState({
+    //                 isLoaded: true,
+    //                 videos: data
+    //             })
+    //             return data;
+    //         },
+    //             error => {
+    //                 this.setState({
+    //                     isLoaded: true,
+    //                     error: error
+    //                 });
+    //             });
+    // }
 
     render() {
-        const { error, isLoaded, videos } = this.state;
+        const videos = this.props.video || []
+        console.log(videos)
 
-        if (error) {
-            return <div>Error: {error.message}</div>;
-        } else if (!isLoaded) {
+        if (videos.length === 0) {
             return <div>Loading...</div>;
         } else {
 
@@ -68,9 +56,9 @@ export default class TrendingVideos extends React.Component {
                         tag="div"
                         key={video.id}
                     >
-                        <Link onClick='location.reload();' to={{pathname:`/video/${video.id}`}} params={{id:video.id}}><CardImg top width="100%" height={200} src={video.vid_thumbnail_uri} alt="Video thumbnail" /></Link>
+                        <Link to={`/video/${video.id}`} params={{ video: video }}><CardImg top width="100%" height={200} src={video.vid_thumbnail_uri} alt="Video thumbnail" /></Link>
                         <CardBody>
-                            <Link onClick='location.reload();' to={{pathname:`/video/${video.id}`}} params={{id:video.id}}><CardTitle>{video.title}</CardTitle></Link>
+                            <Link to={`/video/${video.id}`} params={{ id: video.id }}><CardTitle>{video.title}</CardTitle></Link>
                             <CardText>{video.description}</CardText>
                         </CardBody>
                     </Card>
