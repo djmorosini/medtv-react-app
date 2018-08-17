@@ -58,7 +58,7 @@ class VideoPlayer extends Component {
 			return (
 				<div id="playerWrapper" className="d-flex flex-column flex-wrap">
 					<div id={this.props.match.params.id} className="col-lg-9 col-md-10 col-sm-10">
-						<Player fluid={false} width='100%' height={400}>
+						<Player fluid={false} width='70%' height={400}>
 							<source src={videoLink} />
 							<BigPlayButton position='center' />
 							<ControlBar autoHide={false} />
