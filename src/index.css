@@ -198,6 +198,33 @@ body {
 .the-logo {
   margin:0;
 }
+
+.media{
+  margin-top:100px;
+}
+
+.media-object{
+  border-radius:50%;
+  height:100px;
+  width:100px;
+}
+
+.team{
+  flex-direction:row;
+  flex-wrap:wrap;
+  margin-bottom:5%;
+  margin-left:10%;
+}
+
+.media{
+  width:30%;
+}
+
+.media-body{
+  margin-left:5%;
+  margin-top:5%;
+}
+
 #toplevel-nav {
   background-color: #004E64;
 }
