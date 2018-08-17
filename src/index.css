@@ -209,7 +209,7 @@ body {
   width:100px;
 }
 
-.d-flex{
+.team{
   flex-direction:row;
   flex-wrap:wrap;
   margin-bottom:5%;
