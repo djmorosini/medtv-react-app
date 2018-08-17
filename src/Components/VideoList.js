@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom'
 export default class VideoList extends React.Component {
 
     componentDidMount() {
-        console.log("I mounted it guys!")
         let videos = this.props.video || []
         if (videos.length === 0) {
             console.log(this.props.video)
@@ -38,10 +37,9 @@ export default class VideoList extends React.Component {
 
     render() {
         const videos = this.props.video || []
-        console.log(videos)
 
         if (videos.length === 0) {
-            return <div>Loading...</div>;
+            return <div className='loading-div'>Loading...</div>;
         } else {
 
             const theList = videos.slice(0,9).map((video) => {

@@ -13,7 +13,7 @@ const Main = () => (
       <Route name='watch-page' exact path='/video/:id' component={VideoWatchPage}/>
       <Route name='list-page' path='/videos' component={FullListPage}/>
       <Route name='meet-our-team' path='/meet-our-team' component={MeetOurTeam}/>
-      <Route name='sorry-404' path='/404' component={The404Page}/>
+      <Route name='sorry-404' component={The404Page}/>
     </Switch>
   </BrowserRouter>
 )

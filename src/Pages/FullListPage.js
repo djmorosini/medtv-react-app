@@ -15,9 +15,11 @@ class FullListPage extends Component {
   }
 
   componentDidMount() {
-    console.log("I mounted it guys!")
 
-    let videos = this.state.videos;
+    const {videos} = this.state;
+
+    console.log('FullListPage Mount: ' + videos.length)
+    console.log("Videos State: "+videos)
 
     if (videos.length === 0) {
       console.log("Im fetching!")
@@ -47,11 +49,9 @@ class FullListPage extends Component {
   }
 
   render() {
-    const { error, isLoaded, videos } = this.state;
+    const { error, videos } = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
-    } else if (!isLoaded) {
-      return <div>Loading...</div>;
     } else {
       return (
         <Fragment>
