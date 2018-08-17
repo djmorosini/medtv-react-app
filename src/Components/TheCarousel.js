@@ -6,7 +6,6 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
-import TrendingVideos from './TrendingVideos';
 
 const items = [
   {
@@ -103,7 +102,6 @@ export default class TheCarousel extends Component {
             <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
           </Carousel>
         </div>
-        <TrendingVideos />
       </Fragment>
     );
   }
