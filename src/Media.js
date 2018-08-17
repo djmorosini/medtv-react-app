@@ -12,8 +12,8 @@ import Neo from './images/Neo1.jpg'
 
 const Team = () => {
   return (
-    <div>
-      <Media className="d-flex">
+    <div className="d-flex">
+      <Media className="Mat">
         <Media left top href="#">
           <Media object src={ AgentSmith } alt="Picture of Mat" />
         </Media>
@@ -24,7 +24,7 @@ const Team = () => {
             Mat is committed to taking down the system he was once part of.
             </Media>
       </Media>
-      <Media className="mt-1 d-flex">
+      <Media className="Flo">
         <Media left middle href="#">
         <Media object src={ TheOracle } alt="Picture of Flo"/>
         </Media>
@@ -32,10 +32,10 @@ const Team = () => {
           <Media heading>
              Florence Fong
             </Media>
-            Flo is ...
+            Flo is a front-end ninja.
             </Media>
       </Media>
-      <Media className="mt-1 d-flex">
+      <Media className="Dylan">
         <Media left bottom href="#">
           <Media object src={ Neo } alt="Picture of" />
         </Media>
@@ -46,31 +46,31 @@ const Team = () => {
                 Dylan can't stop won't stop.
                 </Media>
       </Media>
-      <Media className="d-flex">
+      <Media className="Matt">
         <Media left top href="#">
           <Media object src={ Dozer } alt="Picture of" />
         </Media>
         <Media body>
           <Media heading>
-            Matt Layden
+            Matt Layden 
           </Media>
-            Mat is ...
+            Mat loves SDKs.
             </Media>
       </Media>
       
-      <Media className="mt-1 d-flex">
+      <Media className="Julia">
         <Media left middle href="#">
         <Media object src={ Trinity } alt="Picture of"/>
         </Media>
         <Media body>
           <Media heading>
-             Julia Kantarovsky
+             Julia Kantarovsky 
             </Media>
-            Julia is ...
+            Julia Gits React.
             </Media>
       </Media>
      
-      <Media className="mt-1 d-flex">
+      <Media className="Chris">
         <Media left middle href="#">
         <Media object src={ Morpheus } alt="Picture of"/>
         </Media>

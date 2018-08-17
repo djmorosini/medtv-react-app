@@ -138,7 +138,18 @@ body {
 
 .d-flex{
   flex-direction:row;
-  width:10%;
+  flex-wrap:wrap;
+  margin-bottom:5%;
+  margin-left:10%;
+}
+
+.media{
+  width:30%;
+}
+
+.media-body{
+  margin-left:5%;
+  margin-top:5%;
 }
 
 @media (max-width: 991px){
