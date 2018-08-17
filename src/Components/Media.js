@@ -12,7 +12,7 @@ import Neo from '../images/Neo1.jpg'
 
 const Team = () => {
   return (
-    <div className="d-flex">
+    <div className="d-flex team">
       <Media className="Mat">
         <Media left top href="#">
           <Media object src={ AgentSmith } alt="Picture of Mat" />
