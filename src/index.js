@@ -6,8 +6,8 @@ import registerServiceWorker from './registerServiceWorker';
 import Main from './MainRouter'
 
 ReactDOM.render(
-    <Main />
-    , document.getElementById('root')
+    <Main />,
+    document.getElementById('root')
 );
 
 registerServiceWorker();
