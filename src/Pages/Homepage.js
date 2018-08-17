@@ -19,7 +19,7 @@ class Homepage extends Component {
     let videos = this.state.videos;
     console.log('Homepage Mount: ' + videos.length)
     console.log("Videos State: "+videos)
-    
+
     if (videos.length === 0) {
       console.log("Im fetching!")
       this.allVideos().then((allVideos) => {
@@ -57,7 +57,7 @@ class Homepage extends Component {
         <Fragment>
           <TheNavbar />
           <TheCarousel />
-          <TrendingVideos video={videos}/>
+          <TrendingVideos videos={videos}/>
           <TheFooter />
         </Fragment>
       );

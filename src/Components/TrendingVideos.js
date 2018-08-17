@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom'
 export default class TrendingVideos extends React.Component {
 
     componentDidMount() {
-        let videos = this.props.video || []
+        let videos = this.props.videos || []
         if (videos.length === 0) {
             console.log(this.props.video)
             this.setState({ videos: this.props.video, isLoaded: true })
@@ -21,9 +21,9 @@ export default class TrendingVideos extends React.Component {
     }
 
     render() {
-        const videos = this.props.video || []
-
-        if (videos.length === 0) {
+        const videos = this.props.videos || []
+        console.log(this.props.videos)
+        if (!videos) {
             return <div>Loading...</div>;
         } else {
 
@@ -35,9 +35,9 @@ export default class TrendingVideos extends React.Component {
                         tag="div"
                         key={video.id}
                     >
-                        <Link to={`/video/${video.id}`} params={{ id: video.id }}><CardImg top width="100%" height={200} src={video.vid_thumbnail_uri} alt="Video thumbnail" /></Link>
+                        <Link to={`/video/${video.id}`} params={{ id: video.id }} onClick={this.props.updateActiveVideo(video)}><CardImg top width="100%" height={200} src={video.vid_thumbnail_uri} alt="Video thumbnail" /></Link>
                         <CardBody>
-                            <Link to={`/video/${video.id}`} params={{ id: video.id }}><CardTitle>{video.title}</CardTitle></Link>
+                            <Link to={`/video/${video.id}`} params={{ id: video.id }} onClick={this.props.updateActiveVideo(video)}><CardTitle>{video.title}</CardTitle></Link>
                             <CardText>{video.description}</CardText>
                         </CardBody>
                     </Card>
@@ -59,19 +59,19 @@ export default class TrendingVideos extends React.Component {
 }
 
 
-const members = {
-    'one': {
-        'name': 'Dylan',
-        'bio': 'text'
-    },
-    'two': {
-        'name': 'Julia',
-        'bio': 'text'
-    },
-    'three': {
-        'name': 'Chris',
-        'bio': 'text'
-    }
-}
+// const members = {
+//     'one': {
+//         'name': 'Dylan',
+//         'bio': 'text'
+//     },
+//     'two': {
+//         'name': 'Julia',
+//         'bio': 'text'
+//     },
+//     'three': {
+//         'name': 'Chris',
+//         'bio': 'text'
+//     }
+// }
 
-members.one.name = 'Dylan'
+// members.one.name = 'Dylan'

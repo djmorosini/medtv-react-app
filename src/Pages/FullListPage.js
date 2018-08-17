@@ -57,7 +57,7 @@ class FullListPage extends Component {
         <Fragment>
           <TheNavbar />
           <Sidebar />
-          <VideoList video={videos}/>
+          <VideoList videos={videos}/>
           <TheFooter />
         </Fragment>
       );

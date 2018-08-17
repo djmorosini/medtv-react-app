@@ -13,7 +13,7 @@ class VideoWatchPage extends Component {
       error: null,
       isLoaded: false,
       videos: [],
-      vidPlayer: null
+      activeVideo: null
     };
   }
 
@@ -49,6 +49,9 @@ class VideoWatchPage extends Component {
           });
         });
   }
+  updateActiveVideo = (video) => {
+    this.setState({ activeVideo: video})
+  }
 
   render() {
     const { error, videos } = this.state;
@@ -59,8 +62,8 @@ class VideoWatchPage extends Component {
         <Fragment>
           <TheNavbar />
           <VideoWatchBreadcrumb />
-          <VideoPlayer />
-          <TrendingVideos video={videos}/>
+          <VideoPlayer video={this.state.activeVideo || this.state.videos[0]} />
+          <TrendingVideos videos={videos} updateActiveVideo={this.updateActiveVideo}/>
           <TheFooter />
         </Fragment>
       );
