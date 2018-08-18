@@ -62,7 +62,7 @@ body {
   vertical-align: middle;
 }
 .carousel-item:nth-child(2) {
-  background: url(./images/jesse-orrico-60373-unsplash-min.png) no-repeat center center;
+  background: url(./images/jesse-orrico-small.png) no-repeat center center;
   background-size: cover;
 }
 .carousel-item:nth-child(3) {

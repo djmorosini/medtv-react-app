@@ -43,27 +43,22 @@ class VideoPlayer extends Component {
 	// }
 
 	render() {
+		const video = this.props.video;
 
-		const video = this.prop.video;
-
-		let videoLink = video.vid_uri
-		if (!video || !videoLink) {
+		if (!video) {
 			return <div className='loading-div'>Loading...</div>;
 		} else {
-			console.log("Props: " + this.props.match.params.id)
-			console.log("State: " + video.id)
 			// if (video.tag != "VR") {
 				return (
 					<div id="playerWrapper" className="d-flex flex-column flex-wrap">
-						<div id={this.props.match.params.id} className="col-lg-9 col-md-10 col-sm-10">
-							<Player fluid={false} width='70%' height={400}>
-								<source src={videoLink} />
+						<div className="col-lg-9 col-md-10 col-sm-10">
+							<Player src={video.vid_uri} key={this.props.match.params.id} fluid={false} width='70%' height={400}>
 								<BigPlayButton position='center' />
 								<ControlBar autoHide={false} />
 
 							</Player>
 						</div>
-						<VideoDetails />
+						<VideoDetails video={video}/>
 					</div>
 				);
 			// } else {

@@ -3,38 +3,9 @@ import { Card, CardText, CardBody, CardTitle } from 'reactstrap';
 import {withRouter} from 'react-router-dom';
 
 class VideoDetails extends React.Component {
-	constructor(props) {
-		super(props);
-		this.routeParam = props.match.params.id;
-		this.state = {
-			error: null,
-			isLoaded: false,
-			video: null
-		};
-	}
-
-	componentDidMount() {
-		fetch(`https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos/${this.routeParam}`)
-			.then((res) => res.json())
-			.then(
-				(result) => {
-					
-					this.setState({
-						isLoaded: true,
-						video: result
-					});
-				},
-				(error) => {
-					this.setState({
-						isLoaded: true,
-						error: error
-					});
-				}
-			);
-	}
 
 	render() {
-		let video = this.state.video;
+		let video = this.props.video;
 		if (!video) {
 			return <div className='loading-div'>Loading...</div>;
 		} else {
