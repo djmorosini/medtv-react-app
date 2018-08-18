@@ -11,18 +11,17 @@ class VideoStore extends React.Component {
         this.state = {
             videos: [],
             activeVideo: null,
-            isLoaded: false,
             error: null
         }
     }
 
     componentDidMount() {
         let videos = this.state.videos
-        console.log(videos.length)
-        if (videos.length === 0) {
+        if (videos.length === 0 && !localStorage.getItem('videos')) {
             console.log("Im fetching!")
             this.allVideos().then((allVideos) => {
                 this.setState({ videos: allVideos })
+                localStorage.setItem('videos', JSON.stringify(allVideos))
             })
         }
     }
@@ -33,29 +32,33 @@ class VideoStore extends React.Component {
             .then((response) => { return response.json() })
             .then((data) => {
                 this.setState({
-                    isLoaded: true,
                     videos: data
                 })
                 return data;
             },
                 error => {
                     this.setState({
-                        isLoaded: true,
                         error: error
                     });
                 });
     }
     updateActiveVideo = (video) => {
-        console.log("UPDATING")
-        console.log(video)
+        localStorage.setItem('activeVideo', `${JSON.stringify(video)}`)
         this.setState({ activeVideo: video })
     }
 
     render() {
-        const { videos, isLoaded, activeVideo } = this.state
+        let videos = JSON.parse(localStorage.getItem('videos')) || this.state.videos
+        let activeVideo = this.state.activeVideo
         let firstVideo = videos[0]
+        if (localStorage.getItem('activeVideo')) {
+            // localStorage.clear()
+            activeVideo = JSON.parse(`${localStorage.getItem('activeVideo')}`)
+        } else {
+            
+        }
 
-        if (!isLoaded) {
+        if (!videos) {
             return <div>Loading...</div>
         } else if (this.route.props.match.path === "/") {
             

@@ -13,7 +13,6 @@ class VideoList extends React.Component {
 
     render() {
         const videos = this.props.videos
-        console.log(this.updaterFunction)
 
         if (!videos) {
             return <div className='loading-div'>Loading...</div>;
