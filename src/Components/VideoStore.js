@@ -17,9 +17,9 @@ class VideoStore extends React.Component {
     }
 
     componentDidMount() {
-        let isLoaded = this.state.isLoaded
-        console.log(isLoaded)
-        if (!isLoaded) {
+        let videos = this.state.videos
+        console.log(videos.length)
+        if (videos.length === 0) {
             console.log("Im fetching!")
             this.allVideos().then((allVideos) => {
                 this.setState({ videos: allVideos })
