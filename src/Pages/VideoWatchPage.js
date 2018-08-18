@@ -15,7 +15,6 @@ class VideoWatchPage extends Component {
           <TheFooter />
         </Fragment>
       );
-    
   }
 }
 

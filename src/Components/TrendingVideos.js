@@ -15,7 +15,6 @@ class TrendingVideos extends React.Component {
         this.updaterFunction = props.updater;
     }
 
-
     render() {
         const videos = this.props.videos
         if (!this.props.videos) {
