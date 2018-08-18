@@ -52,8 +52,7 @@ class VideoStore extends React.Component {
     }
 
     render() {
-        const { videos, isLoaded } = this.state
-        let activeVideo = this.state.activeVideo
+        const { videos, isLoaded, activeVideo } = this.state
         let firstVideo = videos[0]
 
         if (!isLoaded) {
