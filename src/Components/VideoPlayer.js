@@ -49,8 +49,8 @@ class VideoPlayer extends Component {
 		} else {
 			// if (video.tag != "VR") {
 			return (
-				<div id="playerWrapper" className="d-flex flex-column flex-wrap">
-					<div className="col-lg-9 col-md-10 col-sm-10">
+				<div id="playerWrapper" className="">
+					<div className="col-lg-10 col-md-11 col-sm-12">
 						<Player src={video.vid_uri} key={this.props.match.params.id} fluid={false} width='70%' height={400}>
 							<BigPlayButton position='center' />
 							<ControlBar autoHide={false} />

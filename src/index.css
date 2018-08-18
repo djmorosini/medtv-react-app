@@ -256,6 +256,10 @@ body {
 .card {
   max-width: 70%;
 }
+.trending-card {
+  max-width: 40%;
+  
+}
 .details-wrapper {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -263,7 +267,6 @@ body {
 #playerWrapper {
   margin-left: 50px;
 }
-
 
 
 @media (max-width: 991px){
@@ -289,10 +292,19 @@ body {
   .watch-breadcrumb {
     margin-top: 80px;
   }
+  .trending-card {
+    width: 40%;
+    max-width: 50%;
+    
+  }
+  
 }
-
-
-
+@media (max-width: 575px){
+  .trending-card {
+    min-width: 70%;
+    
+  }
+}
 @media only screen and (max-device-width: 480px){
   #filter-top {
     margin-left: 100px;
