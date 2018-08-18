@@ -9,7 +9,7 @@ export default class TheFooter extends React.Component {
             <div width='100%' className="py-5 footer">
                 <div className="container">
                     <p className="m-0 text-center text-white">Copyright &copy; MedTV 2018 || <Link className="text-white" to="/meet-our-team">Meet Our Team</Link> ||
-                    <a className="text-white" href="/contact.html"> Contact Us</a></p>
+                    </p>
                 </div>
             </div>
         )

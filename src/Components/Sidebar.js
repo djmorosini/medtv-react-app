@@ -48,7 +48,7 @@ export default class Sidebar extends Component {
     render() {
         return (
             <Fragment>
-                <h1 className='trendTitle' id="video-header">Video List Page</h1>
+                <h1 className='trendTitle' id="video-header">Video List</h1>
                 <VideoListBreadCrumb />
                 <div id='filter-sidebar'>
                     <Nav id='filter-top'>

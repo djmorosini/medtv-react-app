@@ -1,5 +1,6 @@
 import React from 'react';
 import { Media } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import AgentSmith from '../images/AgentSmith.jpg';
 import Dozer from '../images/Dozer.jpg';
 import TheOracle from '../images/TheOracle.jpg';
@@ -8,15 +9,91 @@ import Morpheus from '../images/Morpheus1.jpg';
 import Neo from '../images/Neo1.jpg'
 
 
+class Team extends React.Component {
+  render() {
+    const members = [
+      {
+        'name': 'Mat',
+        'shortbio': 'text',
+        'src': AgentSmith
+      },
+      {
+        'name': 'Dylan',
+        'shortbio': 'text',
+        'src': Neo
+      },
+      {
+        'name': 'Julia',
+        'shortbio': 'text',
+        'src': Trinity
+      },
+      {
+        'name': 'Flo',
+        'shortbio': 'text',
+        'src': TheOracle
+      },
+      {
+        'name': 'Matt',
+        'shortbio': 'text',
+        'src': Dozer
+
+      },
+      {
+        'name': 'Chris',
+        'shortbio': 'text',
+        'src': Morpheus
+      },
+    ]
 
 
-const Team = () => {
-  return (
-    <div className="d-flex team">
-      <Media className="Mat">
-        <Media left top href="#">
-          <Media object src={ AgentSmith } alt="Picture of Mat" />
+    const memberList = members.map((member) => {
+      return (
+        <Media className={member.name}>
+          <Media left top >
+              <Link to={`/meet-our-team/${member.name}`} params={{ name: member.name }}>
+              <div><Media object src={member.src} /></div>
+            </Link>
+          </Media>
+
+          <Media body>
+            <Media heading>
+              { member.name }
+          </Media>
+            { member.shortbio}            
+            </Media>
         </Media>
+
+
+      )
+
+
+
+    })
+
+
+
+
+
+    return (
+      <div className="d-flex team">
+        {memberList}
+        {}
+      </div>
+    );
+  }
+};
+
+export default Team;
+
+
+
+{/* <Media className="Mat">
+        <Media left top >
+        <Link  to={`/meet-our-team/${name}`}> params={{name:name}}>
+          <Media object src={ AgentSmith } alt="Picture of Mat" />
+          </Link>
+        </Media>
+        
         <Media body>
           <Media heading>
             Mat Gilbert
@@ -54,7 +131,7 @@ const Team = () => {
           <Media heading>
             Matt Layden 
           </Media>
-            Mat loves SDKs.
+            Matt loves SDKs.
             </Media>
       </Media>
       
@@ -80,9 +157,4 @@ const Team = () => {
             </Media>
             Chris loves the Agile.
             </Media>
-      </Media>
-    </div>
-  );
-};
-
-export default Team;
+      </Media> */}
