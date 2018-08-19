@@ -103,7 +103,7 @@ body {
     1px 1px 20px rgba(0, 0, 0, 0.1);
 }
 .trendTitle {
-  margin: 10px 0 10px 20px; 
+  margin: 10px 0 10px 50px; 
   color: #022F40;
 }
 
@@ -257,7 +257,7 @@ body {
   max-width: 70%;
 }
 .trending-card {
-  max-width: 40%;
+  max-width: 30%;
   
 }
 .details-wrapper {

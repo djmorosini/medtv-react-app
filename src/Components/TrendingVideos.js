@@ -22,7 +22,7 @@ class TrendingVideos extends React.Component {
         } else {
             const theList = videos.slice(3, 6).map((video) => {
                 return (
-                    <Card className='trending-card flex-wrap d-flex col-lg-4 col-md-4 col-sm-12'
+                    <Card className='trending-card flex-wrap d-flex col-lg-4 col-md-5 col-sm-12'
                         tag="div"
                         key={video.id}
                     >
@@ -38,7 +38,7 @@ class TrendingVideos extends React.Component {
             return (
                 <Fragment>
                     <h1 className='trendTitle'>Trending Videos</h1>
-                    <div className='trendVid d-flex flex-wrap col-lg-12 col-sm-12'>
+                    <div className='trendVid d-flex flex-wrap justify-content-around col-lg-12 col-sm-12'>
                         
                             {theList}
                        
