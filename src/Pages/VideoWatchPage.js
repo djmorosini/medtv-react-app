@@ -6,15 +6,19 @@ import VideoStore from '../Components/VideoStore';
 
 class VideoWatchPage extends Component {
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
-      return (
-        <Fragment>
-          <TheNavbar />
-          <VideoWatchBreadcrumb />
-          <VideoStore props={this.props} />
-          <TheFooter />
-        </Fragment>
-      );
+    return (
+      <Fragment>
+        <TheNavbar />
+        <VideoWatchBreadcrumb />
+        <VideoStore props={this.props} />
+        <TheFooter />
+      </Fragment>
+    );
   }
 }
 

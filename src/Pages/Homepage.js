@@ -6,18 +6,22 @@ import VideoStore from '../Components/VideoStore';
 
 class Homepage extends Component {
 
-  render() {
-  
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
 
-      return (
-        <Fragment>
-          <TheNavbar />
-          <TheCarousel />
-          <VideoStore props={this.props}/>
-          <TheFooter />
-        </Fragment>
-      );
-    
+  render() {
+
+
+    return (
+      <Fragment>
+        <TheNavbar />
+        <TheCarousel />
+        <VideoStore props={this.props} />
+        <TheFooter />
+      </Fragment>
+    );
+
   }
 }
 

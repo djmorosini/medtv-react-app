@@ -6,18 +6,21 @@ import VideoStore from '../Components/VideoStore';
 
 class FullListPage extends Component {
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
 
   render() {
 
-      return (
-        <Fragment>
-          <TheNavbar />
-          <Sidebar />
-          <VideoStore props={this.props}/>
-          <TheFooter />
-        </Fragment>
-      );
-    
+    return (
+      <Fragment>
+        <TheNavbar />
+        <Sidebar />
+        <VideoStore props={this.props} />
+        <TheFooter />
+      </Fragment>
+    );
+
   }
 }
 

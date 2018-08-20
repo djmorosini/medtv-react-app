@@ -4,7 +4,6 @@ import {
     CardImg,
     CardTitle,
     CardText,
-    CardDeck,
     CardBody
 } from 'reactstrap';
 import { Link } from 'react-router-dom'

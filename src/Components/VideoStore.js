@@ -26,6 +26,10 @@ class VideoStore extends React.Component {
         }
     }
 
+    componentDidUpdate() {
+        window.scrollTo(0, 0);
+    }
+
     allVideos = () => {
         console.log("Called all videos")
         return fetch('https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos')
@@ -55,18 +59,18 @@ class VideoStore extends React.Component {
             // localStorage.clear()
             activeVideo = JSON.parse(`${localStorage.getItem('activeVideo')}`)
         } else {
-            
+
         }
 
         if (!videos) {
             return <div>Loading...</div>
         } else if (this.route.props.match.path === "/") {
-            
+
             return <TrendingVideos videos={videos} updater={this.updateActiveVideo} />
-            
+
 
         } else if (this.route.props.match.path === '/videos') {
-            return <VideoList videos={videos} updater={this.updateActiveVideo}/>
+            return <VideoList videos={videos} updater={this.updateActiveVideo} />
         } else {
             return (
                 <React.Fragment>
