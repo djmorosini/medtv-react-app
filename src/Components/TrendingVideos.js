@@ -17,7 +17,7 @@ class TrendingVideos extends React.Component {
     render() {
         const videos = this.props.videos
         if (!this.props.videos) {
-            return <div>Loading...</div>;
+            return <div className='loading-div'>Loading...</div>;
         } else {
             const theList = videos.slice(3, 6).map((video) => {
                 return (
