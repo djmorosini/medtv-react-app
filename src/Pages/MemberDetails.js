@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import TheNavbar from '../Components/TheNavbar';
 import TheFooter from '../Components/TheFooter';
-// import MemberContainer from '../Components/MemberContainer'
+import MemberContainer from '../Components/MemberContainer'
 
 
 
@@ -12,7 +12,7 @@ class MemberDetails extends Component {
       return (
         <Fragment>
           <TheNavbar />
-          {/* <MemberContainer /> */}
+          <MemberContainer props={this.props} />
           <TheFooter />
         </Fragment>
       );

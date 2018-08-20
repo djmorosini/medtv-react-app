@@ -14,33 +14,33 @@ class Team extends React.Component {
     const members = [
       {
         'name': 'Mat',
-        'shortbio': 'text',
+        'shortbio': 'Mat is committed to taking down the system he was once part of.',
         'src': AgentSmith
       },
       {
         'name': 'Dylan',
-        'shortbio': 'text',
+        'shortbio': "Dylan can't stop won't stop",
         'src': Neo
       },
       {
         'name': 'Julia',
-        'shortbio': 'text',
+        'shortbio': 'Julia Gits React',
         'src': Trinity
       },
       {
         'name': 'Flo',
-        'shortbio': 'text',
+        'shortbio': 'Flo is a front-end ninja.',
         'src': TheOracle
       },
       {
         'name': 'Matt',
-        'shortbio': 'text',
+        'shortbio': 'Matt loves SDKs.',
         'src': Dozer
 
       },
       {
         'name': 'Chris',
-        'shortbio': 'text',
+        'shortbio': 'Chris loves the Agile.',
         'src': Morpheus
       },
     ]
@@ -48,19 +48,19 @@ class Team extends React.Component {
 
     const memberList = members.map((member) => {
       return (
-        <Media className={member.name}>
+        <Media key={member.name}>
           <Media left top >
-              <Link to={`/meet-our-team/${member.name}`} params={{ name: member.name }}>
+            <Link to={`/meet-our-team/${member.name}`} params={{ name:member.name }}>
               <div><Media object src={member.src} /></div>
             </Link>
           </Media>
 
           <Media body>
             <Media heading>
-              { member.name }
-          </Media>
-            { member.shortbio}            
+              {member.name}
             </Media>
+            {member.shortbio}
+          </Media>
         </Media>
 
 
@@ -86,75 +86,3 @@ class Team extends React.Component {
 export default Team;
 
 
-
-{/* <Media className="Mat">
-        <Media left top >
-        <Link  to={`/meet-our-team/${name}`}> params={{name:name}}>
-          <Media object src={ AgentSmith } alt="Picture of Mat" />
-          </Link>
-        </Media>
-        
-        <Media body>
-          <Media heading>
-            Mat Gilbert
-          </Media>
-            Mat is committed to taking down the system he was once part of.
-            </Media>
-      </Media>
-      <Media className="Flo">
-        <Media left middle href="#">
-        <Media object src={ TheOracle } alt="Picture of Flo"/>
-        </Media>
-        <Media body>
-          <Media heading>
-             Florence Fong
-            </Media>
-            Flo is a front-end ninja.
-            </Media>
-      </Media>
-      <Media className="Dylan">
-        <Media left bottom href="#">
-          <Media object src={ Neo } alt="Picture of" />
-        </Media>
-        <Media body>
-            <Media heading>
-                Dylan Morosini
-                </Media>
-                Dylan can't stop won't stop.
-                </Media>
-      </Media>
-      <Media className="Matt">
-        <Media left top href="#">
-          <Media object src={ Dozer } alt="Picture of" />
-        </Media>
-        <Media body>
-          <Media heading>
-            Matt Layden 
-          </Media>
-            Matt loves SDKs.
-            </Media>
-      </Media>
-      
-      <Media className="Julia">
-        <Media left middle href="#">
-        <Media object src={ Trinity } alt="Picture of"/>
-        </Media>
-        <Media body>
-          <Media heading>
-             Julia Kantarovsky 
-            </Media>
-            Julia Gits React.
-            </Media>
-      </Media>
-     
-      <Media className="Chris">
-        <Media left middle href="#">
-        <Media object src={ Morpheus } alt="Picture of"/>
-        </Media>
-        <Media body>
-          <Media heading>
-             Chris Frank
-            </Media>
-            Chris loves the Agile.
-            </Media>
-      </Media> */}

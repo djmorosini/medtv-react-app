@@ -256,6 +256,11 @@ body {
 .card {
   max-width: 70%;
 }
+.personDetails{
+  margin-top:150px;
+  margin-bottom:150px;
+}
+
 @media (max-width: 991px){
   .nav-links {
     position: relative;
@@ -279,6 +284,7 @@ body {
   .watch-breadcrumb {
     margin-top: 80px;
   }
+
 }
 @media only screen and (max-device-width: 480px){
   #filter-top {
