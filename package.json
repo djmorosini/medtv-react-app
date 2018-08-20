@@ -3,17 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/react": "^16.4.9",
     "aws-sdk": "^2.288.0",
     "bootstrap": "^4.1.3",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
-    "reactstrap": "^6.3.1"
+    "react-vr-player": "^0.1.1",
+    "reactstrap": "^6.3.1",
+    "redux": "^4.0.0",
+    "video-react": "^0.13.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "react-image-resizer": "^1.3.0"
   }
 }

@@ -4,17 +4,18 @@ import {
   Button,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  InputGroupAddon, InputGroupText, InputGroup, Input,
-  Container, Row, Col
+  InputGroupAddon, InputGroup, Input,
+  Container
 } from 'reactstrap';
+import { Link, NavLink } from 'react-router-dom'
+
+import Picture from '../images/logo_transparent_small(1).png'
 
 
 export default class TheNavbar extends React.Component {
@@ -38,17 +39,14 @@ export default class TheNavbar extends React.Component {
 
     return (
 
-      <Navbar fixed="top" className="bg-primary" dark expand="lg">
+      <Navbar fixed="top" id='toplevel-nav' dark expand="lg">
         <Container>
-          <NavbarBrand href="/">MedTV</NavbarBrand>
+        <Link className='the-logo' to="/"><img alt='MedTV logo' height={40} src={Picture}/></Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink active href="#">Videos</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#">Contribute</NavLink>
+                <NavLink className='nav-links' to="/videos"><div className='nav-item-container'>Videos</div></NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
@@ -56,7 +54,7 @@ export default class TheNavbar extends React.Component {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    Head
+                    Cranial
                   </DropdownItem>
                   <DropdownItem>
                     Appendages
@@ -72,11 +70,14 @@ export default class TheNavbar extends React.Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
+              <NavItem id='team-nav'>
+                <NavLink className='nav-links nav2' to="/meet-our-team"><div className='nav-item-container contribute'>Team</div></NavLink>
+              </NavItem>
               <NavItem>
                 <InputGroup>
                   <Input type="text" className="form-control" placeholder="Search for..." />
-                  <InputGroupAddon className="input-group-btn">
-                    <Button className="nav-go btn-success" type="button">Go!</Button>
+                  <InputGroupAddon addonType="append" className="input-group-btn">
+                    <Button className="nav-go" type="button">Go!</Button>
                   </InputGroupAddon>
                 </InputGroup>
               </NavItem>
