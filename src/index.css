@@ -258,7 +258,10 @@ body {
 }
 .trending-card {
   max-width: 30%;
-  
+}
+.personDetails{
+  margin-top:150px;
+  margin-bottom:150px;
 }
 .details-wrapper {
   margin-top: 20px;
@@ -309,6 +312,7 @@ body {
     min-width: 70%;
     
   }
+
 }
 @media only screen and (max-device-width: 480px){
   #filter-top {
