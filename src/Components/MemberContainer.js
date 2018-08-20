@@ -22,9 +22,9 @@ export default class Example extends React.Component {
               <img src={TheOracle}></img>
             </Col>
             <Col xs="6">
-              <a href="Flo/linkedin">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/florence-fong/">LinkedIn</a>
               <br />
-              <a href="Flo/github">GitHub</a>
+              <a href="https://github.com/flofong">GitHub</a>
             </Col>
           </Row>
 
@@ -40,9 +40,9 @@ export default class Example extends React.Component {
               <img src={Dozer}></img>
             </Col>
             <Col xs="6">
-              <a href="Matt/linkedin">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/matthew-layden-68059a167/">LinkedIn</a>
               <br />
-              <a href="Matt/github">GitHub</a>
+              <a href="https://github.com/kobello">GitHub</a>
             </Col>
           </Row>
 
@@ -58,9 +58,9 @@ export default class Example extends React.Component {
               <img src={Neo}></img>
             </Col>
             <Col xs="6">
-              <a href="Dylan/linkedin">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/djmorosini/">LinkedIn</a>
               <br />
-              <a href="Dylan/github">GitHub</a>
+              <a href="https://github.com/djmorosini">GitHub</a>
             </Col>
           </Row>
 
@@ -76,9 +76,9 @@ export default class Example extends React.Component {
               <img src={Trinity}></img>
             </Col>
             <Col xs="6">
-              <a href="Julia/linkedin">LinkedIn</a>
+              <a href="https://linkedin.com/in/juliakantarovsky">LinkedIn</a>
               <br />
-              <a href="Julia/github">GitHub</a>
+              <a href="https://github.com/JuliaKan">GitHub</a>
             </Col>
           </Row>
 
@@ -94,9 +94,9 @@ export default class Example extends React.Component {
               <img src={Morpheus}></img>
             </Col>
             <Col xs="6">
-              <a href="Chris/linkedin">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/christopherfrank/">LinkedIn</a>
               <br />
-              <a href="Chris/github">GitHub</a>
+              <a href="https://github.com/cfrank1977">GitHub</a>
             </Col>
           </Row>
 
