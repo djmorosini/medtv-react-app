@@ -48,9 +48,6 @@ export default class TheNavbar extends React.Component {
               <NavItem>
                 <NavLink className='nav-links' to="/videos"><div className='nav-item-container'>Videos</div></NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink className='nav-links nav2' to="/404"><div className='nav-item-container contribute'>Contribute</div></NavLink>
-              </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Browse
@@ -73,6 +70,9 @@ export default class TheNavbar extends React.Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
+              <NavItem id='team-nav'>
+                <NavLink className='nav-links nav2' to="/meet-our-team"><div className='nav-item-container contribute'>Team</div></NavLink>
+              </NavItem>
               <NavItem>
                 <InputGroup>
                   <Input type="text" className="form-control" placeholder="Search for..." />

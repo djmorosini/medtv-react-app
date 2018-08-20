@@ -5,57 +5,33 @@ import {
 } from 'reactstrap';
 import { Link } from 'react-router-dom'
 
-export default class VideoList extends React.Component {
-
-    componentDidMount() {
-        let videos = this.props.video || []
-        if (videos.length === 0) {
-            console.log(this.props.video)
-            this.setState({ videos: this.props.video, isLoaded: true })
-            
-        }
+class VideoList extends React.Component {
+    constructor(props) {
+        super(props)
+        this.updaterFunction = props.updater;
     }
 
-    // allVideos = () => {
-    //     console.log("Called all videos")
-    //     return fetch('https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos')
-    //         .then((response) => { return response.json() })
-    //         .then((data) => {
-    //             this.setState({
-    //                 isLoaded: true,
-    //                 videos: data
-    //             })
-    //             return data;
-    //         },
-    //             error => {
-    //                 this.setState({
-    //                     isLoaded: true,
-    //                     error: error
-    //                 });
-    //             });
-    // }
-
     render() {
-        const videos = this.props.video || []
+        const videos = this.props.videos
 
-        if (videos.length === 0) {
-            return <div className='loading-div'>Loading...</div>;
+        if (!videos) {
+            return <div className='loading-div no-videos'>No Videos...</div>;
         } else {
 
-            const theList = videos.slice(0,9).map((video) => {
+            const theList = videos.slice(0, 9).map((video) => {
                 return (
-                    
+
                     <Card width={400} className='col-lg-3 col-md-5 col-sm-12'
                         tag="div"
                         key={video.id}
                     >
-                        <Link to={{pathname:`/video/${video.id}`}} params={{id:video.id}}>
+                        <Link to={`/video/${video.id}`} params={{ id: video.id }} onClick={() => this.updaterFunction(video)}>
                             <CardImg width="100%" src={video.vid_thumbnail_uri} alt="Video thumbnail"
                                 height={200}
                             />
                         </Link>
                         <CardBody>
-                            <Link to={{pathname:`/video/${video.id}`}} params={{id:video.id}}>
+                            <Link to={`/video/${video.id}`} params={{ id: video.id }} onClick={() => this.updaterFunction(video)}>
                                 <CardTitle>{video.title}</CardTitle>
                             </Link>
                             <CardText>{video.description}</CardText>
@@ -117,3 +93,5 @@ class ChangePage extends React.Component {
         );
     }
 }
+
+export default VideoList;

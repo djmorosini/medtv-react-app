@@ -62,7 +62,7 @@ body {
   vertical-align: middle;
 }
 .carousel-item:nth-child(2) {
-  background: url(./images/jesse-orrico-60373-unsplash-min.png) no-repeat center center;
+  background: url(./images/jesse-orrico-small.png) no-repeat center center;
   background-size: cover;
 }
 .carousel-item:nth-child(3) {
@@ -103,7 +103,7 @@ body {
     1px 1px 20px rgba(0, 0, 0, 0.1);
 }
 .trendTitle {
-  margin: 10px 0 10px 20px; 
+  margin: 10px 0 10px 50px; 
   color: #022F40;
 }
 
@@ -247,7 +247,7 @@ body {
   color: #022F40;
 }
 .loading-div {
-  height: 800px;
+  height: 600px;
 }
 .bread-bg {
   width: 98%;
@@ -255,6 +255,9 @@ body {
 }
 .card {
   max-width: 70%;
+}
+.trending-card {
+  max-width: 30%;
 }
 .personDetails{
   margin-top:150px;
@@ -265,10 +268,16 @@ body {
   margin-bottom: 20px;
 }
 #playerWrapper {
-  margin-left: 15%;
+  margin-left: 50px;
 }
-
-
+.no-videos {
+  margin-top: 50px;
+  margin-left: 20px;
+  font-size: 2em;
+}
+#team-nav {
+  margin-right: 10px;
+}
 
 @media (max-width: 991px){
   .nav-links {
@@ -293,11 +302,20 @@ body {
   .watch-breadcrumb {
     margin-top: 80px;
   }
+  .trending-card {
+    width: 40%;
+    max-width: 50%;
+    
+  }
+  
+}
+@media (max-width: 575px){
+  .trending-card {
+    min-width: 70%;
+    
+  }
 
 }
-
-
-
 @media only screen and (max-device-width: 480px){
   #filter-top {
     margin-left: 100px;

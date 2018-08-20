@@ -4,40 +4,31 @@ import {
     CardImg,
     CardTitle,
     CardText,
-    CardDeck,
     CardBody
 } from 'reactstrap';
 import { Link } from 'react-router-dom'
 
-export default class TrendingVideos extends React.Component {
-
-    componentDidMount() {
-        let videos = this.props.video || []
-        if (videos.length === 0) {
-            console.log(this.props.video)
-            this.setState({ videos: this.props.video, isLoaded: true })
-            
-        }
+class TrendingVideos extends React.Component {
+    constructor(props) {
+        super(props)
+        this.updaterFunction = props.updater;
     }
 
     render() {
-        const videos = this.props.video || []
-
-        if (videos.length === 0) {
-            return <div>Loading...</div>;
+        const videos = this.props.videos
+        if (!this.props.videos) {
+            return <div className='loading-div'>Loading...</div>;
         } else {
-
-
-
+            
             const theList = videos.slice(3, 6).map((video) => {
                 return (
-                    <Card className='h-100 col-lg-4 col-md-6 col-sm-8'
+                    <Card className='trending-card flex-wrap d-flex col-lg-4 col-md-5 col-sm-12'
                         tag="div"
                         key={video.id}
                     >
-                        <Link onClick='location.reload();' to={`/video/${video.id}`} params={{ id: video.id }}><CardImg top width="100%" height={200} src={video.vid_thumbnail_uri} alt="Video thumbnail" /></Link>
+                        <Link to={`/video/${video.id}`} params={{ id: video.id }} onClick={() => this.updaterFunction(video)}><CardImg top width="100%" height={200} src={video.vid_thumbnail_uri} alt="Video thumbnail" /></Link>
                         <CardBody>
-                            <Link onClick='location.reload();' to={`/video/${video.id}`} params={{ id: video.id }}><CardTitle>{video.title}</CardTitle></Link>
+                            <Link to={`/video/${video.id}`} params={{ id: video.id }} onClick={() => this.updaterFunction(video)}><CardTitle>{video.title}</CardTitle></Link>
                             <CardText>{video.description}</CardText>
                         </CardBody>
                     </Card>
@@ -47,13 +38,15 @@ export default class TrendingVideos extends React.Component {
             return (
                 <Fragment>
                     <h1 className='trendTitle'>Trending Videos</h1>
-                    <div className='trendVid d-flex flex-wrap col-lg-12 col-sm-12'>
-                        <CardDeck>
+                    <div className='trendVid d-flex flex-wrap justify-content-around col-lg-12 col-sm-12'>
+                        
                             {theList}
-                        </CardDeck>
+                       
                     </div>
                 </Fragment>
             )
         }
     }
 }
+
+export default TrendingVideos;
