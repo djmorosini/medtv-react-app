@@ -247,7 +247,7 @@ body {
   color: #022F40;
 }
 .loading-div {
-  height: 800px;
+  height: 600px;
 }
 .bread-bg {
   width: 98%;
@@ -266,6 +266,11 @@ body {
 }
 #playerWrapper {
   margin-left: 50px;
+}
+.no-videos {
+  margin-top: 50px;
+  margin-left: 20px;
+  font-size: 2em;
 }
 
 

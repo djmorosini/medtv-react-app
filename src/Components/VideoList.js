@@ -15,7 +15,7 @@ class VideoList extends React.Component {
         const videos = this.props.videos
 
         if (!videos) {
-            return <div className='loading-div'>Loading...</div>;
+            return <div className='loading-div no-videos'>No Videos...</div>;
         } else {
 
             const theList = videos.slice(0, 9).map((video) => {

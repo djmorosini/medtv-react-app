@@ -16,8 +16,27 @@ class VideoPlayer extends Component {
 	}
 
 	componentDidMount() {
-		if (!(this.props.video.id === this.props.match.params.id)) {
-			console.log("Called fetch video")
+		if (this.props.video) {
+			if (!(this.props.video.id === this.props.match.params.id)) {
+				console.log("Called fetch video 1")
+				return fetch(`https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos/${this.props.match.params.id}`)
+					.then((response) => { return response.json() })
+					.then(
+						(result) => {
+							localStorage.setItem('activeVideo', `${JSON.stringify(result)}`)
+							this.setState({
+								video: result
+							});
+						},
+						(error) => {
+							this.setState({
+								error: error
+							});
+						}
+					);
+			}
+		} else if (!localStorage.getItem('activeVideo')) {
+			console.log("Called fetch video 2")
 			return fetch(`https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos/${this.props.match.params.id}`)
 				.then((response) => { return response.json() })
 				.then(
@@ -37,15 +56,20 @@ class VideoPlayer extends Component {
 
 	render() {
 
-		if (this.props.video.id === this.props.match.params.id) {
-			var video = this.props.video;
+		var video = this.state.video
+
+		if (this.props.video) {
+			if (this.props.video.id === this.props.match.params.id) {
+				video = this.props.video
+			}
 		} else {
-			video = this.state.video;
+			if (localStorage.getItem('activeVideo')) {
+				video = JSON.parse(`${localStorage.getItem('activeVideo')}`);
+			}
 		}
 
-
 		if (!video) {
-			return <div className='loading-div'>Loading...</div>;
+			return <div className='loading-div no-videos'>No video found...</div>;
 		} else {
 			// if (video.tag != "VR") {
 			return (

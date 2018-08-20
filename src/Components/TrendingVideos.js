@@ -19,6 +19,7 @@ class TrendingVideos extends React.Component {
         if (!this.props.videos) {
             return <div className='loading-div'>Loading...</div>;
         } else {
+            
             const theList = videos.slice(3, 6).map((video) => {
                 return (
                     <Card className='trending-card flex-wrap d-flex col-lg-4 col-md-5 col-sm-12'
