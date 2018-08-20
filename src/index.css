@@ -262,6 +262,8 @@ body {
 .personDetails{
   margin-top:150px;
   margin-bottom:150px;
+  font-size:2em;
+  text-align:center;
 }
 .details-wrapper {
   margin-top: 20px;
@@ -278,7 +280,15 @@ body {
 #team-nav {
   margin-right: 10px;
 }
-
+.memberName{
+  color:#004E64;
+}
+.memberName:hover{
+  text-decoration:none;
+}
+.matrixPic{
+  height:50%;
+}
 @media (max-width: 991px){
   .nav-links {
     position: relative;
