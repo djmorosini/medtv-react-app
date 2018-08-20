@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
 
 //so that I don't have to write it at the bottom
 export default class TheFooter extends React.Component {

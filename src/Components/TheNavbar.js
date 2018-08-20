@@ -70,7 +70,7 @@ export default class TheNavbar extends React.Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-              <NavItem>
+              <NavItem id='team-nav'>
                 <NavLink className='nav-links nav2' to="/meet-our-team"><div className='nav-item-container contribute'>Team</div></NavLink>
               </NavItem>
               <NavItem>

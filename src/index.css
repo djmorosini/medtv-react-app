@@ -275,7 +275,9 @@ body {
   margin-left: 20px;
   font-size: 2em;
 }
-
+#team-nav {
+  margin-right: 10px;
+}
 
 @media (max-width: 991px){
   .nav-links {
