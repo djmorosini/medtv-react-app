@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import {
-    Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink,
+    Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu,
     Collapse
 } from 'reactstrap';
-// import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import VideoListBreadCrumb from './ListBreadcrumb'
 
 export default class Sidebar extends Component {
@@ -93,49 +93,49 @@ export default class Sidebar extends Component {
                         <NavItem className='category-title' onClick={this.toggle1}>Cardiology</NavItem>
                         <Collapse isOpen={this.state.collapse1}>
                             <NavItem>
-                                <NavLink className='sub-title' href="#">- Coronary Artery</NavLink>
+                                <NavLink className='sub-title' to="/videos?tag=Coronary Artery">Coronary Artery</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className='sub-title' href="#">- Heart</NavLink>
+                                <NavLink className='sub-title' to="/videos?tag=Heart">Heart</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className='sub-title' href="#">- Aneurysm Repair</NavLink>
+                                <NavLink className='sub-title' to="/videos?tag=Aneurysm Repair">Aneurysm Repair</NavLink>
                             </NavItem>
                         </Collapse>
                         <NavItem className='category-title' onClick={this.toggle2}>Orthopedic</NavItem>
                         <Collapse isOpen={this.state.collapse2}>
                             <NavItem>
-                                <NavLink className='sub-title' href="#">- Back</NavLink>
+                                <NavLink className='sub-title' to="/videos?tag=back">Back</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className='sub-title' href="#">- Hip</NavLink>
+                                <NavLink className='sub-title' to="/videos?tag=Hip">Hip</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className='sub-title' href="#">- Hand/Wrist</NavLink>
+                                <NavLink className='sub-title' to="/videos?tag=Hand/Wrist">Hand/Wrist</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className='sub-title' href="#">- Knee</NavLink>
+                                <NavLink className='sub-title' to="/videos?tag=Knee">Knee</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className='sub-title' href="#">- Shoulder</NavLink>
+                                <NavLink className='sub-title' to="/videos?tag=Shoulder">Shoulder</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className='sub-title' href="#">- Foot/Ankle</NavLink>
+                                <NavLink className='sub-title' to="/videos?tag=Foot/Ankle">Foot/Ankle</NavLink>
                             </NavItem>
                         </Collapse>
                         <NavItem className='category-title' onClick={this.toggle3}>General</NavItem>
                         <Collapse isOpen={this.state.collapse3}>
                             <NavItem>
-                                <NavLink className='sub-title' href="#">- Cholecystectomy</NavLink>
+                                <NavLink className='sub-title' to="/videos?tag=Cholecystectomy">Cholecystectomy</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className='sub-title' href="#">- Hemorrhoid</NavLink>
+                                <NavLink className='sub-title' to="/videos?tag=Hemorrhoid">Hemorrhoid</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className='sub-title' href="#">- Colon Resection</NavLink>
+                                <NavLink className='sub-title' to="/videos?tag=Colon Resection">Colon Resection</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className='sub-title' href="#">- Thyroid</NavLink>
+                                <NavLink className='sub-title' to="/videos?tag=Thyroid">-Thyroid</NavLink>
                             </NavItem>
                         </Collapse>
                     </Nav>

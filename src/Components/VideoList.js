@@ -13,6 +13,43 @@ class VideoList extends React.Component {
 
     render() {
         const videos = this.props.videos
+        console.log(this.props)
+
+        if (this.props.fetchedVideo) {
+            const fetchedVideos = this.props.fetchedVideo
+            const theList = fetchedVideos.map((video) => {
+                return (
+
+                    <Card width={400} className='col-lg-3 col-md-5 col-sm-12'
+                        tag="div"
+                        key={video.id}
+                    >
+                        <Link to={`/video/${video.id}`} params={{ id: video.id }} onClick={() => this.updaterFunction(video)}>
+                            <CardImg width="100%" src={video.vid_thumbnail_uri} alt="Video thumbnail"
+                                height={200}
+                            />
+                        </Link>
+                        <CardBody>
+                            <Link to={`/video/${video.id}`} params={{ id: video.id }} onClick={() => this.updaterFunction(video)}>
+                                <CardTitle>{video.title}</CardTitle>
+                            </Link>
+                            <CardText>{video.description}</CardText>
+                        </CardBody>
+                    </Card>
+                );
+            });
+
+            return (
+                <Fragment>
+                    <div id='the-list' className='d-flex flex-wrap col-lg-11 col-md-11 col-sm-11'>
+                        {theList}
+                    </div>
+                    <div className='d-flex justify-content-center'>
+                        <ChangePage />
+                    </div>
+                </Fragment>
+            )
+        }
 
         if (!videos) {
             return <div className='loading-div no-videos'>No Videos...</div>;

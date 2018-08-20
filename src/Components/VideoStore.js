@@ -10,6 +10,7 @@ class VideoStore extends React.Component {
         this.route = props
         this.state = {
             videos: [],
+            fetchedVideo: null,
             activeVideo: null,
             error: null
         }
@@ -22,6 +23,12 @@ class VideoStore extends React.Component {
             this.allVideos().then((allVideos) => {
                 this.setState({ videos: allVideos })
                 localStorage.setItem('videos', JSON.stringify(allVideos))
+            })
+        }
+        if (this.props.props.location.search) {
+            this.getVideosByTags().then((fetchedVideo) => {
+                this.setState({ fetchedVideo: fetchedVideo })
+                localStorage.setItem('fetchedVideo', JSON.stringify(fetchedVideo))
             })
         }
     }
@@ -46,21 +53,41 @@ class VideoStore extends React.Component {
                     });
                 });
     }
+
+    getVideosByTags = () => {
+        console.log("Called get videos by tag")
+        return fetch(`https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos${this.props.props.location.search}`)
+            .then((response) => { return response.json() })
+            .then((data) => {
+                this.setState({
+                    fetchedVideo: data
+                })
+                return data;
+            },
+                error => {
+                    this.setState({
+                        error: error
+                    });
+                });
+    }
+
     updateActiveVideo = (video) => {
         localStorage.setItem('activeVideo', `${JSON.stringify(video)}`)
         this.setState({ activeVideo: video })
     }
 
     render() {
+        console.log(this.props.props.location.search)
         let videos = JSON.parse(localStorage.getItem('videos')) || this.state.videos
         let activeVideo = this.state.activeVideo
         let firstVideo = videos[0]
+        let fetchedVideo = this.state.fetchedVideo
+
         if (localStorage.getItem('activeVideo')) {
             // localStorage.clear()
             activeVideo = JSON.parse(`${localStorage.getItem('activeVideo')}`)
-        } else {
-
-        }
+        } 
+        
 
         if (!videos) {
             return <div>Loading...</div>
@@ -70,7 +97,7 @@ class VideoStore extends React.Component {
 
 
         } else if (this.route.props.match.path === '/videos') {
-            return <VideoList videos={videos} updater={this.updateActiveVideo} />
+            return <VideoList videos={videos} fetchedVideo={fetchedVideo} updater={this.updateActiveVideo} />
         } else {
             return (
                 <React.Fragment>
