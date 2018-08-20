@@ -36,10 +36,10 @@ class VideoDetails extends React.Component {
 	render() {
 		let video = this.state.video;
 		if (!video) {
-			return <div>Loading...</div>;
+			return <div className='loading-div'>Loading...</div>;
 		} else {
 			return (
-				<div className="d-flex flex-wrap col-lg-4 col-sm-4">
+				<div className="d-flex flex-wrap col-lg-12 col-sm-12 details-wrapper">
 					<Card className="h-100 col-lg-12 col-md-12 col-sm-12" tag="div" key={video.id}>
 						<CardBody>
 							<CardTitle id='vidDetailTitle'><span>{video.title}</span></CardTitle>

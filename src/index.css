@@ -57,7 +57,7 @@ body {
   height: 500px;
 }
 .carousel-item:first-child {
-  background: url(./images/piron-guillaume-492639-unsplash.jpg) no-repeat center center;
+  background: url(./images/piron-guillaume-small.jpg) no-repeat center center;
   background-size: cover;
   vertical-align: middle;
 }
@@ -66,7 +66,7 @@ body {
   background-size: cover;
 }
 .carousel-item:nth-child(3) {
-  background: url(./images/oneDoctor.jpg) no-repeat center center;
+  background: url(./images/oneDoctor-small.jpg) no-repeat center center;
   background-size: cover;
 }
 .carousel-item:nth-child(4) {
@@ -162,7 +162,7 @@ body {
 }
 
 #vidDetailTitle{
-  font-size: 2em;
+  font-size: 1.8em;
 }
 .strong {
   font-weight: 1000;
@@ -260,6 +260,15 @@ body {
   margin-top:150px;
   margin-bottom:150px;
 }
+.details-wrapper {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#playerWrapper {
+  margin-left: 15%;
+}
+
+
 
 @media (max-width: 991px){
   .nav-links {
@@ -286,6 +295,9 @@ body {
   }
 
 }
+
+
+
 @media only screen and (max-device-width: 480px){
   #filter-top {
     margin-left: 100px;

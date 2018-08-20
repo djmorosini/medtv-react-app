@@ -26,8 +26,8 @@ export default class Sorry404 extends React.Component {
                         <li>
                             <Link to="/videos">Videos</Link>
                         </li>
-                        <li>
-                            Browse
+                        {/* <li>
+                            Browse Videos
                     <ul>
                                 <li>
                                     <a href="#">Cranial</a>
@@ -45,7 +45,7 @@ export default class Sorry404 extends React.Component {
                                     <a href="#">Vascular</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> */}
                     </ul>
                 </Jumbotron>
             </div>
