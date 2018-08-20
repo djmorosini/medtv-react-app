@@ -256,6 +256,10 @@ body {
 .card {
   max-width: 70%;
 }
+.personDetails{
+  margin-top:150px;
+  margin-bottom:150px;
+}
 .details-wrapper {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -289,6 +293,7 @@ body {
   .watch-breadcrumb {
     margin-top: 80px;
   }
+
 }
 
 
