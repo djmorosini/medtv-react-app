@@ -16,7 +16,7 @@ const Main = () => (
       <Route name='list-page' path='/videos' component={FullListPage}/>
       <Route name='meet-our-team' exact path='/meet-our-team' component={MeetOurTeam}/>
       <Route name='member-details' exact path='/meet-our-team/:name' component={MemberDetails}/>
-      <Route name='sorry-404' path='/404' component={The404Page}/>
+      <Route name='sorry-404' component={The404Page}/>
     </Switch>
   </BrowserRouter>
 )

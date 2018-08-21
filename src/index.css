@@ -10,7 +10,7 @@ body {
 }
 .category-title {
   color: #004E64;
-  margin: 10px 0 10px 20px;
+  margin: 10px 0 10px 5px;
   cursor: pointer;
   
 }
@@ -26,7 +26,11 @@ body {
 }
 .sub-title:hover {
   margin-left: 20px;
+  text-decoration: none;
   color: rgb(37, 158, 73);
+}
+.sub-links {
+  margin: 10px 0 20px 0;
 }
 #filter-top {
   margin-left: 400px;
@@ -127,6 +131,7 @@ body {
   margin-top: 50px;
   margin-left: 220px;
   width: 100%;
+  min-height: 900px;
 }
 #video-header {
   margin-top: 80px;
@@ -155,6 +160,7 @@ body {
   margin-bottom: 20px;
   overflow: hidden;
   height: 450px;
+  min-width: 30%;
 }
 
 .watch-breadcrumb {
@@ -177,7 +183,6 @@ body {
   position: relative;
   top: 8px;
   right: 8px;
-  
 }
 .nav-item-container {
   width: 100%;
@@ -280,6 +285,38 @@ body {
 #team-nav {
   margin-right: 10px;
 }
+#fetch-vid {
+  height: 600px;
+}
+.no-list {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 3em;
+  height: 900px;
+}
+.browse:hover {
+  text-decoration: none;
+  
+}
+.nav-browse {
+  color: #004E64;
+  cursor:pointer;
+}
+.nav-browse:hover {
+  background-color: #004E64;
+  color: white;
+}
+.filter-items:hover {
+  background-color: #004E64;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+.filter-links:hover {
+  text-decoration: none;
+}
+
+
 .memberName{
   color:#004E64;
 }
@@ -330,6 +367,10 @@ body {
     width: 40%;
     max-width: 50%;
     
+  }
+  #team-nav {
+    margin-top: -8px;
+    margin-bottom: 10px;
   }
   
 }
