@@ -13,15 +13,16 @@ import Neo from '../images/Neo1.jpg'
 export default class Example extends React.Component {
   render() {
     let person = this.props.props.match.params.name
-    if (person === 'Flo') {
+    if (person === 'Florence') {
       return (
         <Container className='personDetails'>
 
           <Row>
             <Col xs="6">
-              <img src={TheOracle}></img>
+              <img className="matrixPic" src={TheOracle}></img>
             </Col>
             <Col xs="6">
+              <h1>Florence Fong</h1>
               <a href="https://www.linkedin.com/in/florence-fong/">LinkedIn</a>
               <br />
               <a href="https://github.com/flofong">GitHub</a>
@@ -37,9 +38,10 @@ export default class Example extends React.Component {
 
           <Row>
             <Col xs="6">
-              <img src={Dozer}></img>
+              <img className="matrixPic" src={Dozer}></img>
             </Col>
             <Col xs="6">
+            <h1>Matt Layden</h1>
               <a href="https://www.linkedin.com/in/matthew-layden-68059a167/">LinkedIn</a>
               <br />
               <a href="https://github.com/kobello">GitHub</a>
@@ -55,9 +57,10 @@ export default class Example extends React.Component {
 
           <Row>
             <Col xs="6">
-              <img src={Neo}></img>
+              <img className="matrixPic" src={Neo}></img>
             </Col>
             <Col xs="6">
+            <h1>Dylan Morosini</h1>
               <a href="https://www.linkedin.com/in/djmorosini/">LinkedIn</a>
               <br />
               <a href="https://github.com/djmorosini">GitHub</a>
@@ -73,9 +76,10 @@ export default class Example extends React.Component {
 
           <Row>
             <Col xs="6">
-              <img src={Trinity}></img>
+              <img className="matrixPic" src={Trinity}></img>
             </Col>
             <Col xs="6">
+              <h1>Julia Kantarovsky</h1>
               <a href="https://linkedin.com/in/juliakantarovsky">LinkedIn</a>
               <br />
               <a href="https://github.com/JuliaKan">GitHub</a>
@@ -91,9 +95,10 @@ export default class Example extends React.Component {
 
           <Row>
             <Col xs="6">
-              <img src={Morpheus}></img>
+              <img className="matrixPic" src={Morpheus}></img>
             </Col>
             <Col xs="6">
+            <h1>Chris Frank</h1>
               <a href="https://www.linkedin.com/in/christopherfrank/">LinkedIn</a>
               <br />
               <a href="https://github.com/cfrank1977">GitHub</a>
@@ -109,9 +114,10 @@ export default class Example extends React.Component {
 
           <Row>
             <Col xs="6">
-              <img src={AgentSmith}></img>
+              <img className="matrixPic" src={AgentSmith}></img>
             </Col>
             <Col xs="6">
+            <h1>Mat Gilbert</h1>
               <a href="Mat/linkedin">LinkedIn</a>
               <br />
               <a href="Mat/github">GitHub</a>

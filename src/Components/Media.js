@@ -13,35 +13,34 @@ class Team extends React.Component {
   render() {
     const members = [
       {
-        'name': 'Mat',
-        'shortbio': 'Mat is committed to taking down the system he was once part of.',
-        'src': AgentSmith
+        'name': 'Matt',
+        'shortbio': 'Matt loves SDKs.',
+        'src': Dozer
       },
       {
         'name': 'Dylan',
-        'shortbio': "Dylan can't stop won't stop",
+        'shortbio': "Dylan can't stop won't stop.",
         'src': Neo
       },
       {
         'name': 'Julia',
-        'shortbio': 'Julia Gits React',
+        'shortbio': 'Julia Gits React.',
         'src': Trinity
       },
       {
-        'name': 'Flo',
-        'shortbio': 'Flo is a front-end ninja.',
+        'name': 'Florence',
+        'shortbio': 'Florence is a front-end ninja.',
         'src': TheOracle
-      },
-      {
-        'name': 'Matt',
-        'shortbio': 'Matt loves SDKs.',
-        'src': Dozer
-
       },
       {
         'name': 'Chris',
         'shortbio': 'Chris loves the Agile.',
         'src': Morpheus
+      },
+      {
+        'name': 'Mat',
+        'shortbio': 'Mat is committed to taking down the system he was once part of.',
+        'src': AgentSmith
       },
     ]
 
@@ -50,14 +49,15 @@ class Team extends React.Component {
       return (
         <Media key={member.name}>
           <Media left top >
-            <Link to={`/meet-our-team/${member.name}`} params={{ name:member.name }}>
+            <Link to={`/meet-our-team/${member.name}`} params={{ name: member.name }}>
               <div><Media object src={member.src} /></div>
             </Link>
           </Media>
 
           <Media body>
             <Media heading>
-              {member.name}
+              <Link className="memberName" to={`/meet-our-team/${member.name}`} params={{ name: member.name }}>
+                {member.name}</Link>
             </Media>
             {member.shortbio}
           </Media>
