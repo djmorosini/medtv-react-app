@@ -58,8 +58,8 @@ export default class Sidebar extends Component {
                                 Age
                         </DropdownToggle>
                             <DropdownMenu right>
-                                <DropdownItem >Age Below 60</DropdownItem>
-                                <DropdownItem>Age Above 60</DropdownItem>
+                                <DropdownItem>Below 60</DropdownItem>
+                                <DropdownItem>Above 60</DropdownItem>
                             </DropdownMenu>
                         </Dropdown>
                         <Dropdown isOpen={this.state.dropdownOpen2} toggle={this.drop2}>
@@ -76,7 +76,7 @@ export default class Sidebar extends Component {
                                 Duration
                         </DropdownToggle>
                             <DropdownMenu right>
-                                <DropdownItem >Less than 3 hours</DropdownItem>
+                                <DropdownItem>Less than 3 hours</DropdownItem>
                                 <DropdownItem>Longer than 3 hours</DropdownItem>
                             </DropdownMenu>
                         </Dropdown>

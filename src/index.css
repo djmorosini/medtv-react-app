@@ -292,11 +292,17 @@ body {
   font-size: 3em;
   height: 900px;
 }
-.nav-browse:hover {
+.browse:hover {
   text-decoration: none;
+  
 }
 .nav-browse {
   color: #004E64;
+  cursor:pointer;
+}
+.nav-browse:hover {
+  background-color: #004E64;
+  color: white;
 }
 
 

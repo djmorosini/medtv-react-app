@@ -53,21 +53,31 @@ export default class TheNavbar extends React.Component {
                   Browse
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem>
-                    <NavLink className='nav-browse' to='videos?tag=Cranial'>Cranial</NavLink>
+                  <NavLink  className='browse' to='videos?tag=Cranial'>
+                    <DropdownItem className='nav-browse'>
+                      Cranial
                   </DropdownItem>
-                  <DropdownItem>
-                    <NavLink className='nav-browse' to='videos?tag=Appendages'>Appendages</NavLink>
+                  </NavLink>
+                  <NavLink className='browse' to='videos?tag=Appendages'>
+                    <DropdownItem className='nav-browse'>
+                      Appendages
                   </DropdownItem>
-                  <DropdownItem>
-                    <NavLink className='nav-browse' to='videos?tag=Heart'>Heart</NavLink>
+                  </NavLink>
+                  <NavLink className='browse' to='videos?tag=Heart'>
+                    <DropdownItem className='nav-browse'>
+                      Cardiology
                   </DropdownItem>
-                  <DropdownItem>
-                    <NavLink className='nav-browse' to='videos?tag=Lung'>Lung</NavLink>
+                  </NavLink>
+                  <NavLink className='browse' to='videos?tag=Lung'>
+                    <DropdownItem className='nav-browse'>
+                      General
                   </DropdownItem>
-                  <DropdownItem>
-                    <NavLink className='nav-browse' to='videos?tag=Vascular'>Vascular</NavLink>
+                  </NavLink>
+                  <NavLink className='browse' to='videos?tag=Vascular'>
+                    <DropdownItem className='nav-browse'>
+                      Medical Devices
                   </DropdownItem>
+                  </NavLink>
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem id='team-nav'>
