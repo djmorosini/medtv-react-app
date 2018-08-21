@@ -131,6 +131,7 @@ body {
   margin-top: 50px;
   margin-left: 220px;
   width: 100%;
+  min-height: 900px;
 }
 #video-header {
   margin-top: 80px;
@@ -289,6 +290,7 @@ body {
   text-align: center;
   margin-top: 50px;
   font-size: 3em;
+  height: 900px;
 }
 .nav-browse:hover {
   text-decoration: none;
