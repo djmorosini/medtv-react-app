@@ -309,6 +309,11 @@ body {
 .filter-items:hover {
   background-color: #004E64;
   color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+.filter-links:hover {
+  text-decoration: none;
 }
 
 
