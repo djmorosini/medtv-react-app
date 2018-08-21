@@ -2,11 +2,12 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import AgentSmith from '../images/AgentSmith.jpg';
 import Dozer from '../images/Dozer.jpg';
-import TheOracle from '../images/TheOracle.jpg';
+// import TheOracle from '../images/TheOracle.jpg';
 // import Trinity from '../images/Trinity1.jpg';
 import Morpheus from '../images/Morpheus1.jpg';
 import Neo from '../images/Neo1.jpg';
 import Julia from '../images/julia400px.jpg'
+import Flo from '../images/flo.jpg'
 
 
 
@@ -20,9 +21,9 @@ export default class Example extends React.Component {
 
           <Row>
             <Col xs="6 imageHolder">
-              <img className="matrixPic" src={TheOracle}></img>
+              <img className="matrixPic" src={Flo}></img>
             </Col>
-            <Col xs="6">
+            <Col xs="6 information">
               <h1>Florence Fong</h1>
               <a href="https://www.linkedin.com/in/florence-fong/">LinkedIn</a>
               <br />
@@ -42,7 +43,7 @@ export default class Example extends React.Component {
             <Col xs="6 imageHolder">
               <img className="matrixPic" src={Dozer}></img>
             </Col>
-            <Col xs="6">
+            <Col xs="6 information">
             <h1>Matt Layden</h1>
               <a href="https://www.linkedin.com/in/matthew-layden-68059a167/">LinkedIn</a>
               <br />
@@ -62,7 +63,7 @@ export default class Example extends React.Component {
             <Col xs="6 imageHolder">
               <img className="matrixPic" src={Neo}></img>
             </Col>
-            <Col xs="6">
+            <Col xs="6 information">
             <h1>Dylan Morosini</h1>
               <a href="https://www.linkedin.com/in/djmorosini/">LinkedIn</a>
               <br />
@@ -87,7 +88,7 @@ export default class Example extends React.Component {
               <a href="https://linkedin.com/in/juliakantarovsky">LinkedIn</a>
               <br />
               <a href="https://github.com/JuliaKan">GitHub</a>
-              <p className="whatIDid">Julia has worked a lot on this project</p>
+              <p className="whatIDid">Julia was a Full Stack Developer on this project. She spent the first sprint working on the backend, using Serverless to deploy  the app. She specifically employed the use of AWS Lambda, AWS DynamoDB, and AWS S3. She spent the second and third sprints working on the front end using React. She specifically created the "Team" components.</p>
             </Col>
           </Row>
 
@@ -102,7 +103,7 @@ export default class Example extends React.Component {
             <Col xs="6 imageHolder">
               <img className="matrixPic" src={Morpheus}></img>
             </Col>
-            <Col xs="6">
+            <Col xs="6 information">
             <h1>Chris Frank</h1>
               <a href="https://www.linkedin.com/in/christopherfrank/">LinkedIn</a>
               <br />
@@ -122,7 +123,7 @@ export default class Example extends React.Component {
             <Col xs="6 imageHolder">
               <img className="matrixPic" src={AgentSmith}></img>
             </Col>
-            <Col xs="6">
+            <Col xs="6 information">
             <h1>Mat Gilbert</h1>
               <a href="Mat/linkedin">LinkedIn</a>
               <br />
