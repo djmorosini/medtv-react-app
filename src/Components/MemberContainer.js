@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import AgentSmith from '../images/AgentSmith.jpg';
 import Dozer from '../images/Dozer.jpg';
 import Chris from '../images/Chris.jpg';
-import Neo from '../images/Neo1.jpg';
+import Dylan from '../images/dylanHeadshot.jpg';
 import Julia from '../images/julia400px.jpg'
 import Flo from '../images/Flo.jpg'
 
@@ -59,14 +59,14 @@ export default class Example extends React.Component {
 
           <Row>
             <Col xs="6 imageHolder">
-              <img className="matrixPic" src={Neo}></img>
+              <img className="matrixPic" src={Dylan}></img>
             </Col>
             <Col xs="6 information">
             <h1>Dylan Morosini</h1>
               <a href="https://www.linkedin.com/in/djmorosini/">LinkedIn</a>
               <br />
               <a href="https://github.com/djmorosini">GitHub</a>
-              <p className="whatIDid">Dylan has worked a lot on this project</p>
+              <p className="whatIDid">Dylan took lead on converting the static html pages into a more dynamic react application while also preparing the front-end client to connect to the AWS back-end. He specifically worked on improving the site by limiting interactions with the back-end database and persisting the state of the application.</p>
             </Col>
           </Row>
 
