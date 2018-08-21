@@ -25,7 +25,8 @@ export default class TheNavbar extends React.Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
+      input: ''
     };
   }
 
@@ -34,6 +35,10 @@ export default class TheNavbar extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
+  updateInput = (e) => {
+    console.log(e.target.value)
+    this.setState({ input: e.target.value })
+  }
 
   render() {
 
@@ -41,7 +46,7 @@ export default class TheNavbar extends React.Component {
 
       <Navbar fixed="top" id='toplevel-nav' dark expand="lg">
         <Container>
-        <Link className='the-logo' to="/"><img alt='MedTV logo' height={40} src={Picture}/></Link>
+          <Link className='the-logo' to="/"><img alt='MedTV logo' height={40} src={Picture} /></Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -53,21 +58,31 @@ export default class TheNavbar extends React.Component {
                   Browse
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem>
-                    Cranial
+                  <NavLink  className='browse' to='videos?tag=Cranial'>
+                    <DropdownItem className='nav-browse'>
+                      Cranial
                   </DropdownItem>
-                  <DropdownItem>
-                    Appendages
+                  </NavLink>
+                  <NavLink className='browse' to='videos?tag=Appendages'>
+                    <DropdownItem className='nav-browse'>
+                      Appendages
                   </DropdownItem>
-                  <DropdownItem>
-                    Heart
+                  </NavLink>
+                  <NavLink className='browse' to='videos?tag=Heart'>
+                    <DropdownItem className='nav-browse'>
+                      Cardiology
                   </DropdownItem>
-                  <DropdownItem>
-                    Lung
+                  </NavLink>
+                  <NavLink className='browse' to='videos?tag=Lung'>
+                    <DropdownItem className='nav-browse'>
+                      General
                   </DropdownItem>
-                  <DropdownItem>
-                    Vascular
+                  </NavLink>
+                  <NavLink className='browse' to='videos?tag=Vascular'>
+                    <DropdownItem className='nav-browse'>
+                      Medical Devices
                   </DropdownItem>
+                  </NavLink>
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem id='team-nav'>
@@ -75,9 +90,9 @@ export default class TheNavbar extends React.Component {
               </NavItem>
               <NavItem>
                 <InputGroup>
-                  <Input type="text" className="form-control" placeholder="Search for..." />
+                  <Input type="text" value={this.state.input} onChange={e => this.updateInput(e)} className="form-control" placeholder="Search for..." />
                   <InputGroupAddon addonType="append" className="input-group-btn">
-                    <Button className="nav-go" type="button">Go!</Button>
+                    <Link to={`/videos?tag=${this.state.input}`}><Button className="nav-go" type="button">Go!</Button></Link>
                   </InputGroupAddon>
                 </InputGroup>
               </NavItem>

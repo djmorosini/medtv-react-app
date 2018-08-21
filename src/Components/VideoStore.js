@@ -10,13 +10,16 @@ class VideoStore extends React.Component {
         this.route = props
         this.state = {
             videos: [],
+            fetchedVideo: null,
             activeVideo: null,
-            error: null
+            error: null,
+            searchParam: null
         }
     }
 
     componentDidMount() {
         let videos = this.state.videos
+        let searchParam = this.state.searchParam
         if (videos.length === 0 && !localStorage.getItem('videos')) {
             console.log("Im fetching!")
             this.allVideos().then((allVideos) => {
@@ -24,9 +27,22 @@ class VideoStore extends React.Component {
                 localStorage.setItem('videos', JSON.stringify(allVideos))
             })
         }
+        if (this.props.props.location.search!==searchParam) {
+            this.getVideosByTags().then((fetchedVideo) => {
+                this.setState({ fetchedVideo: fetchedVideo, searchParam: this.props.props.location.search })
+                localStorage.setItem('fetchedVideo', JSON.stringify(fetchedVideo))
+            })
+        }
     }
 
     componentDidUpdate() {
+        let searchParam = this.state.searchParam
+        if (this.props.props.location.search!==searchParam) {
+            this.getVideosByTags().then((fetchedVideo) => {
+                this.setState({ fetchedVideo: fetchedVideo, searchParam: this.props.props.location.search })
+                localStorage.setItem('fetchedVideo', JSON.stringify(fetchedVideo))
+            })
+        }
         window.scrollTo(0, 0);
     }
 
@@ -46,21 +62,42 @@ class VideoStore extends React.Component {
                     });
                 });
     }
+
+    getVideosByTags = () => {
+        console.log("Called get videos by tag")
+        return fetch(`https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos${this.props.props.location.search}`)
+            .then((response) => { return response.json() })
+            .then((data) => {
+                this.setState({
+                    fetchedVideo: data,
+                    searchParam: this.props.props.location.search
+                })
+                return data;
+            },
+                error => {
+                    this.setState({
+                        error: error
+                    });
+                });
+    }
+
     updateActiveVideo = (video) => {
         localStorage.setItem('activeVideo', `${JSON.stringify(video)}`)
         this.setState({ activeVideo: video })
     }
 
     render() {
+        console.log(this.props.props.location.search)
         let videos = JSON.parse(localStorage.getItem('videos')) || this.state.videos
         let activeVideo = this.state.activeVideo
         let firstVideo = videos[0]
+        let fetchedVideo = this.state.fetchedVideo
+
         if (localStorage.getItem('activeVideo')) {
             // localStorage.clear()
             activeVideo = JSON.parse(`${localStorage.getItem('activeVideo')}`)
-        } else {
-
         }
+
 
         if (!videos) {
             return <div>Loading...</div>
@@ -70,7 +107,13 @@ class VideoStore extends React.Component {
 
 
         } else if (this.route.props.match.path === '/videos') {
-            return <VideoList videos={videos} updater={this.updateActiveVideo} />
+
+            return (
+                <React.Fragment>
+                    
+                    <VideoList videos={videos} fetchedVideo={fetchedVideo} updater={this.updateActiveVideo} />
+                </React.Fragment>
+            )
         } else {
             return (
                 <React.Fragment>
