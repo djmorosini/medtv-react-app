@@ -106,7 +106,7 @@ export default class Example extends React.Component {
               <a href="https://www.linkedin.com/in/christopherfrank/">LinkedIn</a>
               <br />
               <a href="https://github.com/cfrank1977">GitHub</a>
-              <p className="whatIDid">Chris has worked a lot on this project</p>
+              <p className="whatIDid">Engineering team manager. Product Owner. Full stack developer who can roll up his sleeves and support the team to move through roadblocks.</p>
             </Col>
           </Row>
 
