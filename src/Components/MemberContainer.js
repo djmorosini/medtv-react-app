@@ -18,7 +18,7 @@ export default class Example extends React.Component {
         <Container className='personDetails'>
 
           <Row>
-            <Col xs="6">
+            <Col xs="6 imageHolder">
               <img className="matrixPic" src={TheOracle}></img>
             </Col>
             <Col xs="6">
@@ -37,7 +37,7 @@ export default class Example extends React.Component {
         <Container className='personDetails'>
 
           <Row>
-            <Col xs="6">
+            <Col xs="6 imageHolder">
               <img className="matrixPic" src={Dozer}></img>
             </Col>
             <Col xs="6">
@@ -56,7 +56,7 @@ export default class Example extends React.Component {
         <Container className='personDetails'>
 
           <Row>
-            <Col xs="6">
+            <Col xs="6 imageHolder">
               <img className="matrixPic" src={Neo}></img>
             </Col>
             <Col xs="6">
@@ -75,7 +75,7 @@ export default class Example extends React.Component {
         <Container className='personDetails'>
 
           <Row>
-            <Col xs="6">
+            <Col xs="6 imageHolder">
               <img className="matrixPic" src={Trinity}></img>
             </Col>
             <Col xs="6">
@@ -94,7 +94,7 @@ export default class Example extends React.Component {
         <Container className='personDetails'>
 
           <Row>
-            <Col xs="6">
+            <Col xs="6 imageHolder">
               <img className="matrixPic" src={Morpheus}></img>
             </Col>
             <Col xs="6">
@@ -113,7 +113,7 @@ export default class Example extends React.Component {
         <Container className='personDetails'>
 
           <Row>
-            <Col xs="6">
+            <Col xs="6 imageHolder">
               <img className="matrixPic" src={AgentSmith}></img>
             </Col>
             <Col xs="6">
