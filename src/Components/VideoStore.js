@@ -2,7 +2,6 @@ import React from 'react';
 import VideoPlayer from './VideoPlayer';
 import TrendingVideos from './TrendingVideos';
 import VideoList from './VideoList';
-import Sidebar from './Sidebar'
 
 
 class VideoStore extends React.Component {
@@ -28,7 +27,7 @@ class VideoStore extends React.Component {
                 localStorage.setItem('videos', JSON.stringify(allVideos))
             })
         }
-        if (this.props.props.location.search!=searchParam) {
+        if (this.props.props.location.search!==searchParam) {
             this.getVideosByTags().then((fetchedVideo) => {
                 this.setState({ fetchedVideo: fetchedVideo, searchParam: this.props.props.location.search })
                 localStorage.setItem('fetchedVideo', JSON.stringify(fetchedVideo))
@@ -38,7 +37,7 @@ class VideoStore extends React.Component {
 
     componentDidUpdate() {
         let searchParam = this.state.searchParam
-        if (this.props.props.location.search!=searchParam) {
+        if (this.props.props.location.search!==searchParam) {
             this.getVideosByTags().then((fetchedVideo) => {
                 this.setState({ fetchedVideo: fetchedVideo, searchParam: this.props.props.location.search })
                 localStorage.setItem('fetchedVideo', JSON.stringify(fetchedVideo))

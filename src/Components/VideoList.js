@@ -38,7 +38,7 @@ class VideoList extends React.Component {
                     </Card>
                 );
             });
-            if (theList.length != 0) {
+            if (theList.length !== 0) {
                 return (
 
                     <Fragment>
