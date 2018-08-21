@@ -4,6 +4,7 @@ import {
     Collapse
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom'
+
 import VideoListBreadCrumb from './ListBreadcrumb'
 
 export default class Sidebar extends Component {
@@ -45,6 +46,7 @@ export default class Sidebar extends Component {
     }
 
     render() {
+        
         return (
             <Fragment>
                 <h1 className='trendTitle' id="video-header">Video List</h1>

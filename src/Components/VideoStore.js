@@ -2,6 +2,7 @@ import React from 'react';
 import VideoPlayer from './VideoPlayer';
 import TrendingVideos from './TrendingVideos';
 import VideoList from './VideoList';
+import Sidebar from './Sidebar'
 
 
 class VideoStore extends React.Component {
@@ -12,12 +13,14 @@ class VideoStore extends React.Component {
             videos: [],
             fetchedVideo: null,
             activeVideo: null,
-            error: null
+            error: null,
+            searchParam: null
         }
     }
 
     componentDidMount() {
         let videos = this.state.videos
+        let searchParam = this.state.searchParam
         if (videos.length === 0 && !localStorage.getItem('videos')) {
             console.log("Im fetching!")
             this.allVideos().then((allVideos) => {
@@ -25,15 +28,22 @@ class VideoStore extends React.Component {
                 localStorage.setItem('videos', JSON.stringify(allVideos))
             })
         }
-        if (this.props.props.location.search) {
+        if (this.props.props.location.search!=searchParam) {
             this.getVideosByTags().then((fetchedVideo) => {
-                this.setState({ fetchedVideo: fetchedVideo })
+                this.setState({ fetchedVideo: fetchedVideo, searchParam: this.props.props.location.search })
                 localStorage.setItem('fetchedVideo', JSON.stringify(fetchedVideo))
             })
         }
     }
 
     componentDidUpdate() {
+        let searchParam = this.state.searchParam
+        if (this.props.props.location.search!=searchParam) {
+            this.getVideosByTags().then((fetchedVideo) => {
+                this.setState({ fetchedVideo: fetchedVideo, searchParam: this.props.props.location.search })
+                localStorage.setItem('fetchedVideo', JSON.stringify(fetchedVideo))
+            })
+        }
         window.scrollTo(0, 0);
     }
 
@@ -60,7 +70,8 @@ class VideoStore extends React.Component {
             .then((response) => { return response.json() })
             .then((data) => {
                 this.setState({
-                    fetchedVideo: data
+                    fetchedVideo: data,
+                    searchParam: this.props.props.location.search
                 })
                 return data;
             },
@@ -86,8 +97,8 @@ class VideoStore extends React.Component {
         if (localStorage.getItem('activeVideo')) {
             // localStorage.clear()
             activeVideo = JSON.parse(`${localStorage.getItem('activeVideo')}`)
-        } 
-        
+        }
+
 
         if (!videos) {
             return <div>Loading...</div>
@@ -97,7 +108,13 @@ class VideoStore extends React.Component {
 
 
         } else if (this.route.props.match.path === '/videos') {
-            return <VideoList videos={videos} fetchedVideo={fetchedVideo} updater={this.updateActiveVideo} />
+
+            return (
+                <React.Fragment>
+                    
+                    <VideoList videos={videos} fetchedVideo={fetchedVideo} updater={this.updateActiveVideo} />
+                </React.Fragment>
+            )
         } else {
             return (
                 <React.Fragment>

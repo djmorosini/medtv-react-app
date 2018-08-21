@@ -16,7 +16,7 @@ class VideoList extends React.Component {
         console.log(this.props)
 
         if (this.props.fetchedVideo) {
-            const fetchedVideos = this.props.fetchedVideo
+            let fetchedVideos = this.props.fetchedVideo
             const theList = fetchedVideos.map((video) => {
                 return (
 
@@ -38,21 +38,23 @@ class VideoList extends React.Component {
                     </Card>
                 );
             });
+            if (theList.length != 0) {
+                return (
 
-            return (
-                <Fragment>
-                    <div id='the-list' className='d-flex flex-wrap col-lg-11 col-md-11 col-sm-11'>
-                        {theList}
-                    </div>
-                    <div className='d-flex justify-content-center'>
-                        <ChangePage />
-                    </div>
-                </Fragment>
-            )
-        }
-
-        if (!videos) {
-            return <div className='loading-div no-videos'>No Videos...</div>;
+                    <Fragment>
+                        <div id='the-list' className='d-flex flex-wrap col-lg-11 col-md-11 col-sm-11'>
+                            {theList}
+                        </div>
+                        <div className='d-flex justify-content-center'>
+                            <ChangePage />
+                        </div>
+                    </Fragment>
+                )
+            } else {
+                return (
+                    <div className='loading-div no-list'>No videos</div>
+                )
+            }
         } else {
 
             const theList = videos.slice(0, 9).map((video) => {
