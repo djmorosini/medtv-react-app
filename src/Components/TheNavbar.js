@@ -58,29 +58,34 @@ export default class TheNavbar extends React.Component {
                   Browse
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <NavLink  className='browse' to='videos?tag=Cranial'>
+                  <NavLink  className='browse' to='videos?tag=Cardiovascular'>
                     <DropdownItem className='nav-browse'>
-                      Cranial
+                      Cardiovascular
                   </DropdownItem>
                   </NavLink>
-                  <NavLink className='browse' to='videos?tag=Appendages'>
+                  <NavLink className='browse' to='videos?tag=Digestive'>
                     <DropdownItem className='nav-browse'>
-                      Appendages
+                      Digestive
                   </DropdownItem>
                   </NavLink>
-                  <NavLink className='browse' to='videos?tag=Heart'>
+                  <NavLink className='browse' to='videos?tag=Musculoskeletal'>
                     <DropdownItem className='nav-browse'>
-                      Cardiology
+                    Musculoskeletal
                   </DropdownItem>
                   </NavLink>
-                  <NavLink className='browse' to='videos?tag=Lung'>
+                  <NavLink className='browse' to='videos?tag=Respiratory'>
                     <DropdownItem className='nav-browse'>
-                      General
+                    Respiratory
                   </DropdownItem>
                   </NavLink>
-                  <NavLink className='browse' to='videos?tag=Vascular'>
+                  <NavLink className='browse' to='videos?tag=Skin'>
                     <DropdownItem className='nav-browse'>
-                      Medical Devices
+                      Skin
+                  </DropdownItem>
+                  </NavLink>
+                  <NavLink className='browse' to='videos?tag=Urinary+System'>
+                    <DropdownItem className='nav-browse'>
+                      Urinary System
                   </DropdownItem>
                   </NavLink>
                 </DropdownMenu>

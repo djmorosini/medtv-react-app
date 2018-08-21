@@ -130,8 +130,8 @@ body {
 #the-list {
   margin-top: 50px;
   margin-left: 220px;
-  width: 100%;
-  min-height: 900px;
+  width: 83%;
+  min-height: 1600px;
 }
 #video-header {
   margin-top: 80px;
@@ -160,7 +160,7 @@ body {
   margin-bottom: 20px;
   overflow: hidden;
   height: 450px;
-  min-width: 30%;
+  min-width: 31%;
 }
 
 .watch-breadcrumb {
@@ -292,7 +292,7 @@ body {
   text-align: center;
   margin-top: 50px;
   font-size: 3em;
-  height: 900px;
+  height: 1600px;
 }
 .browse:hover {
   text-decoration: none;
