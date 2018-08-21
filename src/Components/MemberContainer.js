@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import AgentSmith from '../images/AgentSmith.jpg';
 import Matt from '../images/matt.jpg';
-import Morpheus from '../images/Morpheus1.jpg';
+import Chris from '../images/Chris.jpg';
 import Neo from '../images/Neo1.jpg';
 import Julia from '../images/julia400px.jpg'
 import Flo from '../images/Flo.jpg'
@@ -99,14 +99,14 @@ export default class Example extends React.Component {
 
           <Row>
             <Col xs="6 imageHolder">
-              <img className="matrixPic" src={Morpheus}></img>
+              <img className="matrixPic" src={Chris}></img>
             </Col>
             <Col xs="6 information">
             <h1>Chris Frank</h1>
               <a href="https://www.linkedin.com/in/christopherfrank/">LinkedIn</a>
               <br />
               <a href="https://github.com/cfrank1977">GitHub</a>
-              <p className="whatIDid">Chris has worked a lot on this project</p>
+              <p className="whatIDid">Engineering team manager. Product Owner. Full stack developer who can roll up his sleeves and support the team to move through roadblocks.</p>
             </Col>
           </Row>
 
