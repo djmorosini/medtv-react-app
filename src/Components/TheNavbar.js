@@ -41,7 +41,7 @@ export default class TheNavbar extends React.Component {
 
       <Navbar fixed="top" id='toplevel-nav' dark expand="lg">
         <Container>
-        <Link className='the-logo' to="/"><img alt='MedTV logo' height={40} src={Picture}/></Link>
+          <Link className='the-logo' to="/"><img alt='MedTV logo' height={40} src={Picture} /></Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -54,19 +54,19 @@ export default class TheNavbar extends React.Component {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    Cranial
+                    <NavLink className='nav-browse' to='videos?tag=Cranial'>Cranial</NavLink>
                   </DropdownItem>
                   <DropdownItem>
-                    Appendages
+                    <NavLink className='nav-browse' to='videos?tag=Appendages'>Appendages</NavLink>
                   </DropdownItem>
                   <DropdownItem>
-                    Heart
+                    <NavLink className='nav-browse' to='videos?tag=Heart'>Heart</NavLink>
                   </DropdownItem>
                   <DropdownItem>
-                    Lung
+                    <NavLink className='nav-browse' to='videos?tag=Lung'>Lung</NavLink>
                   </DropdownItem>
                   <DropdownItem>
-                    Vascular
+                    <NavLink className='nav-browse' to='videos?tag=Vascular'>Vascular</NavLink>
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>

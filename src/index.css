@@ -286,6 +286,12 @@ body {
   margin-top: 50px;
   font-size: 3em;
 }
+.nav-browse:hover {
+  text-decoration: none;
+}
+.nav-browse {
+  color: #004E64;
+}
 
 
 @media (max-width: 991px){
@@ -315,6 +321,10 @@ body {
     width: 40%;
     max-width: 50%;
     
+  }
+  #team-nav {
+    margin-top: -8px;
+    margin-bottom: 10px;
   }
   
 }
