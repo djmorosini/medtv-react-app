@@ -323,9 +323,23 @@ body {
 .memberName:hover{
   text-decoration:none;
 }
+
 .matrixPic{
-  height:50%;
+  height:400px;
 }
+.imageHolder{
+  height:40%;
+  margin-bottom:20px;
+}
+.whatIDid{
+  font-size:.5em;
+}
+.information{
+  margin-left:-70px;
+  margin-top:80px;
+}
+
+/* Here is a media breakpoint */
 @media (max-width: 991px){
   .nav-links {
     position: relative;
@@ -360,6 +374,8 @@ body {
   }
   
 }
+
+/* Here is another media breakpoint */
 @media (max-width: 575px){
   .trending-card {
     min-width: 70%;
