@@ -2,12 +2,10 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import AgentSmith from '../images/AgentSmith.jpg';
 import Dozer from '../images/Dozer.jpg';
-// import TheOracle from '../images/TheOracle.jpg';
-// import Trinity from '../images/Trinity1.jpg';
 import Morpheus from '../images/Morpheus1.jpg';
 import Neo from '../images/Neo1.jpg';
 import Julia from '../images/julia400px.jpg'
-import Flo from '../images/flo.jpg'
+import Flo from '../images/Flo.jpg'
 
 
 
