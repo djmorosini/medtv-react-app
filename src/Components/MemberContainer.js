@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import AgentSmith from '../images/AgentSmith.jpg';
-import Dozer from '../images/Dozer.jpg';
+import Matt from '../images/matt.jpg';
 import Morpheus from '../images/Morpheus1.jpg';
 import Neo from '../images/Neo1.jpg';
 import Julia from '../images/julia400px.jpg'
@@ -39,7 +39,7 @@ export default class Example extends React.Component {
 
           <Row>
             <Col xs="6 imageHolder">
-              <img className="matrixPic" src={Dozer}></img>
+              <img className="matrixPic" src={Matt}></img>
             </Col>
             <Col xs="6 information">
             <h1>Matt Layden</h1>
@@ -86,7 +86,7 @@ export default class Example extends React.Component {
               <a href="https://linkedin.com/in/juliakantarovsky">LinkedIn</a>
               <br />
               <a href="https://github.com/JuliaKan">GitHub</a>
-              <p className="whatIDid">Julia was a Full Stack Developer on this project. She spent the first sprint working on the backend, using Serverless to deploy  the app. She specifically employed the use of AWS Lambda, AWS DynamoDB, and AWS S3. She spent the second and third sprints working on the front end using React. She specifically created the "Team" components.</p>
+              <p className="whatIDid">Julia was a Full Stack Developer on this project. She spent the first sprint working on the backend, using Serverless to deploy the app. She specifically employed the use of AWS Lambda, AWS DynamoDB, and AWS S3. She spent the second and third sprints working on the front end using React. She specifically created the "Team" components.</p>
             </Col>
           </Row>
 
