@@ -58,8 +58,8 @@ export default class Sidebar extends Component {
                                 Age
                         </DropdownToggle>
                             <DropdownMenu right>
-                            <Link className='filter-links' to="/videos?tag=Below+60"><DropdownItem>Below 60</DropdownItem></Link>
-                            <Link className='filter-links' to="/videos?tag=Above+60"><DropdownItem>Above 60</DropdownItem></Link>
+                            <Link className='filter-links' to="/videos?tag=Below+60"><DropdownItem className='filter-items'>Below 60</DropdownItem></Link>
+                            <Link className='filter-links' to="/videos?tag=Above+60"><DropdownItem className='filter-items'>Above 60</DropdownItem></Link>
                             </DropdownMenu>
                         </Dropdown>
                         <Dropdown isOpen={this.state.dropdownOpen2} toggle={this.drop2}>
@@ -67,8 +67,8 @@ export default class Sidebar extends Component {
                                 Gender
                         </DropdownToggle>
                             <DropdownMenu right>
-                            <Link className='filter-links' to="/videos?tag=Male"><DropdownItem >Male</DropdownItem></Link>
-                            <Link className='filter-links' to="/videos?tag=Female"><DropdownItem>Female</DropdownItem></Link>
+                            <Link className='filter-links' to="/videos?tag=Male"><DropdownItem className='filter-items'>Male</DropdownItem></Link>
+                            <Link className='filter-links' to="/videos?tag=Female"><DropdownItem className='filter-items'>Female</DropdownItem></Link>
                             </DropdownMenu>
                         </Dropdown>
                         <Dropdown isOpen={this.state.dropdownOpen3} toggle={this.drop3}>
@@ -76,8 +76,8 @@ export default class Sidebar extends Component {
                                 Duration
                         </DropdownToggle>
                             <DropdownMenu right>
-                            <Link className='filter-links' to="/videos?tag=Less+than+45+min"><DropdownItem>Less than 45 min</DropdownItem></Link>
-                            <Link className='filter-links' to="/videos?tag=Longer+than+45+min"><DropdownItem>Longer than 45 min</DropdownItem></Link>
+                            <Link className='filter-links' to="/videos?tag=Less+than+45+min"><DropdownItem className='filter-items'>Less than 45 min</DropdownItem></Link>
+                            <Link className='filter-links' to="/videos?tag=Longer+than+45+min"><DropdownItem className='filter-items'>Longer than 45 min</DropdownItem></Link>
                             </DropdownMenu>
                         </Dropdown>
                         <Dropdown isOpen={this.state.dropdownOpen4} toggle={this.drop4}>
@@ -85,8 +85,8 @@ export default class Sidebar extends Component {
                                 Location
                         </DropdownToggle>
                             <DropdownMenu right>
-                            <Link className='filter-links' to="/videos?tag=In+US"><DropdownItem >In U.S.</DropdownItem></Link>
-                            <Link className='filter-links' to="/videos?tag=Outside+US"><DropdownItem>Outside U.S.</DropdownItem></Link>
+                            <Link className='filter-links' to="/videos?tag=In+US"><DropdownItem className='filter-items'>In U.S.</DropdownItem></Link>
+                            <Link className='filter-links' to="/videos?tag=Outside+US"><DropdownItem className='filter-items'>Outside U.S.</DropdownItem></Link>
                             </DropdownMenu>
                         </Dropdown>
                     </Nav>
