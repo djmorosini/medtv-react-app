@@ -25,7 +25,8 @@ export default class TheNavbar extends React.Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
+      input: ''
     };
   }
 
@@ -33,6 +34,10 @@ export default class TheNavbar extends React.Component {
     this.setState({
       isOpen: !this.state.isOpen
     });
+  }
+  updateInput = (e) => {
+    console.log(e.target.value)
+    this.setState({ input: e.target.value })
   }
 
   render() {
@@ -85,9 +90,9 @@ export default class TheNavbar extends React.Component {
               </NavItem>
               <NavItem>
                 <InputGroup>
-                  <Input type="text" className="form-control" placeholder="Search for..." />
+                  <Input type="text" value={this.state.input} onChange={e => this.updateInput(e)} className="form-control" placeholder="Search for..." />
                   <InputGroupAddon addonType="append" className="input-group-btn">
-                    <Button className="nav-go" type="button">Go!</Button>
+                    <Link to={`/videos?tag=${this.state.input}`}><Button className="nav-go" type="button">Go!</Button></Link>
                   </InputGroupAddon>
                 </InputGroup>
               </NavItem>

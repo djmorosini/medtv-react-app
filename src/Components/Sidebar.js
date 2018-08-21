@@ -3,7 +3,7 @@ import {
     Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu,
     Collapse
 } from 'reactstrap';
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 import VideoListBreadCrumb from './ListBreadcrumb'
 
@@ -58,8 +58,8 @@ export default class Sidebar extends Component {
                                 Age
                         </DropdownToggle>
                             <DropdownMenu right>
-                                <DropdownItem>Below 60</DropdownItem>
-                                <DropdownItem>Above 60</DropdownItem>
+                            <Link className='filter-links' to="/videos?tag=Below+60"><DropdownItem>Below 60</DropdownItem></Link>
+                            <Link className='filter-links' to="/videos?tag=Above+60"><DropdownItem>Above 60</DropdownItem></Link>
                             </DropdownMenu>
                         </Dropdown>
                         <Dropdown isOpen={this.state.dropdownOpen2} toggle={this.drop2}>
@@ -67,8 +67,8 @@ export default class Sidebar extends Component {
                                 Gender
                         </DropdownToggle>
                             <DropdownMenu right>
-                                <DropdownItem >Male</DropdownItem>
-                                <DropdownItem>Female</DropdownItem>
+                            <Link className='filter-links' to="/videos?tag=Male"><DropdownItem >Male</DropdownItem></Link>
+                            <Link className='filter-links' to="/videos?tag=Female"><DropdownItem>Female</DropdownItem></Link>
                             </DropdownMenu>
                         </Dropdown>
                         <Dropdown isOpen={this.state.dropdownOpen3} toggle={this.drop3}>
@@ -76,8 +76,8 @@ export default class Sidebar extends Component {
                                 Duration
                         </DropdownToggle>
                             <DropdownMenu right>
-                                <DropdownItem>Less than 3 hours</DropdownItem>
-                                <DropdownItem>Longer than 3 hours</DropdownItem>
+                            <Link className='filter-links' to="/videos?tag=Less+than+45+min"><DropdownItem>Less than 45 min</DropdownItem></Link>
+                            <Link className='filter-links' to="/videos?tag=Longer+than+45+min"><DropdownItem>Longer than 45 min</DropdownItem></Link>
                             </DropdownMenu>
                         </Dropdown>
                         <Dropdown isOpen={this.state.dropdownOpen4} toggle={this.drop4}>
@@ -85,8 +85,8 @@ export default class Sidebar extends Component {
                                 Location
                         </DropdownToggle>
                             <DropdownMenu right>
-                                <DropdownItem >In U.S.</DropdownItem>
-                                <DropdownItem>Outside U.S.</DropdownItem>
+                            <Link className='filter-links' to="/videos?tag=In+US"><DropdownItem >In U.S.</DropdownItem></Link>
+                            <Link className='filter-links' to="/videos?tag=Outside+US"><DropdownItem>Outside U.S.</DropdownItem></Link>
                             </DropdownMenu>
                         </Dropdown>
                     </Nav>
@@ -95,19 +95,19 @@ export default class Sidebar extends Component {
                         <NavItem className='category-title' onClick={this.toggle1}>Cardiology</NavItem>
                         <Collapse isOpen={this.state.collapse1}>
                             <NavItem>
-                                <div className='sub-links'><NavLink className='sub-title ' to="/videos?tag=Coronary Artery">Coronary Artery</NavLink></div>
+                                <div className='sub-links'><NavLink className='sub-title' to="/videos?tag=Coronary+Artery">Coronary Artery</NavLink></div>
                             </NavItem>
                             <NavItem>
                             <div className='sub-links'><NavLink className='sub-title' to="/videos?tag=Heart">Heart</NavLink></div>
                             </NavItem>
                             <NavItem>
-                            <div className='sub-links'><NavLink className='sub-title' to="/videos?tag=Aneurysm Repair">Aneurysm Repair</NavLink></div>
+                            <div className='sub-links'><NavLink className='sub-title' to="/videos?tag=Aneurysm+Repair">Aneurysm Repair</NavLink></div>
                             </NavItem>
                         </Collapse>
                         <NavItem className='category-title' onClick={this.toggle2}>Orthopedic</NavItem>
                         <Collapse isOpen={this.state.collapse2}>
                             <NavItem>
-                            <div className='sub-links'> <NavLink className='sub-title' to="/videos?tag=back">Back</NavLink></div>
+                            <div className='sub-links'><NavLink className='sub-title' to="/videos?tag=back">Back</NavLink></div>
                             </NavItem>
                             <NavItem>
                             <div className='sub-links'><NavLink className='sub-title' to="/videos?tag=Hip">Hip</NavLink></div>
@@ -122,7 +122,7 @@ export default class Sidebar extends Component {
                             <div className='sub-links'><NavLink className='sub-title' to="/videos?tag=Shoulder">Shoulder</NavLink></div>
                             </NavItem>
                             <NavItem>
-                            <div className='sub-links'><NavLink className='sub-title' to="/videos?tag=Foot/Ankle">Foot/Ankle</NavLink></div>
+                            <div className='sub-links'><NavLink className='sub-title' to="/videos?tag=Foot+Ankle">Foot/Ankle</NavLink></div>
                             </NavItem>
                         </Collapse>
                         <NavItem className='category-title' onClick={this.toggle3}>General</NavItem>
@@ -134,7 +134,7 @@ export default class Sidebar extends Component {
                             <div className='sub-links'><NavLink className='sub-title' to="/videos?tag=Hemorrhoid">Hemorrhoid</NavLink></div>
                             </NavItem>
                             <NavItem>
-                            <div className='sub-links'><NavLink className='sub-title' to="/videos?tag=Colon Resection">Colon Resection</NavLink></div>
+                            <div className='sub-links'><NavLink className='sub-title' to="/videos?tag=Colon+Resection">Colon Resection</NavLink></div>
                             </NavItem>
                             <NavItem>
                             <div className='sub-links'><NavLink className='sub-title' to="/videos?tag=Thyroid">Thyroid</NavLink></div>

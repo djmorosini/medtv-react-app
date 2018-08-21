@@ -160,6 +160,7 @@ body {
   margin-bottom: 20px;
   overflow: hidden;
   height: 450px;
+  min-width: 30%;
 }
 
 .watch-breadcrumb {
@@ -182,7 +183,6 @@ body {
   position: relative;
   top: 8px;
   right: 8px;
-  
 }
 .nav-item-container {
   width: 100%;
@@ -301,6 +301,10 @@ body {
   cursor:pointer;
 }
 .nav-browse:hover {
+  background-color: #004E64;
+  color: white;
+}
+.filter-items:hover {
   background-color: #004E64;
   color: white;
 }
