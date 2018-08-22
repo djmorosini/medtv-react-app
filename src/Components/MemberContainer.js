@@ -19,7 +19,7 @@ export default class Example extends React.Component {
 
           <Row>
             <Col xs="6 imageHolder">
-              <img className="matrixPic" src={Flo} alt='Team Matric Picture'></img>
+              <img className="matrixPic" src={Flo} alt='Team Matrix'></img>
             </Col>
             <Col xs="6 information">
               <h1>Florence Fong</h1>
@@ -39,7 +39,7 @@ export default class Example extends React.Component {
 
           <Row>
             <Col xs="6 imageHolder">
-              <img className="matrixPic" src={Matt} alt='Team Matric Picture'></img>
+              <img className="matrixPic" src={Matt} alt='Team Matrix'></img>
             </Col>
             <Col xs="6 information">
             <h1>Matt Layden</h1>
@@ -59,7 +59,7 @@ export default class Example extends React.Component {
 
           <Row>
             <Col xs="6 imageHolder">
-              <img className="matrixPic" src={Dylan} alt='Team Matric Picture'></img>
+              <img className="matrixPic" src={Dylan} alt='Team Matrix'></img>
             </Col>
             <Col xs="6 information">
             <h1>Dylan Morosini</h1>
@@ -79,7 +79,7 @@ export default class Example extends React.Component {
 
           <Row>
             <Col xs="6 imageHolder">
-              <img className="matrixPic" src={Julia} alt='Team Matric Picture'></img>
+              <img className="matrixPic" src={Julia} alt='Team Matrix'></img>
             </Col>
             <Col xs="6 information">
               <h1>Julia Kantarovsky</h1>
@@ -99,7 +99,7 @@ export default class Example extends React.Component {
 
           <Row>
             <Col xs="6 imageHolder">
-              <img className="matrixPic" src={Chris} alt='Team Matric Picture'></img>
+              <img className="matrixPic" src={Chris} alt='Team Matrix'></img>
             </Col>
             <Col xs="6 information">
             <h1>Chris Frank</h1>
@@ -119,7 +119,7 @@ export default class Example extends React.Component {
 
           <Row>
             <Col xs="6 imageHolder">
-              <img className="matrixPic" src={Mat}></img>
+              <img className="matrixPic" src={Mat} alt='Team Matrix'></img>
             </Col>
             <Col xs="6 information">
             <h1>Mat Gilbert</h1>
