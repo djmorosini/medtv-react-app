@@ -66,7 +66,7 @@ export default class Example extends React.Component {
               <a href="https://www.linkedin.com/in/djmorosini/">LinkedIn</a>
               <br />
               <a href="https://github.com/djmorosini">GitHub</a>
-              <p className="whatIDid">Dylan took lead on converting the static html pages into a more dynamic react application while also preparing the front-end client to connect to the AWS back-end. He specifically worked on improving the site by limiting interactions with the back-end database and persisting the state of the application.</p>
+              <p className="whatIDid">Dylan took the lead on converting the static html pages into a more dynamic react application while also preparing the front-end client to connect to the AWS back-end. He specifically worked on improving the site by limiting interactions with the back-end database and persisting the state of the application.</p>
             </Col>
           </Row>
 
