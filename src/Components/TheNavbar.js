@@ -51,7 +51,7 @@ export default class TheNavbar extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink className='nav-links' to="/videos"><div className='nav-item-container'>Videos</div></NavLink>
+                <NavLink className='nav-links' to="/videos?startkey="><div className='nav-item-container'>Videos</div></NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>

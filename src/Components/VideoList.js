@@ -100,37 +100,21 @@ class VideoList extends React.Component {
 class ChangePage extends React.Component {
     render() {
         return (
-            <Pagination aria-label="Page navigation example">
-                <PaginationItem disabled>
-                    <PaginationLink previous href="#" />
-                </PaginationItem>
-                <PaginationItem active>
-                    <PaginationLink href="#">
+            <Pagination>
+                <PaginationItem className='page-nation'>
+                    <Link className='page-item' to={`/videos?startkey=`}>
                         1
-          </PaginationLink>
+          </Link>
                 </PaginationItem>
-                <PaginationItem>
-                    <PaginationLink href="#">
+                <PaginationItem className='page-nation'>
+                    <Link className='page-item' to={`/videos?startkey=937ee770-a57e-11e8-8faf-f971d5f69c22`}>
                         2
-          </PaginationLink>
+          </Link>
                 </PaginationItem>
-                <PaginationItem>
-                    <PaginationLink href="#">
+                <PaginationItem className='page-nation'>
+                    <Link className='page-item' to={`/videos?startkey=f0f36a20-a632-11e8-b9bb-6bc433fab65d`}>
                         3
-          </PaginationLink>
-                </PaginationItem>
-                <PaginationItem>
-                    <PaginationLink href="#">
-                        4
-          </PaginationLink>
-                </PaginationItem>
-                <PaginationItem>
-                    <PaginationLink href="#">
-                        5
-          </PaginationLink>
-                </PaginationItem>
-                <PaginationItem>
-                    <PaginationLink next href="#" />
+          </Link>
                 </PaginationItem>
             </Pagination>
         );
