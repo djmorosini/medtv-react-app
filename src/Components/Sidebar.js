@@ -140,10 +140,10 @@ export default class Sidebar extends Component {
                         <NavItem className='category-title' onClick={this.toggle3}>Musculoskeletal</NavItem>
                         <Collapse isOpen={this.state.collapse3}>
                             <NavItem>
-                                <div className='sub-links'><NavLink className='sub-title' to="/videos?tag=Knee">Knee</NavLink></div>
+                                <div className='sub-links'><NavLink className='sub-title' to="/videos?tag=Hip/Thigh">Hip/Thigh</NavLink></div>
                             </NavItem>
                             <NavItem>
-                                <div className='sub-links'><NavLink className='sub-title' to="/videos?tag=Hemorrhoid">Hip/Thigh</NavLink></div>
+                                <div className='sub-links'><NavLink className='sub-title' to="/videos?tag=Knee">Knee</NavLink></div>
                             </NavItem>
                             <NavItem>
                                 <div className='sub-links'><NavLink className='sub-title' to="/videos?tag=Neck/Spine">Neck/Spine</NavLink></div>
