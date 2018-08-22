@@ -156,11 +156,11 @@ body {
   margin-bottom: 20px;
 }
 #the-list .card {
-  margin-left: 20px;
+  margin-left: 10px;
   margin-bottom: 20px;
   overflow: hidden;
   height: 450px;
-  min-width: 31%;
+  min-width: 32%;
 }
 
 .watch-breadcrumb {
@@ -338,6 +338,18 @@ body {
   margin-left:-70px;
   margin-top:80px;
 }
+.team-photo {
+  margin: auto;
+  width: 422px;
+}
+.team-wrap {
+  margin-bottom: 100px;
+}
+.team-text {
+  margin-top: 20px;
+  text-align: center;
+}
+
 
 /* Here is a media breakpoint */
 @media (max-width: 991px){
@@ -381,11 +393,19 @@ body {
     min-width: 70%;
     
   }
-
 }
+
+
+/* cellphone breakpoint */
 @media only screen and (max-device-width: 480px){
   #filter-top {
     margin-left: 100px;
     width: 500px;
+  }
+  .no-list {
+    margin-left: 200px;
+    margin-top: 50px;
+    font-size: 3em;
+    height: 1600px;
   }
 }

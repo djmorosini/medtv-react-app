@@ -18,10 +18,10 @@ export default class Example extends React.Component {
         <Container className='personDetails'>
 
           <Row>
-            <Col xs="6 imageHolder">
+            <Col className='col-lg-6'>
               <img className="matrixPic" src={Flo} alt='Team Matrix'></img>
             </Col>
-            <Col xs="6 information">
+            <Col className='col-lg-6'>
               <h1>Florence Fong</h1>
               <a href="https://www.linkedin.com/in/florence-fong/">LinkedIn</a>
               <br />
@@ -38,10 +38,10 @@ export default class Example extends React.Component {
         <Container className='personDetails'>
 
           <Row>
-            <Col xs="6 imageHolder">
+            <Col className='col-lg-6'>
               <img className="matrixPic" src={Matt} alt='Team Matrix'></img>
             </Col>
-            <Col xs="6 information">
+            <Col className='col-lg-6'>
             <h1>Matt Layden</h1>
               <a href="https://www.linkedin.com/in/matthew-layden-68059a167/">LinkedIn</a>
               <br />
@@ -58,10 +58,10 @@ export default class Example extends React.Component {
         <Container className='personDetails'>
 
           <Row>
-            <Col xs="6 imageHolder">
+            <Col className='col-lg-6'>
               <img className="matrixPic" src={Dylan} alt='Team Matrix'></img>
             </Col>
-            <Col xs="6 information">
+            <Col className='col-lg-6'>
             <h1>Dylan Morosini</h1>
               <a href="https://www.linkedin.com/in/djmorosini/">LinkedIn</a>
               <br />
@@ -78,10 +78,10 @@ export default class Example extends React.Component {
         <Container className='personDetails'>
 
           <Row>
-            <Col xs="6 imageHolder">
+            <Col className='col-lg-6'>
               <img className="matrixPic" src={Julia} alt='Team Matrix'></img>
             </Col>
-            <Col xs="6 information">
+            <Col className='col-lg-6'>
               <h1>Julia Kantarovsky</h1>
               <a href="https://linkedin.com/in/juliakantarovsky">LinkedIn</a>
               <br />
@@ -98,15 +98,15 @@ export default class Example extends React.Component {
         <Container className='personDetails'>
 
           <Row>
-            <Col xs="6 imageHolder">
+            <Col className='col-lg-6'>
               <img className="matrixPic" src={Chris} alt='Team Matrix'></img>
             </Col>
-            <Col xs="6 information">
+            <Col className='col-lg-6'>
             <h1>Chris Frank</h1>
               <a href="https://www.linkedin.com/in/christopherfrank/">LinkedIn</a>
               <br />
               <a href="https://github.com/cfrank1977">GitHub</a>
-              <p className="whatIDid">Engineering team manager. Product Owner. Full stack developer who can roll up his sleeves and support the team to move through roadblocks.</p>
+              <p className="whatIDid">Chris took the lead on building our enterprise-class backend using the Serverless.com framework. We deployed our backend to AWS. It consists of DynamoDB, Node.js as AWS Lambdas, and an API Gateway. We also host the media for the site (videos & thumbnails) in S3. Chris also developed several React Components for the frontend. Specifically the Video Player, Video Details, and the Filter/Sub-category sidebar.</p>
             </Col>
           </Row>
 
@@ -118,10 +118,10 @@ export default class Example extends React.Component {
         <Container className='personDetails'>
 
           <Row>
-            <Col xs="6 imageHolder">
+            <Col className='col-lg-6'>
               <img className="matrixPic" src={Mat} alt='Team Matrix'></img>
             </Col>
-            <Col xs="6 information">
+            <Col className='col-lg-6'>
             <h1>Mat Gilbert</h1>
               <a href="Mat/linkedin">LinkedIn</a>
               <br />
