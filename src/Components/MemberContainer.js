@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import AgentSmith from '../images/AgentSmith.jpg';
+import Mat from '../images/mat.png';
 import Matt from '../images/matt.jpg';
 import Chris from '../images/Chris.jpg';
 import Dylan from '../images/dylanHeadshot.jpg';
@@ -119,7 +119,7 @@ export default class Example extends React.Component {
 
           <Row>
             <Col xs="6 imageHolder">
-              <img className="matrixPic" src={AgentSmith} alt='Team Matric Picture'></img>
+              <img className="matrixPic" src={Mat}></img>
             </Col>
             <Col xs="6 information">
             <h1>Mat Gilbert</h1>
