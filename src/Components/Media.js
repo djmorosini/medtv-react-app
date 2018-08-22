@@ -7,6 +7,7 @@ import TheOracle from '../images/TheOracle.jpg';
 import Trinity from '../images/Trinity1.jpg';
 import Morpheus from '../images/Morpheus1.jpg';
 import Neo from '../images/Neo1.jpg'
+import TheTeam from '../images/teamPhoto.jpg'
 
 
 class Team extends React.Component {
@@ -75,9 +76,12 @@ class Team extends React.Component {
 
 
     return (
-      <div className="d-flex team">
-        {memberList}
-        {}
+      <div className='d-flex flex-column team-wrap'>
+        <div className="d-flex team">
+          {memberList}
+        </div>
+        <img className='team-photo' alt='Full Team' src={TheTeam}></img>
+        <p className='team-text'>The Team, from left to right, Chris Frank, Florence Fong, Dylan Morosini, Julia Kantarovsky, Matt Layden</p>
       </div>
     );
   }
