@@ -106,7 +106,7 @@ export default class Example extends React.Component {
               <a href="https://www.linkedin.com/in/christopherfrank/">LinkedIn</a>
               <br />
               <a href="https://github.com/cfrank1977">GitHub</a>
-              <p className="whatIDid">Chris took the lead on building our enterprise-class backend using the Serverless.com framework. We deployed our backend to AWS. It consists of DynamoDB, Node.js as AWS Lambdas, and an API Gateway. We also host the media for the site (videos & thumbnails) in S3. Chris also developed several React Components for the frontend. Specifically the Video Player, Video Details, and the Filter/Sub-category sidebar.</p>
+              <p className="whatIDid">Chris took the lead on building our enterprise-class backend using the Serverless.com framework. We deployed our backend to AWS. It consists of DynamoDB, Node.js as AWS Lambdas, and an API Gateway. Additionally, we host the media for the site (videos & thumbnails) in S3. Chris also developed several React Components for the frontend. Specifically the Video Player, Video Details, and the Filter/Sub-category sidebar.</p>
             </Col>
           </Row>
 

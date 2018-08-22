@@ -27,7 +27,7 @@ class VideoStore extends React.Component {
                 localStorage.setItem('videos', JSON.stringify(allVideos))
             })
         }
-        if (this.props.props.location.search!==searchParam) {
+        if (this.props.props.location.search !== searchParam) {
             this.getVideosByTags().then((fetchedVideo) => {
                 this.setState({ fetchedVideo: fetchedVideo, searchParam: this.props.props.location.search })
                 localStorage.setItem('fetchedVideo', JSON.stringify(fetchedVideo))
@@ -37,7 +37,13 @@ class VideoStore extends React.Component {
 
     componentDidUpdate() {
         let searchParam = this.state.searchParam
-        if (this.props.props.location.search!==searchParam) {
+        if (searchParam.includes('startkey')) {
+
+            this.getNextPage().then((nextPage) => {
+                this.setState({ videos: nextPage, searchParam: this.props.props.location.search })
+            })
+
+        } else if (this.props.props.location.search !== searchParam) {
             this.getVideosByTags().then((fetchedVideo) => {
                 this.setState({ fetchedVideo: fetchedVideo, searchParam: this.props.props.location.search })
                 localStorage.setItem('fetchedVideo', JSON.stringify(fetchedVideo))
@@ -49,6 +55,22 @@ class VideoStore extends React.Component {
     allVideos = () => {
         console.log("Called all videos")
         return fetch('https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos')
+            .then((response) => { return response.json() })
+            .then((data) => {
+                this.setState({
+                    videos: data
+                })
+                return data;
+            },
+                error => {
+                    this.setState({
+                        error: error
+                    });
+                });
+    }
+    getNextPage = () => {
+        console.log("Called all videos")
+        return fetch(`https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos${this.props.props.location.search}`)
             .then((response) => { return response.json() })
             .then((data) => {
                 this.setState({
@@ -110,7 +132,7 @@ class VideoStore extends React.Component {
 
             return (
                 <React.Fragment>
-                    
+
                     <VideoList videos={videos} fetchedVideo={fetchedVideo} updater={this.updateActiveVideo} />
                 </React.Fragment>
             )

@@ -17,7 +17,7 @@ class VideoList extends React.Component {
 
         if (this.props.fetchedVideo) {
             let fetchedVideos = this.props.fetchedVideo
-            const theList = fetchedVideos.map((video) => {
+            const theList = fetchedVideos.slice(0, 9).map((video) => {
                 return (
 
                     <Card width={400} className='col-lg-3 col-md-5 col-sm-12'
