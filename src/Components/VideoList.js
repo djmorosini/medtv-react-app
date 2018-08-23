@@ -13,7 +13,6 @@ class VideoList extends React.Component {
 
     render() {
         const videos = this.props.videos
-        // console.log(this.props)
 
         if (this.props.fetchedVideo) {
             let fetchedVideos = this.props.fetchedVideo

@@ -21,7 +21,6 @@ class VideoStore extends React.Component {
     componentDidMount() {
         let videos = this.state.videos
         let searchParam = this.state.searchParam
-        // let pageNation = this.state.pageNation
         let propParam = this.props.props.location.search
         if (videos.length === 0 && !localStorage.getItem('videos')) {
             console.log("Im fetching!")
@@ -30,7 +29,7 @@ class VideoStore extends React.Component {
                 localStorage.setItem('videos', JSON.stringify(allVideos))
             })
         }
-        if (propParam.includes('?tag') && propParam !== searchParam) {
+        if ((propParam.includes('?tag') || propParam.includes('?startkey')) && propParam !== searchParam) {
             this.getVideosByTags().then((fetchedVideo) => {
                 this.setState({ fetchedVideo: fetchedVideo, searchParam: this.props.props.location.search || '?none' })
                 localStorage.setItem('fetchedVideo', JSON.stringify(fetchedVideo))
@@ -51,7 +50,6 @@ class VideoStore extends React.Component {
     }
 
     allVideos = () => {
-        console.log("Called all videos")
         return fetch('https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos')
             .then((response) => { return response.json() })
             .then((data) => {
@@ -68,7 +66,6 @@ class VideoStore extends React.Component {
     }
 
     getVideosByTags = () => {
-        console.log("Called get videos by tag")
         return fetch(`https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos${this.props.props.location.search}`)
             .then((response) => { return response.json() })
             .then((data) => {
@@ -91,13 +88,11 @@ class VideoStore extends React.Component {
     }
 
     render() {
-        // console.log(this.route.props)
         let videos = JSON.parse(localStorage.getItem('videos')) || this.state.videos
         let activeVideo = this.state.activeVideo
         let firstVideo = videos[0]
         let fetchedVideo = this.state.fetchedVideo
         let nextPage = this.state.nextPage
-        // let searchParams = this.props.props.location.search
 
         if (localStorage.getItem('activeVideo')) {
             // localStorage.clear()
