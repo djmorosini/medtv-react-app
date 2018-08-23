@@ -18,34 +18,11 @@ export default class Sorry404 extends React.Component {
                             <Link to="/">Home</Link>
                         </li>
                         <li>
-                            <Link to="about.html">About</Link>
+                            <Link to="/videos?startkey=">Videos</Link>
                         </li>
                         <li>
-                            <Link to="contact.html">Contact</Link>
+                            <Link to="/meet-our-team">Meet Our Team</Link>
                         </li>
-                        <li>
-                            <Link to="/videos">Videos</Link>
-                        </li>
-                        {/* <li>
-                            Browse Videos
-                    <ul>
-                                <li>
-                                    <a href="#">Cranial</a>
-                                </li>
-                                <li>
-                                    <a href="#">Appendages</a>
-                                </li>
-                                <li>
-                                    <a href="#">Heart</a>
-                                </li>
-                                <li>
-                                    <a href="#">Lungs</a>
-                                </li>
-                                <li>
-                                    <a href="#">Vascular</a>
-                                </li>
-                            </ul>
-                        </li> */}
                     </ul>
                 </Jumbotron>
             </div>
