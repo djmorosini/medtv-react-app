@@ -14,7 +14,6 @@ class VideoStore extends React.Component {
             activeVideo: null,
             error: null,
             searchParam: null,
-            pageNation: null,
             nextPage: null
         }
     }
@@ -41,15 +40,8 @@ class VideoStore extends React.Component {
 
     componentDidUpdate() {
         let searchParam = this.state.searchParam
-        let pageNation = this.state.pageNation || ''
         let propParam = this.props.props.location.search
-        if (pageNation.includes('startkey') && propParam !== pageNation) {
-
-            this.getNextPage().then((nextPage) => {
-                this.setState({ nextPage: nextPage, pageNation: this.props.props.location.search || '' })
-            })
-
-        } else if (propParam !== searchParam) {
+        if (propParam !== searchParam) {
             this.getVideosByTags().then((fetchedVideo) => {
                 this.setState({ fetchedVideo: fetchedVideo, searchParam: this.props.props.location.search })
                 localStorage.setItem('fetchedVideo', JSON.stringify(fetchedVideo))
@@ -61,22 +53,6 @@ class VideoStore extends React.Component {
     allVideos = () => {
         console.log("Called all videos")
         return fetch('https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos')
-            .then((response) => { return response.json() })
-            .then((data) => {
-                this.setState({
-                    videos: data
-                })
-                return data;
-            },
-                error => {
-                    this.setState({
-                        error: error
-                    });
-                });
-    }
-    getNextPage = () => {
-        console.log("Called all videos")
-        return fetch(`https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos${this.props.props.location.search}`)
             .then((response) => { return response.json() })
             .then((data) => {
                 this.setState({
