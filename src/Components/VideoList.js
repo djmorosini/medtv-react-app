@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import {
-    Card, CardImg, CardText, CardBody, Pagination, PaginationItem, PaginationLink,
+    Card, CardImg, CardText, CardBody, Pagination, PaginationItem,
     CardTitle
 } from 'reactstrap';
 import { Link } from 'react-router-dom'
@@ -13,7 +13,7 @@ class VideoList extends React.Component {
 
     render() {
         const videos = this.props.videos
-        console.log(this.props)
+        // console.log(this.props)
 
         if (this.props.fetchedVideo) {
             let fetchedVideos = this.props.fetchedVideo

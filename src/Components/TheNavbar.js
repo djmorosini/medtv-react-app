@@ -58,32 +58,32 @@ export default class TheNavbar extends React.Component {
                   Browse
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <NavLink  className='browse' to='videos?tag=Cardiovascular'>
+                  <NavLink  className='browse' to='/videos?tag=Cardiovascular'>
                     <DropdownItem className='nav-browse'>
                       Cardiovascular
                   </DropdownItem>
                   </NavLink>
-                  <NavLink className='browse' to='videos?tag=Digestive'>
+                  <NavLink className='browse' to='/videos?tag=Digestive'>
                     <DropdownItem className='nav-browse'>
                       Digestive
                   </DropdownItem>
                   </NavLink>
-                  <NavLink className='browse' to='videos?tag=Musculoskeletal'>
+                  <NavLink className='browse' to='/videos?tag=Musculoskeletal'>
                     <DropdownItem className='nav-browse'>
                     Musculoskeletal
                   </DropdownItem>
                   </NavLink>
-                  <NavLink className='browse' to='videos?tag=Respiratory'>
+                  <NavLink className='browse' to='/videos?tag=Respiratory'>
                     <DropdownItem className='nav-browse'>
                     Respiratory
                   </DropdownItem>
                   </NavLink>
-                  <NavLink className='browse' to='videos?tag=Skin'>
+                  <NavLink className='browse' to='/videos?tag=Skin'>
                     <DropdownItem className='nav-browse'>
                       Skin
                   </DropdownItem>
                   </NavLink>
-                  <NavLink className='browse' to='videos?tag=Urinary+System'>
+                  <NavLink className='browse' to='/videos?tag=Urinary+System'>
                     <DropdownItem className='nav-browse'>
                       Urinary System
                   </DropdownItem>

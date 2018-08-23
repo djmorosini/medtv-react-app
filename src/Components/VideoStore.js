@@ -22,7 +22,7 @@ class VideoStore extends React.Component {
     componentDidMount() {
         let videos = this.state.videos
         let searchParam = this.state.searchParam
-        let pageNation = this.state.pageNation
+        // let pageNation = this.state.pageNation
         let propParam = this.props.props.location.search
         if (videos.length === 0 && !localStorage.getItem('videos')) {
             console.log("Im fetching!")
@@ -43,7 +43,7 @@ class VideoStore extends React.Component {
         let searchParam = this.state.searchParam
         let pageNation = this.state.pageNation || ''
         let propParam = this.props.props.location.search
-        if (pageNation.includes('startkey') && propParam != pageNation) {
+        if (pageNation.includes('startkey') && propParam !== pageNation) {
 
             this.getNextPage().then((nextPage) => {
                 this.setState({ nextPage: nextPage, pageNation: this.props.props.location.search || '' })
@@ -115,13 +115,13 @@ class VideoStore extends React.Component {
     }
 
     render() {
-        console.log(this.props.props.location.search)
+        // console.log(this.route.props)
         let videos = JSON.parse(localStorage.getItem('videos')) || this.state.videos
         let activeVideo = this.state.activeVideo
         let firstVideo = videos[0]
         let fetchedVideo = this.state.fetchedVideo
         let nextPage = this.state.nextPage
-        let searchParams = this.props.props.location.search
+        // let searchParams = this.props.props.location.search
 
         if (localStorage.getItem('activeVideo')) {
             // localStorage.clear()
