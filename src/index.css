@@ -33,6 +33,7 @@ body {
   margin: 10px 0 20px 0;
 }
 #filter-top {
+  margin-top: 50px;
   margin-left: 400px;
   width: 500px;
 }
@@ -128,10 +129,10 @@ body {
   text-decoration: none;
 }
 #the-list {
-  margin-top: 50px;
+  margin-top: 60px;
   margin-left: 220px;
   width: 83%;
-  min-height: 1500px;
+  min-height: 1450px;
 }
 #video-header {
   margin-top: 80px;
@@ -348,6 +349,13 @@ body {
 .team-text {
   margin-top: 20px;
   text-align: center;
+}
+.page-nation {
+  margin-left: 20px;
+  font-size: 20pt;
+}
+.page-item:hover {
+  color: green;
 }
 
 

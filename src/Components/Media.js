@@ -81,7 +81,7 @@ class Team extends React.Component {
           {memberList}
         </div>
         <img className='team-photo' alt='Full Team' src={TheTeam}></img>
-        <p className='team-text'>The Team, from left to right, Chris Frank, Florence Fong, Dylan Morosini, Julia Kantarovsky, Matt Layden</p>
+        <p className='team-text'>The MedTV Team from left to right: Chris Frank, Florence Fong, Dylan Morosini, Julia Kantarovsky, Matt Layden</p>
       </div>
     );
   }

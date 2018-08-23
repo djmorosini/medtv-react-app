@@ -7,7 +7,7 @@ const VideoWatchBreadcrumb = (props) => {
       <div className='watch-breadcrumb'>
       <Breadcrumb className='bread-bg'>
         <BreadcrumbItem className='home-breadcrumb'><Link to="/">Home</Link></BreadcrumbItem>
-        <BreadcrumbItem className='home-breadcrumb'><Link to="/videos">Video List</Link></BreadcrumbItem>
+        <BreadcrumbItem className='home-breadcrumb'><Link to="/videos?startkey=">Video List</Link></BreadcrumbItem>
         <BreadcrumbItem active>Watch Video</BreadcrumbItem>
       </Breadcrumb>
       </div>

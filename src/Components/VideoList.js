@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import {
-    Card, CardImg, CardText, CardBody, Pagination, PaginationItem, PaginationLink,
+    Card, CardImg, CardText, CardBody, Pagination, PaginationItem,
     CardTitle
 } from 'reactstrap';
 import { Link } from 'react-router-dom'
@@ -13,7 +13,6 @@ class VideoList extends React.Component {
 
     render() {
         const videos = this.props.videos
-        console.log(this.props)
 
         if (this.props.fetchedVideo) {
             let fetchedVideos = this.props.fetchedVideo
@@ -42,7 +41,7 @@ class VideoList extends React.Component {
                 return (
 
                     <Fragment>
-                        <div id='the-list' className='d-flex flex-wrap col-lg-11 col-md-11 col-sm-11'>
+                        <div id='the-list' className='d-flex flex-wrap align-content-start col-lg-11 col-md-11 col-sm-11'>
                             {theList}
                         </div>
                         <div className='d-flex justify-content-center'>
@@ -85,7 +84,7 @@ class VideoList extends React.Component {
 
             return (
                 <Fragment>
-                    <div id='the-list' className='d-flex flex-wrap col-lg-11 col-md-11 col-sm-11'>
+                    <div id='the-list' className='d-flex flex-wrap align-content-start col-lg-11 col-md-11 col-sm-11'>
                         {theList}
                     </div>
                     <div className='d-flex justify-content-center'>
@@ -100,37 +99,21 @@ class VideoList extends React.Component {
 class ChangePage extends React.Component {
     render() {
         return (
-            <Pagination aria-label="Page navigation example">
-                <PaginationItem disabled>
-                    <PaginationLink previous href="#" />
-                </PaginationItem>
-                <PaginationItem active>
-                    <PaginationLink href="#">
+            <Pagination>
+                <PaginationItem className='page-nation'>
+                    <Link className='page-item' to={`/videos?startkey=`}>
                         1
-          </PaginationLink>
+          </Link>
                 </PaginationItem>
-                <PaginationItem>
-                    <PaginationLink href="#">
+                <PaginationItem className='page-nation'>
+                    <Link className='page-item' to={`/videos?startkey=937ee770-a57e-11e8-8faf-f971d5f69c22`}>
                         2
-          </PaginationLink>
+          </Link>
                 </PaginationItem>
-                <PaginationItem>
-                    <PaginationLink href="#">
+                <PaginationItem className='page-nation'>
+                    <Link className='page-item' to={`/videos?startkey=5eb0cf10-a581-11e8-9de9-8597fe4e71dd`}>
                         3
-          </PaginationLink>
-                </PaginationItem>
-                <PaginationItem>
-                    <PaginationLink href="#">
-                        4
-          </PaginationLink>
-                </PaginationItem>
-                <PaginationItem>
-                    <PaginationLink href="#">
-                        5
-          </PaginationLink>
-                </PaginationItem>
-                <PaginationItem>
-                    <PaginationLink next href="#" />
+          </Link>
                 </PaginationItem>
             </Pagination>
         );

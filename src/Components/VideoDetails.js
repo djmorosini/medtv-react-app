@@ -16,8 +16,8 @@ class VideoDetails extends React.Component {
 							<CardTitle id='vidDetailTitle'><span>{video.title}</span></CardTitle>
 							<CardText>{video.description}</CardText>
 							<CardText><span className='strong'>Author:</span>  {video.author}</CardText>
-							<CardText><span className='strong'>Gender</span>: {video.patient.gender}</CardText>
-                            <CardText><span className='strong'>Age</span>: {video.patient.age}</CardText>
+							<CardText><span className='strong'>Patient Gender:</span> {video.patient.gender}</CardText>
+                            <CardText><span className='strong'>Patient Age:</span> {video.patient.age}</CardText>
                             <CardText><span className='strong'>Location:</span> {video.vid_location.title}</CardText>
                             <CardText><span className='strong'>Country:</span> {video.vid_location.country}</CardText>
 							<CardText><span className='strong'>Device:</span> {video.device}</CardText>

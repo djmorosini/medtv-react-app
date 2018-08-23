@@ -36,7 +36,6 @@ export default class TheNavbar extends React.Component {
     });
   }
   updateInput = (e) => {
-    console.log(e.target.value)
     this.setState({ input: e.target.value })
   }
 
@@ -51,39 +50,39 @@ export default class TheNavbar extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink className='nav-links' to="/videos"><div className='nav-item-container'>Videos</div></NavLink>
+                <NavLink className='nav-links' to="/videos?startkey="><div className='nav-item-container'>Videos</div></NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Browse
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <NavLink  className='browse' to='videos?tag=Cardiovascular'>
+                  <NavLink  className='browse' to='/videos?tag=Cardiovascular'>
                     <DropdownItem className='nav-browse'>
                       Cardiovascular
                   </DropdownItem>
                   </NavLink>
-                  <NavLink className='browse' to='videos?tag=Digestive'>
+                  <NavLink className='browse' to='/videos?tag=Digestive'>
                     <DropdownItem className='nav-browse'>
                       Digestive
                   </DropdownItem>
                   </NavLink>
-                  <NavLink className='browse' to='videos?tag=Musculoskeletal'>
+                  <NavLink className='browse' to='/videos?tag=Musculoskeletal'>
                     <DropdownItem className='nav-browse'>
                     Musculoskeletal
                   </DropdownItem>
                   </NavLink>
-                  <NavLink className='browse' to='videos?tag=Respiratory'>
+                  <NavLink className='browse' to='/videos?tag=Respiratory'>
                     <DropdownItem className='nav-browse'>
                     Respiratory
                   </DropdownItem>
                   </NavLink>
-                  <NavLink className='browse' to='videos?tag=Skin'>
+                  <NavLink className='browse' to='/videos?tag=Skin'>
                     <DropdownItem className='nav-browse'>
                       Skin
                   </DropdownItem>
                   </NavLink>
-                  <NavLink className='browse' to='videos?tag=Urinary+System'>
+                  <NavLink className='browse' to='/videos?tag=Urinary+System'>
                     <DropdownItem className='nav-browse'>
                       Urinary System
                   </DropdownItem>

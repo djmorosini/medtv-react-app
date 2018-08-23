@@ -5,6 +5,10 @@ import Media from '../Components/Media';
 
 class MeetOurTeam extends Component {
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
 
     return (
