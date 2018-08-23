@@ -123,9 +123,9 @@ export default class Example extends React.Component {
             </Col>
             <Col className='col-lg-6'>
             <h1>Mat Gilbert</h1>
-              <a href="Mat/linkedin">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/mat-gilbert-37732038/">LinkedIn</a>
               <br />
-              <a href="Mat/github">GitHub</a>
+              <a href="https://github.com/dirtybirdnj">GitHub</a>
               <p className="whatIDid">Mat was the advisor on this project</p>
             </Col>
           </Row>
