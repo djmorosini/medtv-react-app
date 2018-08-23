@@ -7,6 +7,10 @@ import MemberContainer from '../Components/MemberContainer'
 
 class MemberDetails extends Component {
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
     render() {
   
       return (

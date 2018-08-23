@@ -5,6 +5,10 @@ import TheFooter from '../Components/TheFooter';
 
 class The404Page extends Component {
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
 
     return (
