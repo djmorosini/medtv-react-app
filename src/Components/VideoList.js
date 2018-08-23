@@ -42,7 +42,7 @@ class VideoList extends React.Component {
                 return (
 
                     <Fragment>
-                        <div id='the-list' className='d-flex flex-wrap col-lg-11 col-md-11 col-sm-11'>
+                        <div id='the-list' className='d-flex flex-wrap align-content-start col-lg-11 col-md-11 col-sm-11'>
                             {theList}
                         </div>
                         <div className='d-flex justify-content-center'>
@@ -85,7 +85,7 @@ class VideoList extends React.Component {
 
             return (
                 <Fragment>
-                    <div id='the-list' className='d-flex flex-wrap col-lg-11 col-md-11 col-sm-11'>
+                    <div id='the-list' className='d-flex flex-wrap align-content-start col-lg-11 col-md-11 col-sm-11'>
                         {theList}
                     </div>
                     <div className='d-flex justify-content-center'>
