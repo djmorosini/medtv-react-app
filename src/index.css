@@ -417,6 +417,6 @@ body {
     height: 1600px;
   }
   #the-list .card {
-    min-width: 80%;
+    min-width: 110%;
   }
 }
