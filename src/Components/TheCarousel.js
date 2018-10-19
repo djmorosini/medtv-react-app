@@ -82,7 +82,7 @@ export default class TheCarousel extends Component {
           onExiting={this.onExiting}
           onExited={this.onExited}
         >
-          <CarouselCaption className="d-flex h-50 align-items-center justify-content-center" captionText={item.caption} captionHeader={item.header} />
+          <CarouselCaption className="d-flex flex-column h-50 align-items-center justify-content-center" captionText={item.caption} captionHeader={item.header} />
         </CarouselItem>
       );
     });

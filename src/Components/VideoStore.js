@@ -23,7 +23,6 @@ class VideoStore extends React.Component {
         let searchParam = this.state.searchParam
         let propParam = this.props.props.location.search
         if (videos.length === 0 && !localStorage.getItem('videos')) {
-            console.log("Im fetching!")
             this.allVideos().then((allVideos) => {
                 this.setState({ videos: allVideos })
                 localStorage.setItem('videos', JSON.stringify(allVideos))
