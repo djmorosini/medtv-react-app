@@ -416,4 +416,7 @@ body {
     font-size: 3em;
     height: 1600px;
   }
+  #the-list .card {
+    min-width: 80%;
+  }
 }

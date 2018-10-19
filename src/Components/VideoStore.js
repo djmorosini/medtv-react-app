@@ -88,6 +88,7 @@ class VideoStore extends React.Component {
     }
 
     render() {
+        console.log(this.props)
         let videos = JSON.parse(localStorage.getItem('videos')) || this.state.videos
         let activeVideo = this.state.activeVideo
         let firstVideo = videos[0]
