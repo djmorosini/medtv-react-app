@@ -316,15 +316,12 @@ body {
 .filter-links:hover {
   text-decoration: none;
 }
-
-
 .memberName{
   color:#004E64;
 }
 .memberName:hover{
   text-decoration:none;
 }
-
 .matrixPic{
   height:400px;
 }
@@ -386,7 +383,6 @@ body {
   .trending-card {
     width: 40%;
     max-width: 50%;
-    
   }
   #team-nav {
     margin-top: -8px;
@@ -396,7 +392,6 @@ body {
     min-width: 45%;
     max-width: 280px;
   }
-  
 }
 
 /* Here is another media breakpoint */
@@ -412,7 +407,6 @@ body {
   #the-list .card {
     min-width: 280px;
   }
-  
 }
 
 
@@ -436,5 +430,11 @@ body {
   }
   #root {
     width: fit-content;
+  }
+  .details-wrapper {
+    width: 120%;
+  }
+  #video-wrap {
+    width: 120%;
   }
 }
