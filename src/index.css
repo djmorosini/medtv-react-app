@@ -392,15 +392,27 @@ body {
     margin-top: -8px;
     margin-bottom: 10px;
   }
+  #the-list .card {
+    min-width: 45%;
+    max-width: 280px;
+  }
   
 }
 
 /* Here is another media breakpoint */
 @media (max-width: 575px){
+  #filter-top {
+    margin-left: 100px;
+    width: 500px;
+  }
   .trending-card {
     min-width: 70%;
     
   }
+  #the-list .card {
+    min-width: 280px;
+  }
+  
 }
 
 
@@ -417,6 +429,12 @@ body {
     height: 1600px;
   }
   #the-list .card {
-    min-width: 110%;
+    min-width: 90%;
+  }
+  #the-list {
+    width: fit-content;
+  }
+  #root {
+    width: fit-content;
   }
 }
