@@ -18,7 +18,6 @@ class VideoPlayer extends Component {
 	componentDidMount() {
 		if (this.props.video) {
 			if (!(this.props.video.id === this.props.match.params.id)) {
-				console.log("Called fetch video 1")
 				return fetch(`https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos/${this.props.match.params.id}`)
 					.then((response) => { return response.json() })
 					.then(
@@ -36,7 +35,6 @@ class VideoPlayer extends Component {
 					);
 			}
 		} else if (!localStorage.getItem('activeVideo')) {
-			console.log("Called fetch video 2")
 			return fetch(`https://n1mr20dqxh.execute-api.us-east-2.amazonaws.com/qa/videos/${this.props.match.params.id}`)
 				.then((response) => { return response.json() })
 				.then(
@@ -74,7 +72,7 @@ class VideoPlayer extends Component {
 			// if (video.tag != "VR") {
 			return (
 				<div id="playerWrapper" className="">
-					<div className="col-lg-10 col-md-11 col-sm-12">
+					<div className="col-lg-10 col-md-11 col-sm-12" id='video-wrap'>
 						<Player src={video.vid_uri} key={this.props.match.params.id} fluid={false} width='70%' height={400}>
 							<BigPlayButton position='center' />
 							<ControlBar autoHide={false} />
