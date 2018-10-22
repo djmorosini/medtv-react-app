@@ -49,19 +49,19 @@ class Team extends React.Component {
     const memberList = members.map((member) => {
       return (
         <Media key={member.name}>
-          <Media left top >
-            <Link to={`/meet-our-team/${member.name}`} params={{ name: member.name }}>
+          <Link to={`/meet-our-team/${member.name}`} params={{ name: member.name }}>
+            <Media left top >
               <div><Media object src={member.src} /></div>
-            </Link>
-          </Media>
-
-          <Media body>
-            <Media heading>
-              <Link className="memberName" to={`/meet-our-team/${member.name}`} params={{ name: member.name }}>
-                {member.name}</Link>
             </Media>
-            {member.shortbio}
-          </Media>
+          </Link>
+          <Link className="bio-link" to={`/meet-our-team/${member.name}`} params={{ name: member.name }}>
+            <Media body>
+              <Media heading className="memberName">
+                {member.name}
+              </Media>
+              <div className="short-bio">{member.shortbio}</div>
+            </Media>
+          </Link>
         </Media>
 
 
