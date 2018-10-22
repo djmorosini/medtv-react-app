@@ -217,13 +217,9 @@ body {
 
 .team{
   flex-direction:row;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   margin-bottom:5%;
   margin-left:10%;
-}
-
-.media{
-  width:30%;
 }
 
 .media-body{
@@ -354,7 +350,22 @@ body {
 .page-item:hover {
   color: green;
 }
-
+.media {
+  width: fit-content;
+  width: 30%;
+}
+.short-bio {
+  text-decoration: none;
+  color: black;
+}
+.bio-link:hover {
+  text-decoration: none;
+  color: black;
+}
+.team-breadcrumb {
+  margin-top: 70px;
+  margin-bottom: -50px;
+}
 
 /* Here is a media breakpoint */
 @media (max-width: 991px){
@@ -392,6 +403,9 @@ body {
     min-width: 45%;
     max-width: 280px;
   }
+  .media {
+    width: 50%;
+  }
 }
 
 /* Here is another media breakpoint */
@@ -406,6 +420,9 @@ body {
   }
   #the-list .card {
     min-width: 280px;
+  }
+  .media {
+    width: 80%;
   }
 }
 
