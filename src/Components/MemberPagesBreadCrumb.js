@@ -7,7 +7,7 @@ const MemberPagesBreadCrumb = (props) => {
       <div className='team-breadcrumb'>
       <Breadcrumb className='bread-bg'>
         <BreadcrumbItem className='home-breadcrumb'><Link to="/">Home</Link></BreadcrumbItem>
-        <BreadcrumbItem className='home-breadcrumb'><Link to="/videos?startkey=">Team Page</Link></BreadcrumbItem>
+        <BreadcrumbItem className='home-breadcrumb'><Link to="/meet-our-team">Team Page</Link></BreadcrumbItem>
         <BreadcrumbItem active>Member Details</BreadcrumbItem>
       </Breadcrumb>
       </div>
