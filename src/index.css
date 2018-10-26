@@ -161,7 +161,8 @@ body {
   margin-bottom: 20px;
   overflow: hidden;
   height: 450px;
-  min-width: 32%;
+  min-width: 340px;
+  max-width: 340px;
 }
 
 .watch-breadcrumb {
@@ -188,7 +189,7 @@ body {
 .nav-item-container {
   width: 100%;
   height: 100%;
-
+  padding-bottom: 5px;
 }
 .nav-links:hover {
   color: white;
@@ -259,7 +260,8 @@ body {
   max-width: 70%;
 }
 .trending-card {
-  max-width: 30%;
+  min-width: 340px;
+  max-width: 340px;
 }
 .personDetails{
   margin-top:150px;
@@ -391,17 +393,13 @@ body {
   .watch-breadcrumb {
     margin-top: 80px;
   }
-  .trending-card {
+  /* .trending-card {
     width: 40%;
     max-width: 50%;
-  }
+  } */
   #team-nav {
     margin-top: -8px;
     margin-bottom: 10px;
-  }
-  #the-list .card {
-    min-width: 45%;
-    max-width: 280px;
   }
   .media {
     width: 50%;
@@ -413,13 +411,6 @@ body {
   #filter-top {
     margin-left: 100px;
     width: 500px;
-  }
-  .trending-card {
-    min-width: 70%;
-    
-  }
-  #the-list .card {
-    min-width: 280px;
   }
   .media {
     width: 80%;
@@ -448,10 +439,16 @@ body {
   #root {
     width: fit-content;
   }
+  #playerWrapper {
+    width: 450px;
+  }
   .details-wrapper {
-    width: 120%;
+    width: 450px;
   }
   #video-wrap {
-    width: 120%;
+    width: 450px;
+  }
+  .trendTitle {
+    font-size: 32px;
   }
 }
