@@ -4,7 +4,7 @@ import TrendingVideos from './TrendingVideos';
 import VideoList from './VideoList';
 
 
-class VideoStore extends React.Component {
+export default class VideoStore extends React.Component {
     constructor(props) {
         super(props)
         this.route = props
@@ -133,6 +133,3 @@ class VideoStore extends React.Component {
         }
     }
 }
-
-export default VideoStore;
-
